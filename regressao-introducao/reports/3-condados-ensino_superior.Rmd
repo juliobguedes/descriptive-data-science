@@ -1,0 +1,31 @@
+---
+title: "Regressão Linear"
+author: "Nazareno Andrade"
+output: 
+  html_notebook:
+    theme: readable
+    fig_width: 7
+    toc: true
+    toc_float: true
+
+---
+
+```{r message=FALSE, warning=FALSE}
+library(openintro)
+library(tidyverse)
+library(ggbeeswarm)
+library(modelr)
+library(broom)
+theme_set(theme_bw())
+```
+
+# Nosso objetivo
+
+Agora faremos o ajuste de um modelo linear para uma nova relação: 
+
+```{r}
+countyComplete %>% 
+  ggplot(aes(x = bachelors, y = per_capita_income)) + 
+  geom_point(alpha = 0.4, size = .5)
+```
+

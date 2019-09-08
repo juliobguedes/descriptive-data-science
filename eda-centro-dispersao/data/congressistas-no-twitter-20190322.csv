@@ -1,0 +1,609 @@
+id_parlamentar,casa,nome_eleitoral,partido,UF,twitter,conteudo,n,engajamento,engajamento_mediano
+1023,senado,MARIA DO CARMO ALVES,DEM,SE,MariaSenadora,proprio,0,0,0
+107283,câmara,GLEISI HOFFMANN,PT,PR,gleisi,proprio,206,737928,2575.5
+108338,câmara,JAQUELINE CASSOL,PP,RO,jqcassol,proprio,26,36,1
+109429,câmara,BENES LEOCÁDIO,PRB,RN,NA,proprio,0,0,0
+112437,câmara,JOÃO MARCELO SOUZA,MDB,MA,NA,proprio,0,0,0
+115746,câmara,GELSON AZEVEDO,PR,RJ,NA,proprio,0,0,0
+116379,câmara,DARCI DE MATOS,PSD,SC,depdarcidematos,proprio,45,107,2
+1173,senado,WELLINGTON FAGUNDES,PR,MT,sen_wellington,proprio,132,494,2
+1186,senado,LUIS CARLOS HEINZE,PP,RS,SenadorHeinze,proprio,124,6182,19.5
+121948,câmara,ADRIANO DO BALDY,PP,GO,AdrianoBaldy,proprio,0,0,0
+122158,câmara,PEDRO PAULO,DEM,RJ,pedropaulo,proprio,44,916,6.5
+122974,câmara,PEDRO LUCAS FERNANDES,PTB,MA,NA,proprio,0,0,0
+1249,senado,KÁTIA ABREU,PDT,TO,KatiaAbreu,proprio,153,69850,79
+132504,câmara,ENIO VERRI,PT,PR,enioverri,proprio,147,35648,44
+133439,câmara,ANDRÉ FIGUEIREDO,PDT,CE,andrepdt12,proprio,131,9832,40
+133810,câmara,MARCELO MORAES,PTB,RS,NA,proprio,0,0,0
+133968,câmara,PAULO RAMOS,PDT,RJ,pauloramosdep,proprio,0,0,0
+134812,câmara,EDMILSON RODRIGUES,PSOL,PA,EdmilsonPSOL,proprio,210,17094,24
+135054,câmara,CRISTIANO VALE,PR,PA,NA,proprio,0,0,0
+136811,câmara,AFONSO HAMM,PP,RS,depafonsohamm,proprio,0,0,0
+137070,câmara,VICENTINHO JÚNIOR,PR,TO,vicentinhojr,proprio,79,71,1
+139285,câmara,LÍDICE DA MATA,PSB,BA,lidicedamata,proprio,239,7827,14
+141335,câmara,BETO FARO,PT,PA,BetoFaroPT ‏,proprio,0,0,0
+141391,câmara,ARNALDO JARDIM,PPS,SP,ArnaldoJardim,proprio,130,790,4
+141398,câmara,CARLOS ZARATTINI,PT,SP,CarlosZarattini,proprio,225,29580,58
+141401,câmara,CARLOS BEZERRA,MDB,MT,CarlosBezerraJr,proprio,117,4636,17
+141405,câmara,CELSO MALDANER,MDB,SC,celsomaldaner,proprio,0,0,0
+141408,câmara,CLEBER VERDE,PRB,MA,CleberVerde10 ‏,proprio,0,0,0
+141411,câmara,DAGOBERTO NOGUEIRA,PDT,MS,dagobertopdt,proprio,1,1,1
+141417,câmara,EDIO LOPES,PR,RR,ediolopes,proprio,197,113,0
+141421,câmara,EDUARDO DA FONTE,PP,PE,eduardodafonte,proprio,0,0,0
+141422,câmara,EFRAIM FILHO,DEM,PB,efraimfilho,proprio,27,183,5
+141427,câmara,FÁBIO RAMALHO,MDB,MG,_FabinhoRamalho,proprio,0,0,0
+141428,câmara,FÁBIO FARIA,PSD,RN,fabiofaria33,proprio,0,0,0
+141431,câmara,FERNANDO COELHO FILHO,DEM,PE,FBCFilho,proprio,6,26,3.5
+141434,câmara,FLAVIANO MELO,MDB,AC,flaviano_melo,proprio,0,0,0
+141439,câmara,CHICO D'ANGELO,PDT,RJ,chico_dangelo,proprio,240,3942,7
+141450,câmara,HUGO LEAL,PSD,RJ,dephugoleal,proprio,0,0,0
+141458,câmara,JOÃO CARLOS BACELAR,PR,BA,deputadobacelar,proprio,0,0,0
+141459,câmara,JOÃO MAIA,PR,RN,depjoaomaia,proprio,0,0,0
+141464,câmara,JOSÉ AIRTON FÉLIX CIRILO,PT,CE,JoseAirtonPT,proprio,25,66,2
+141470,câmara,JOSÉ GUIMARÃES,PT,CE,guimaraes13PT,proprio,708,70912,18.5
+141488,câmara,PAULO TEIXEIRA,PT,SP,pauloteixeira13,proprio,216,259837,719
+141508,câmara,MAURO NAZIF,PSB,RO,drmauronazif,proprio,0,0,0
+141513,câmara,BILAC PINTO,DEM,MG,bilac_pinto,proprio,0,0,0
+141516,câmara,PAULO ABI-ACKEL,PSDB,MG,pauloabiackel,proprio,15,89,3
+141518,câmara,PAULO PEREIRA DA SILVA,SOLIDARIEDADE,SP,dep_paulinho,proprio,12,43,2.5
+141523,câmara,RAUL HENRY,MDB,PE,RaulHenry,proprio,0,0,0
+141531,câmara,RODRIGO DE CASTRO,PSDB,MG,RodrigoCastro45,proprio,15,51,3
+141553,câmara,VANDERLEI MACRIS,PSDB,SP,vanderleimacris,proprio,108,879,5
+141555,câmara,VINICIUS CARVALHO,PRB,SP,falecomvinicius,proprio,95,52,0
+143084,câmara,TIAGO DIMAS,SOLIDARIEDADE,TO,tiago_dimas,proprio,87,262,3
+143632,câmara,DOMINGOS NETO,PSD,CE,Domingos_Neto,proprio,32,1172,5
+146307,câmara,NERI GELLER,PP,MT,NeriGeller,proprio,0,0,0
+146788,câmara,MARCELO ARO,PHS,MG,marceloaro,proprio,132,806,2
+150418,câmara,MÁRCIO MARINHO,PRB,BA,dpmarciomarinho,proprio,40,75,1
+151208,câmara,LAERCIO OLIVEIRA,PP,SE,laerciofederal,proprio,0,0,0
+152605,câmara,GLAUBER BRAGA,PSOL,RJ,Glauber_Braga,proprio,130,104071,47
+152610,câmara,ROBERTO ALVES,PRB,SP,RobertoAlvesPRB,proprio,0,0,0
+154178,câmara,MILTON VIEIRA,PRB,SP,DepMiltonVieira,proprio,22,24,1
+156190,câmara,MARCEL VAN HATTEM,NOVO,RS,marcelvanhattem,proprio,163,247962,824
+157130,câmara,TÚLIO GADÊLHA,PDT,PE,tuliogadelha,proprio,81,82138,320
+159237,câmara,ASSIS CARVALHO,PT,PI,assis_carvalho,proprio,188,1540,2
+160508,câmara,AFONSO FLORENCE,PT,BA,AfonsoFlorence‏,proprio,0,0,0
+160510,câmara,LUIS TIBÉ,AVANTE,MG,LuisTibeOficial,proprio,0,0,0
+160511,câmara,ALESSANDRO MOLON,PSB,RJ,AlessandroMolon,proprio,0,0,0
+160512,câmara,AUREO RIBEIRO,SOLIDARIEDADE,RJ,DeputadoAureo,proprio,0,0,0
+160517,câmara,PAULO FOLETTO,PSB,ES,DeputadoFoletto,proprio,0,0,0
+160518,câmara,WELITON PRADO,PROS,MG,pradoweliton,proprio,34,130,3
+160527,câmara,AGUINALDO RIBEIRO,PP,PB,aguinaldo1111,proprio,0,0,0
+160528,câmara,DANILO CABRAL,PSB,PE,danilo4010 ‏,proprio,0,0,0
+160531,câmara,JHONATAN DE JESUS,PRB,RR,jhonatan_djesus,proprio,14,67,4.5
+160532,câmara,ELI CORRÊA FILHO,DEM,SP,NA,proprio,0,0,0
+160534,câmara,LAURIETE,PR,ES,2010lauriete,proprio,0,0,0
+160535,câmara,MARCON,PT,RS,depmarcon,proprio,273,4994,5
+160538,câmara,BOHN GASS,PT,RS,BOHNGASS,proprio,0,0,0
+160541,câmara,ARTHUR LIRA,PP,AL,DEPArthurLira,proprio,0,0,0
+160545,câmara,ALEXANDRE LEITE,DEM,SP,lexandreleite,proprio,58,23,0
+160552,câmara,DANRLEI DE DEUS HINTERHOLZ,PSD,RS,DanrleiFederal,proprio,0,0,0
+160553,câmara,ANTONIO BRITO,PSD,BA,antoniobritoba,proprio,0,0,0
+160556,câmara,PADRE JOÃO,PT,MG,dep_padrejoao,proprio,199,5080,5
+160558,câmara,PAULO FREIRE COSTA,PR,SP,DF_PauloFreire,proprio,36,158,3.5
+160559,câmara,ALCEU MOREIRA,MDB,RS,Alceu_Moreira,proprio,214,2239,8
+160569,câmara,WALDENOR PEREIRA,PT,BA,waldenorpereira,proprio,32,671,13
+160570,câmara,JERÔNIMO GOERGEN,PP,RS,jeronimogoergen,proprio,285,10865,8
+160575,câmara,ERIKA KOKAY,PT,DF,erikakokay,proprio,585,399334,238
+160587,câmara,FÁBIO TRAD,PSD,MS,f_trad,proprio,95,1737,13
+160588,câmara,DIEGO ANDRADE,PSD,MG,diegoandrade_mg,proprio,0,0,0
+160589,câmara,BRUNA FURLAN,PSDB,SP,BrunaFurlan_,proprio,0,0,0
+160591,câmara,VINICIUS GURGEL,PR,AP,vinicius2828,proprio,0,0,0
+160592,câmara,ZECA DIRCEU,PT,PR,zeca_dirceu,proprio,305,21911,16
+160598,câmara,FLÁVIA MORAIS,PDT,GO,depflaviamorais,proprio,0,0,0
+160599,câmara,DIMAS FABIANO,PP,MG,depdimasfabiano,proprio,0,0,0
+160600,câmara,ARTHUR OLIVEIRA MAIA,DEM,BA,departhurmaia,proprio,0,0,0
+160601,câmara,PR. MARCO FELICIANO,PODE,SP,marcofeliciano,proprio,465,339564,237
+160604,câmara,PEDRO UCZAI,PT,SC,uczai,proprio,203,14322,20
+160610,câmara,VALMIR ASSUNÇÃO,PT,BA,falavalmir,proprio,0,0,0
+160619,câmara,JOSÉ NUNES,PSD,BA,JoseNunesDep,proprio,0,0,0
+160621,câmara,SANDRO ALEX,PSD,PR,SandroAlex2323,proprio,0,0,0
+160632,câmara,ZÉ SILVA,SOLIDARIEDADE,MG,ZeSilva_,proprio,136,65,0
+160635,câmara,RUY CARNEIRO,PSDB,PB,depruycarneiro,proprio,14,29,1.5
+160639,câmara,PROFESSORA DORINHA SEABRA REZENDE,DEM,TO,profdorinha,proprio,8,28,3
+160640,câmara,EROS BIONDINI,PROS,MG,erosbiondini,proprio,167,5126,26
+160641,câmara,PROFESSORA MARCIVANIA,PCdoB,AP,marcivania65,proprio,33,72,1
+160642,câmara,PASTOR EURICO,PATRI,PE,pastoreurico,proprio,0,0,0
+160645,câmara,LUIZ CARLOS,PSDB,AP,depluizcarlos,proprio,0,0,0
+160651,câmara,ROGÉRIO PENINHA MENDONÇA,MDB,SC,deputadopeninha,proprio,148,16385,27.5
+160653,câmara,ROBERTO DE LUCENA,PODE,SP,robertodelucena,proprio,32,336,9
+160655,câmara,RICARDO IZAR,PP,SP,RicardoIzar,proprio,14,57,4
+160665,câmara,AUGUSTO COUTINHO,SOLIDARIEDADE,PE,augustocmelo ‏,proprio,0,0,0
+160666,câmara,FÉLIX MENDONÇA JÚNIOR,PDT,BA,felixMendoncaJr,proprio,0,0,0
+160667,câmara,GUILHERME MUSSI,PP,SP,guilhermemussi,proprio,0,0,0
+160669,câmara,GENECIAS NORONHA,SOLIDARIEDADE,CE,depgenecias,proprio,0,0,0
+160672,câmara,JEAN WYLLYS,PSOL,RJ,jeanwyllys_real,proprio,88,305063,836.5
+160673,câmara,GIOVANI CHERINI,PR,RS,giovanicherini,proprio,169,304,1
+160674,câmara,HUGO MOTTA,PRB,PB,hugomottapb,proprio,0,0,0
+160758,câmara,DOMINGOS SÁVIO,PSDB,MG,DomingosSavioMG,proprio,75,607,2
+160976,câmara,TIRIRICA,PR,SP,tiriricanaweb,proprio,16,582,35.5
+161550,câmara,EMIDINHO MADEIRA,PSB,MG,emidinhomadeira,proprio,0,0,0
+162332,câmara,LUIZ NISHIMORI,PR,PR,luiznishimori,proprio,0,0,0
+164359,câmara,DELEGADO WALDIR,PSL,GO,delegado_waldir,proprio,0,0,0
+164360,câmara,CARMEN ZANOTTO,PPS,SC,carmenzanotto,proprio,0,0,0
+166402,câmara,MAGDA MOFATTO,PR,GO,Magdamofatto,proprio,0,0,0
+171617,câmara,PAULÃO,PT,AL,paulaodopt,proprio,74,771,3
+171619,câmara,MARGARIDA SALOMÃO,PT,MG,JFMargarida,proprio,948,173595,36
+171623,câmara,FABIO REIS,MDB,SE,fabioreis1515,proprio,60,115,1
+177282,câmara,SUBTENENTE GONZAGA,PDT,MG,SubGonzagaMG,proprio,0,0,0
+178829,câmara,CAPITÃO AUGUSTO,PR,SP,capitao_augusto,proprio,0,0,0
+178831,câmara,ANDRÉ ABDON,PP,AP,dep_andreabdon‏,proprio,0,0,0
+178832,câmara,LEANDRE,PV,PR,Leandre4300,proprio,0,0,0
+178833,câmara,ALEXANDRE SERFIOTIS,PSD,RJ,AleSerfiotis,proprio,1,1,1
+178835,câmara,AFONSO MOTTA,PDT,RS,afonso_motta,proprio,0,0,0
+178836,câmara,ALAN RICK,DEM,AC,Alan_Rick,proprio,49,284,4
+178839,câmara,JÉSSICA SALES,MDB,AC,NA,proprio,0,0,0
+178842,câmara,JHC,PSB,AL,JHC_40,proprio,102,1060,4.5
+178843,câmara,MARX BELTRÃO,PSD,AL,NA,proprio,0,0,0
+178853,câmara,CAETANO,PT,BA,DepCaetano‏,proprio,0,0,0
+178854,câmara,ELMAR NASCIMENTO,DEM,BA,ElmarNascimento,proprio,0,0,0
+178857,câmara,JORGE SOLLA,PT,BA,depjorgesolla,proprio,135,69575,122
+178858,câmara,MÁRIO NEGROMONTE JR.,PP,BA,depnegromontejr,proprio,0,0,0
+178860,câmara,PAULO AZI,DEM,BA,pauloazi,proprio,0,0,0
+178861,câmara,RONALDO CARLETTO,PP,BA,ronaldocarletto,proprio,8,0,0
+178863,câmara,ULDURICO JUNIOR,PPL,BA,ulduricopinto,proprio,0,0,0
+178866,câmara,LUIZIANNE LINS,PT,CE,Luizianne13PT,proprio,125,3010,9
+178871,câmara,EVAIR VIEIRA DE MELO,PP,ES,EvairdeMelo,proprio,204,308,1
+178873,câmara,HELDER SALOMÃO,PT,ES,heldersalomao,proprio,396,217846,77.5
+178874,câmara,SERGIO VIDIGAL,PDT,ES,vidigalsergio,proprio,0,0,0
+178876,câmara,CÉLIO SILVEIRA,PSDB,GO,csilveira4599 ‏,proprio,0,0,0
+178879,câmara,LUCAS VERGILIO,SOLIDARIEDADE,GO,VergilioLucas77,proprio,0,0,0
+178881,câmara,ALUISIO MENDES,PODE,MA,AluisioMendesMA,proprio,22,53,2
+178882,câmara,ANDRÉ FUFUCA,PP,MA,DepAndreFufuca,proprio,0,0,0
+178884,câmara,HILDO ROCHA,MDB,MA,hildorocha1513,proprio,60,51,1
+178886,câmara,JUSCELINO FILHO,DEM,MA,DepJuscelino,proprio,95,177,1
+178887,câmara,RUBENS PEREIRA JÚNIOR,PCdoB,MA,rubenspereirajr,proprio,315,17843,15
+178889,câmara,ZÉ CARLOS,PT,MA,Dep_ZeCarlosPT,proprio,97,1018,3
+178895,câmara,MISAEL VARELLA,PSD,MG,NA,proprio,0,0,0
+178896,câmara,NEWTON CARDOSO JR,MDB,MG,newton1510,proprio,50,123,2
+178901,câmara,TEREZA CRISTINA,DEM,MS,TerezaCrisMS,proprio,32,56695,1168.5
+178908,câmara,DELEGADO ÉDER MAURO,PSD,PA,EderMauroPA,proprio,190,4882,17.5
+178909,câmara,HÉLIO LEITE,DEM,PA,NA,proprio,0,0,0
+178910,câmara,JOAQUIM PASSARINHO,PSD,PA,joaquimpassarin,proprio,0,0,0
+178912,câmara,PEDRO CUNHA LIMA,PSDB,PB,pedroocl,proprio,12,874,49.5
+178916,câmara,DANIEL COELHO,PPS,PE,DanielCoelho23 ‏,proprio,0,0,0
+178920,câmara,RICARDO TEOBALDO,PODE,PE,psdbricardo45,proprio,0,0,0
+178921,câmara,SEBASTIÃO OLIVEIRA,PR,PE,Seba_Oliveira,proprio,0,0,0
+178922,câmara,TADEU ALENCAR,PSB,PE,NA,proprio,0,0,0
+178924,câmara,CAPITÃO FÁBIO ABREU,PR,PI,depfabioabreu,proprio,61,85,1
+178925,câmara,REJANE DIAS,PT,PI,rejane_dias,proprio,79,230,2
+178927,câmara,ALIEL MACHADO,PSB,PR,alielmachado,proprio,70,1126,7
+178928,câmara,CHRISTIANE DE SOUZA YARED,PR,PR,christianeyared,proprio,0,0,0
+178929,câmara,DIEGO GARCIA,PODE,PR,diegogarciapr,proprio,120,755,5
+178930,câmara,EVANDRO ROMAN,PSD,PR,roman_evandro,proprio,51,84,1
+178931,câmara,LUCIANO DUCCI,PSB,PR,LucianoDucci,proprio,31,69,2
+178933,câmara,SERGIO SOUZA,MDB,PR,_sergiosouza,proprio,0,0,0
+178934,câmara,TONINHO WANDSCHEER,PROS,PR,deputadotoninho,proprio,112,177,1
+178937,câmara,ALTINEU CÔRTES,PR,RJ,Altineu,proprio,21,10,0
+178939,câmara,CLARISSA GAROTINHO,PROS,RJ,dep_clarissa,proprio,21,143,5
+178945,câmara,ROSANGELA GOMES,PRB,RJ,rosangelasgomes,proprio,53,89,1
+178946,câmara,SORAYA SANTOS,PR,RJ,sorayasantos,proprio,24,189,5.5
+178947,câmara,SÓSTENES CAVALCANTE,DEM,RJ,DepSostenes,proprio,331,23441,15
+178948,câmara,BETO ROSADO,PP,RN,betorosado,proprio,0,0,0
+178951,câmara,RAFAEL MOTTA,PSB,RN,RafaelMottaRN,proprio,25,162,5
+178952,câmara,WALTER ALVES,MDB,RN,WalterAlvesRN,proprio,0,0,0
+178953,câmara,EXPEDITO NETTO,PSD,RO,netto_expedito,proprio,21,41,2
+178954,câmara,LUCIO MOSQUINI,MDB,RO,luciomosquini,proprio,0,0,0
+178956,câmara,MARIANA CARVALHO,PSDB,RO,MarianaPSDB,proprio,0,0,0
+178959,câmara,HIRAN GONÇALVES,PP,RR,deputadohiran,proprio,32,62,1
+178961,câmara,SHÉRIDAN,PSDB,RR,depsheridan,proprio,0,0,0
+178962,câmara,CARLOS GOMES,PRB,RS,carlosgomesdep,proprio,3,0,0
+178963,câmara,COVATTI FILHO,PP,RS,CovattiFilho,proprio,1,5,5
+178964,câmara,HEITOR SCHUCH,PSB,RS,HeitorSchuch,proprio,31,113,3
+178966,câmara,GEOVANIA DE SÁ,PSDB,SC,geovaniadesa,proprio,18,469,14.5
+178969,câmara,FÁBIO MITIDIERI,PSD,SE,depfmitidieri,proprio,236,1334,4
+178970,câmara,JOÃO DANIEL,PT,SE,joaodanielPT,proprio,0,0,0
+178972,câmara,ALEX MANENTE,PPS,SP,alexmanentepps,proprio,0,0,0
+178975,câmara,BALEIA ROSSI,MDB,SP,baleia_rossi,proprio,0,0,0
+178977,câmara,EDUARDO CURY,PSDB,SP,eduardo_cury,proprio,0,0,0
+178981,câmara,HERCULANO PASSOS,MDB,SP,herculanopassos,proprio,36,76,2
+178983,câmara,MARCIO ALVINO,PR,SP,AlvinoMarcio,proprio,0,0,0
+178985,câmara,MIGUEL LOMBARDI,PR,SP,DMiguellombardi,proprio,9,21,3
+178986,câmara,NILTO TATTO,PT,SP,NiltoTatto,proprio,474,6075,5
+178987,câmara,ORLANDO SILVA,PCdoB,SP,orlandosilva,proprio,190,40901,55
+178989,câmara,RENATA ABREU,PODE,SP,RenataAbreuDep,proprio,145,878,5
+178990,câmara,SAMUEL MOREIRA,PSDB,SP,samuelmoreira,proprio,44,205,3
+178992,câmara,VITOR LIPPI,PSDB,SP,DepVitorLippi,proprio,0,0,0
+178993,câmara,CARLOS HENRIQUE GAGUIM,DEM,TO,carlos_gaguim,proprio,0,0,0
+178994,câmara,DULCE MIRANDA,MDB,TO,dulcemiranda_to,proprio,0,0,0
+178996,câmara,GIOVANI FELTES,MDB,RS,GiovaniFeltes,proprio,16,45,3
+178997,câmara,MOSES RODRIGUES,MDB,CE,depfederalmoses,proprio,0,0,0
+179000,câmara,MARCELO ÁLVARO ANTÔNIO,PSL,MG,Marceloalvaroan,proprio,49,16896,169
+179001,câmara,MÁRCIO BIOLCHI,MDB,RS,marciobiolchi,proprio,1,7,7
+179587,câmara,MAJOR VITOR HUGO,PSL,GO,MajorVitorHugo,proprio,298,128591,172
+191923,câmara,FLAVIO NOGUEIRA,PDT,PI,flavionoguera,proprio,0,0,0
+193726,câmara,PAULO EDUARDO MARTINS,PSC,PR,PauloMartins10,proprio,355,1082269,1530
+194260,câmara,NIVALDO ALBUQUERQUE,PTB,AL,NivaldoAlbuque,proprio,0,0,0
+195866,câmara,VAIDON OLIVEIRA,PROS,CE,VaidonOliveira,proprio,0,0,0
+196358,câmara,LOURIVAL GOMES,PSL,RJ,lourivalgomesrj,proprio,0,0,0
+197438,câmara,TITO,AVANTE,BA,NA,proprio,0,0,0
+198197,câmara,GREYCE ELIAS,AVANTE,MG,NA,proprio,0,0,0
+198783,câmara,EMANUEL PINHEIRO NETO,PTB,MT,emanuelzinhomt,proprio,84,270,3
+204351,câmara,DR. LUIZ OVANDO,PSL,MS,NA,proprio,0,0,0
+204352,câmara,CAMILO CAPIBERIBE,PSB,AP,CamiloPSB,proprio,142,2985,13
+204353,câmara,ALINE GURGEL,PRB,AP,alinegurgel1000,proprio,139,1198,6
+204354,câmara,FLÁVIA ARRUDA,PR,DF,flaviaarrudadf,proprio,0,0,0
+204355,câmara,DA VITORIA,PPS,ES,josiasdavitoria,proprio,33,80,2
+204356,câmara,AMARO NETO,PRB,ES,amaronetotv,proprio,0,0,0
+204357,câmara,ROSE MODESTO,PSDB,MS,rosemodestoms,proprio,0,0,0
+204358,câmara,BETO PEREIRA,PSDB,MS,betopereirams,proprio,56,152,1
+204359,câmara,LÉO MORAES,PODE,RO,dep_leomoraes,proprio,0,0,0
+204360,câmara,SILVIA CRISTINA,PDT,RO,NA,proprio,0,0,0
+204361,câmara,CARLOS CHIODINI,MDB,SC,carloschiodini,proprio,55,234,3
+204362,câmara,RICARDO GUIDI,PSD,SC,ricardozguidi,proprio,0,0,0
+204363,câmara,OSIRES DAMASO,PSC,TO,Damaso2020,proprio,0,0,0
+204364,câmara,ELI BORGES,SOLIDARIEDADE,TO,elidiasborges,proprio,24,19,0
+204365,câmara,GILSON MARQUES,NOVO,SC,gilsonmarques30,proprio,54,3184,11.5
+204366,câmara,RODRIGO COELHO,PSB,SC,coelho_rodrigo,proprio,145,378,2
+204367,câmara,DANIEL FREITAS,PSL,SC,NA,proprio,0,0,0
+204368,câmara,FABIO SCHIOCHET,PSL,SC,deputadofabiosc,proprio,0,0,0
+204369,câmara,CAROLINE DE TONI,PSL,SC,CarolDeToni3,proprio,13,1720,122
+204370,câmara,CÉLIO MOURA,PT,TO,CelioMoura13,proprio,0,0,0
+204371,câmara,FELIPE RIGONI,PSB,ES,rigoni_felipe,proprio,103,1457,7
+204372,câmara,JULIO CESAR RIBEIRO,PRB,DF,JulioCesarRib,proprio,53,181,2
+204373,câmara,HÉLIO COSTA,PRB,SC,HelioCosta,proprio,0,0,0
+204374,câmara,BIA KICIS,PSL,DF,Biakicis,proprio,368,717602,667.5
+204375,câmara,LEDA SADALA,AVANTE,AP,LedaSadala,proprio,0,0,0
+204376,câmara,CORONEL ARMANDO,PSL,SC,NA,proprio,0,0,0
+204377,câmara,PAULA BELMONTE,PPS,DF,paulambelmonte,proprio,39,258,4
+204378,câmara,CORONEL CHRISÓSTOMO,PSL,RO,NA,proprio,0,0,0
+204379,câmara,ACÁCIO FAVACHO,PROS,AP,FavachoAcacio,proprio,0,0,0
+204380,câmara,CELINA LEÃO,PP,DF,celinaleao,proprio,66,210,2
+204381,câmara,LUIS MIRANDA,DEM,DF,LuisMirandaUSA1,proprio,0,0,0
+204382,câmara,LOESTER TRUTIS,PSL,MS,LTrutis,proprio,7,286,14
+204383,câmara,PROFESSOR ISRAEL BATISTA,PV,DF,ProfIsrael,proprio,18,167,6.5
+204384,câmara,NEY LEPREVOST,PSD,PR,neyleprevost,proprio,449,1964,4
+204385,câmara,VALDEVAN NOVENTA,PSC,SE,dep_fed_noventa,proprio,0,0,0
+204386,câmara,JOSE MARIO SCHREINER,DEM,GO,SchreinerJose,proprio,0,0,0
+204387,câmara,SARGENTO FAHUR,PSD,PR,SargentoFAHUR,proprio,68,744388,7436.5
+204388,câmara,BIBO NUNES,PSL,RS,bibonunes1,proprio,0,0,0
+204389,câmara,ELIAS VAZ,PSB,GO,EliasVazGyn,proprio,0,0,0
+204390,câmara,PROFESSOR ALCIDES,PP,GO,NA,proprio,0,0,0
+204391,câmara,JOSÉ NELTO,PODE,GO,depjosenelto,proprio,66,538,5.5
+204392,câmara,FRANCISCO JR.,PSD,GO,franciscojr_go,proprio,67,539,7
+204393,câmara,FREI ANASTACIO RIBEIRO,PT,PB,freianastacioal,proprio,0,0,0
+204394,câmara,GERVÁSIO MAIA,PSB,PB,gervasiomaia,proprio,52,481,8
+204395,câmara,PEDRO LUPION,DEM,PR,Dep_PedroLupion,proprio,78,2724,3
+204396,câmara,VERMELHO,PSD,PR,NA,proprio,0,0,0
+204397,câmara,BOCA ABERTA,PROS,PR,BocaAbertaOf,proprio,116,427,2.5
+204398,câmara,FELIPE FRANCISCHINI,PSL,PR,FFrancischini_,proprio,0,0,0
+204399,câmara,SCHIAVINATO,PP,PR,Schiavinato_,proprio,77,52,0
+204400,câmara,ALINE SLEUTJES,PSL,PR,NA,proprio,0,0,0
+204403,câmara,MARLON SANTOS,PDT,RS,deputado_marlon,proprio,0,0,0
+204404,câmara,LUCAS REDECKER,PSDB,RS,LucasRedecker,proprio,124,1034,7
+204405,câmara,LIZIANE BAYER,PSB,RS,LizianeBayer,proprio,205,1268,5
+204406,câmara,PEDRO WESTPHALEN,PP,RS,pedrowestphalen,proprio,55,131,2
+204407,câmara,FERNANDA MELCHIONNA,PSOL,RS,fernandapsol,proprio,717,100499,52
+204408,câmara,GUSTINHO RIBEIRO,SOLIDARIEDADE,SE,GustinhoRibeiro,proprio,32,95,3
+204409,câmara,DANIEL TRZECIAK,PSDB,RS,TrzeciakDaniel,proprio,44,726,14.5
+204410,câmara,LUISA CANZIANI,PTB,PR,luisa_canziani,proprio,93,822,8
+204411,câmara,FILIPE BARROS,PSL,PR,filipebarrost,proprio,43,753,13
+204412,câmara,DR. ZACHARIAS CALIL,DEM,GO,NA,proprio,0,0,0
+204413,câmara,ALCIDES RODRIGUES,PRP,GO,NA,proprio,0,0,0
+204414,câmara,AROLDO MARTINS,PRB,PR,aroldomartins,proprio,116,278,2
+204415,câmara,NEREU CRISPIM,PSL,RS,nereucrispim,proprio,119,389,2
+204416,câmara,UBIRATAN SANDERSON,PSL,RS,SandersonPF,proprio,51,1290,14
+204418,câmara,PROFESSOR LUIZÃO GOULART,PRB,PR,luizaogoulart,proprio,68,150,2
+204419,câmara,GLAUSTIN FOKUS,PSC,GO,glaustinfokus,proprio,38,140,2
+204420,câmara,JULIAN LEMOS,PSL,PB,JulianLemosopb1,proprio,0,0,0
+204421,câmara,EDNA HENRIQUE,PSDB,PB,NA,proprio,0,0,0
+204422,câmara,OSSESIO SILVA,PRB,PE,Ossesio_Silva,proprio,119,267,2
+204423,câmara,ANDRÉ FERREIRA,PSC,PE,NA,proprio,0,0,0
+204425,câmara,SILVIO COSTA FILHO,PRB,PE,Silvio_CFilho,proprio,76,217,2
+204426,câmara,CARLOS VERAS,PT,PE,carlosveras1314,proprio,0,0,0
+204427,câmara,FERNANDO RODOLFO,PR,PE,fernandorodolfo,proprio,0,0,0
+204428,câmara,MARÍLIA ARRAES,PT,PE,MariliaArraes,proprio,86,27630,106
+204429,câmara,JOÃO H. CAMPOS,PSB,PE,NA,proprio,0,0,0
+204430,câmara,MARGARETE COELHO,PP,PI,MargaretCoelho,proprio,68,310,4
+204431,câmara,MARCOS AURÉLIO SAMPAIO,MDB,PI,MarcosA_Sampaio,proprio,0,0,0
+204432,câmara,MARINA SANTOS,SOLIDARIEDADE,PI,NA,proprio,0,0,0
+204433,câmara,MARCELO CALERO,PPS,RJ,caleromarcelo,proprio,113,59871,154
+204434,câmara,DRA. VANDA MILANI,SOLIDARIEDADE,AC,Vandamilani,proprio,0,0,0
+204435,câmara,JESUS SÉRGIO,PDT,AC,jesussergioac,proprio,7,40,2
+204436,câmara,ISNALDO BULHÕES JR.,MDB,AL,bulhoesjr,proprio,5,16,3
+204437,câmara,SEVERINO PESSOA,PRB,AL,NA,proprio,0,0,0
+204438,câmara,SERGIO TOLEDO,PR,AL,depsergiotoledo,proprio,0,0,0
+204439,câmara,DR. LEONARDO,SOLIDARIEDADE,MT,DrLeonardomt,proprio,175,64,0
+204440,câmara,CHRISTINO AUREO,PP,RJ,christinoaureo,proprio,84,88,1
+204441,câmara,OTONI DE PAULA,PSC,RJ,OtoniDepFederal,proprio,63,524,8
+204442,câmara,GURGEL,PSL,RJ,gurgelsoares,proprio,0,0,0
+204443,câmara,WAGNER MONTES,PRB,RJ,depwagnermontes,proprio,27,1957,12
+204444,câmara,HELIO LOPES,PSL,RJ,depheliolopes,proprio,160,128111,353.5
+204445,câmara,FERNANDO MINEIRO,PT,RN,mineiroptrn,proprio,42,539,7
+204446,câmara,PROFESSOR JOZIEL,PSL,RJ,professorjoziel,proprio,4,21,5
+204447,câmara,FLORDELIS,PSD,RJ,Flordelismk,proprio,69,1476,16
+204448,câmara,LUIZ ANTÔNIO CORRÊA,DC,RJ,depluizantonio,proprio,0,0,0
+204449,câmara,NELSON BARBUDO,PSL,MT,NA,proprio,0,0,0
+204450,câmara,DR. LUIZ ANTONIO TEIXEIRA JR.,PP,RJ,drluizantoniojr,proprio,50,760,8
+204451,câmara,DELEGADO ANTÔNIO FURTADO,PSL,RJ,delegadofurtado,proprio,0,0,0
+204452,câmara,MÁRCIO LABRE,PSL,RJ,marciolabre,proprio,375,35635,2
+204453,câmara,NATÁLIA BONAVIDES,PT,RN,natbonavides,proprio,351,25138,25
+204454,câmara,DANIEL SILVEIRA,PSL,RJ,DanielPMERJ,proprio,326,36086,5
+204455,câmara,LUIZ LIMA,PSL,RJ,Oficialluizlima,proprio,112,5907,20
+204456,câmara,GUTEMBERG REIS,MDB,RJ,guth_reis,proprio,113,386,3
+204457,câmara,JUNINHO DO PNEU,DEM,RJ,JuninhodoPneu,proprio,0,0,0
+204458,câmara,MAJOR FABIANA,PSL,RJ,majorfabiana46,proprio,0,0,0
+204459,câmara,DANIELA DO WAGUINHO,MDB,RJ,DanielaWaguinho,proprio,109,428,3
+204460,câmara,CARLOS JORDY,PSL,RJ,carlosjordy,proprio,533,429406,207
+204461,câmara,PAULO GANIME,NOVO,RJ,pauloganime,proprio,344,77367,68.5
+204462,câmara,CHRIS TONIETTO,PSL,RJ,ChrisTonietto17,proprio,0,0,0
+204463,câmara,WLADIMIR GAROTINHO,PRP,RJ,WladGarotinho,proprio,18,97,5
+204464,câmara,TALÍRIA PETRONE,PSOL,RJ,taliriapetrone,proprio,469,1189012,865
+204465,câmara,HAROLDO CATHEDRAL,PSD,RR,NA,proprio,0,0,0
+204466,câmara,TEREZA NELMA,PSDB,AL,TerezaNelma_,proprio,48,30,0
+204467,câmara,PROFESSORA ROSA NEIDE,PT,MT,profdorinha,proprio,8,28,3
+204468,câmara,JOENIA WAPICHANA,REDE,RR,joeniac,proprio,0,0,0
+204469,câmara,MANUEL MARCOS,PRB,AC,ascomdrmanuel,proprio,0,0,0
+204471,câmara,MARA ROCHA,PSDB,AC,NA,proprio,0,0,0
+204472,câmara,JOSÉ MEDEIROS,PODE,MT,JoseMedeirosMT,proprio,556,182668,65
+204473,câmara,GENERAL GIRÃO,PSL,RN,GeneralGirao,proprio,138,169549,366
+204474,câmara,JUAREZ COSTA,MDB,MT,NA,proprio,0,0,0
+204475,câmara,OTACI NASCIMENTO,SOLIDARIEDADE,RR,NA,proprio,0,0,0
+204476,câmara,CHIQUINHO BRAZÃO,AVANTE,RJ,BrazaoChiquinho,proprio,8,10,1
+204477,câmara,FELÍCIO LATERÇA,PSL,RJ,NA,proprio,0,0,0
+204478,câmara,VINICIUS FARAH,MDB,RJ,Vinicius_Farah,proprio,0,0,0
+204479,câmara,NICOLETTI,PSL,RR,NA,proprio,0,0,0
+204480,câmara,ROGÉRIO CORREIA,PT,MG,RogerioCorreia_,proprio,598,269103,101
+204481,câmara,DR. JAZIEL,PR,CE,NA,proprio,0,0,0
+204482,câmara,EUCLYDES PETTERSEN,PSC,MG,EuclydesPetter,proprio,7,5,0
+204483,câmara,VILSON DA FETAEMG,PSB,MG,NA,proprio,0,0,0
+204484,câmara,GENERAL PETERNELLI,PSL,SP,GenPeternelli,proprio,120,7003,15
+204485,câmara,LUIZ CARLOS MOTTA,PR,SP,lcm_motta,proprio,0,0,0
+204486,câmara,MAURO BENEVIDES FILHO,PDT,CE,deputadomaurobf,proprio,0,0,0
+204487,câmara,CAPITÃO WAGNER,PROS,CE,capitao_wagner,proprio,58,790,14
+204488,câmara,CÉLIO STUDART,PV,CE,CelioStudart,proprio,23,244,11
+204489,câmara,ROBÉRIO MONTEIRO,PDT,CE,NA,proprio,0,0,0
+204490,câmara,CHARLLES EVANGELISTA,PSL,MG,charllesevg,proprio,44,104,2
+204491,câmara,GILBERTO ABRAMO,PRB,MG,gilbertoabramo,proprio,15,11,0
+204492,câmara,PAULO GUEDES,PT,MG,deppauloguedes,proprio,23,359,7
+204494,câmara,FRED COSTA,PATRI,MG,fredcosta5133,proprio,0,0,0
+204495,câmara,AIRTON FALEIRO,PT,PA,FALEIRO13,proprio,0,0,0
+204496,câmara,CELSO SABINO,PSDB,PA,celso_sabino,proprio,113,2997,18
+204497,câmara,JÚNIOR FERRARI,PSD,PA,NA,proprio,0,0,0
+204498,câmara,OLIVAL MARQUES,DEM,PA,OLIVALMARQUES,proprio,40,69,1.5
+204499,câmara,CÁSSIO ANDRADE,PSB,PA,Cassio_4011,proprio,63,129,2
+204500,câmara,EDUARDO COSTA,PTB,PA,dep_eduardo,proprio,39,75,2
+204501,câmara,ALENCAR SANTANA BRAGA,PT,SP,AlencarBraga13,proprio,346,47967,19
+204502,câmara,JÚNIOR BOZZELLA,PSL,SP,juniorbozzella,proprio,58,457,6
+204503,câmara,ALEXANDRE PADILHA,PT,SP,padilhando,proprio,485,89409,58
+204504,câmara,CEZINHA DE MADUREIRA,PSD,SP,Czmadureira,proprio,10,32,4
+204505,câmara,VAVÁ MARTINS,PRB,PA,VavaMartins,proprio,0,0,0
+204506,câmara,MARCOS PEREIRA,PRB,SP,marcospereira04,proprio,137,4107,24
+204507,câmara,CARLA ZAMBELLI,PSL,SP,CarlaZambelli17,proprio,776,2822907,886
+204508,câmara,IGOR TIMO,PODE,MG,oficialigortimo,proprio,98,102,1
+204509,câmara,ÁUREA CAROLINA,PSOL,MG,aureacarolinax,proprio,440,145508,67
+204510,câmara,FRANCO CARTAFINA,PHS,MG,FrancoCartafina,proprio,10,78,9
+204511,câmara,DAVID SOARES,DEM,SP,DavidLouve,proprio,0,0,0
+204512,câmara,DELEGADO MARCELO FREITAS,PSL,MG,NA,proprio,0,0,0
+204513,câmara,GUIGA PEIXOTO,PSL,SP,zeguilherme_10,proprio,0,0,0
+204514,câmara,CORONEL TADEU,PSL,SP,CoronelTadeu,proprio,228,9444,11
+204515,câmara,ANDRÉ JANONES,AVANTE,MG,AndreJanonesAdv,proprio,61,1643,13
+204516,câmara,ALEXIS FONTEYNE,NOVO,SP,AlexisFonteyne,proprio,201,29860,68
+204517,câmara,ZÉ VITOR,PMN,MG,NA,proprio,0,0,0
+204518,câmara,DR. FREDERICO,PATRI,MG,DrFredericoMG,proprio,39,71,2
+204519,câmara,TIAGO MITRAUD,NOVO,MG,TiagoMitraud,proprio,305,30650,15
+204520,câmara,CABO JUNIO AMARAL,PSL,MG,cabojunioamaral,proprio,38,21803,211.5
+204521,câmara,ABOU ANNI,PSL,SP,abouannipv,proprio,0,0,0
+204522,câmara,MARCO BERTAIOLLI,PSD,SP,MarcoBertaiolli,proprio,43,335,7
+204523,câmara,LUCAS GONZALEZ,NOVO,MG,lucasvgonzalez,proprio,131,5259,15
+204524,câmara,PINHEIRINHO,PP,MG,NA,proprio,0,0,0
+204525,câmara,ROSANA VALLE,PSB,SP,RosanaValle40,proprio,0,0,0
+204526,câmara,LUIZ PHILIPPE DE ORLEANS E BRAGANÇA,PSL,SP,lpbragancabr,proprio,88,996508,10156.5
+204527,câmara,GENINHO ZULIANI,DEM,SP,geninhozuliani,proprio,76,228,3
+204528,câmara,ADRIANA VENTURA,NOVO,SP,adrianasounovo,proprio,99,6701,25
+204529,câmara,POLICIAL KATIA SASTRE,PR,SP,katiasastre,proprio,0,0,0
+204530,câmara,RODRIGO AGOSTINHO,PSB,SP,rodrigoagost,proprio,51,585,6
+204531,câmara,GUILHERME DERRITE,PP,SP,capitaoderrite,proprio,85,9202,47
+204532,câmara,VINICIUS POIT,NOVO,SP,ViniciusPoit,proprio,138,105197,509.5
+204533,câmara,IDILVAN ALENCAR,PDT,CE,idilvan,proprio,0,0,0
+204534,câmara,TABATA AMARAL,PDT,SP,tabataamaralsp,proprio,189,101559,167
+204535,câmara,SÂMIA BOMFIM,PSOL,SP,samiabomfim,proprio,522,528253,256.5
+204536,câmara,KIM KATAGUIRI,DEM,SP,kimpkat,proprio,189,934180,3001
+204537,câmara,ENRICO MISASI,PV,SP,enricomisasi,proprio,0,0,0
+204538,câmara,PAULO BENGTSON,PTB,PA,PauloBengtson,proprio,23,48,2
+204539,câmara,HERCÍLIO COELHO DINIZ,MDB,MG,NA,proprio,0,0,0
+204540,câmara,MARIA ROSAS,PRB,SP,depmariarosas,proprio,25,161,6
+204541,câmara,EDUARDO BISMARCK,PDT,CE,eduardobismarck,proprio,101,235,2
+204542,câmara,DENIS BEZERRA,PSB,CE,denisbezerra,proprio,5,20,3
+204543,câmara,LUIZ FLÁVIO GOMES,PSB,SP,professorLFG,proprio,73,49991,243
+204544,câmara,ALEXANDRE FROTA,PSL,SP,alefrotabrasil,proprio,830,320063,106
+204545,câmara,ALÊ SILVA,PSL,MG,oficialalesilva,proprio,39,186,4
+204546,câmara,JOICE HASSELMANN,PSL,SP,joicehasselmann,proprio,457,2194507,3042
+204547,câmara,LÉO MOTTA,PSL,MG,NA,proprio,0,0,0
+204548,câmara,HEITOR FREIRE,PSL,CE,HeitorFreireCE,proprio,59,28430,61
+204549,câmara,AJ ALBUQUERQUE,PP,CE,NA,proprio,0,0,0
+204550,câmara,JÚNIOR MANO,PR,CE,jrmano_,proprio,0,0,0
+204551,câmara,BOSCO SARAIVA,SOLIDARIEDADE,AM,boscosaraiva,proprio,133,2296,17
+204552,câmara,EDUARDO BRAIDE,PMN,MA,SouEduardo33,proprio,0,0,0
+204553,câmara,PASTOR SARGENTO ISIDÓRIO,AVANTE,BA,sgtisidorio,proprio,0,0,0
+204554,câmara,ABÍLIO SANTANA,PR,BA,AbilioSantana_,proprio,0,0,0
+204555,câmara,JOSÉ RICARDO,PT,AM,ZeRicardoAM,proprio,216,3042,7
+204556,câmara,MARCELO RAMOS,PR,AM,marceloramosam,proprio,555,4947,3
+204557,câmara,SIDNEY LEITE,PSD,AM,sidneyleite_,proprio,78,126,1
+204558,câmara,MARCELO NILO,PSB,BA,depmarcelonilo,proprio,8,53,6
+204559,câmara,ZÉ NETO,PT,BA,depzeneto,proprio,27,190,5
+204560,câmara,ADOLFO VIANA,PSDB,BA,AdolfoViana_,proprio,0,0,0
+204561,câmara,BIRA DO PINDARÉ,PSB,MA,BiradoPindare,proprio,264,3344,9
+204562,câmara,EDILÁZIO JÚNIOR,PSD,MA,DepEdilazioJr,proprio,0,0,0
+204563,câmara,JOSIMAR MARANHÃOZINHO,PR,MA,josimarPR22,proprio,38,221,5
+204564,câmara,IGOR KANNÁRIO,PHS,BA,NA,proprio,0,0,0
+204565,câmara,PROFESSORA DAYANE PIMENTEL,PSL,BA,deppimentel,proprio,243,38633,45
+204566,câmara,MARRECA FILHO,PATRI,MA,depmarrecafilho,proprio,31,21,0
+204567,câmara,RAIMUNDO COSTA,PRP,BA,NA,proprio,0,0,0
+204569,câmara,DELEGADO PABLO,PSL,AM,DelegadoPablo_,proprio,94,769,7
+204570,câmara,PASTOR GILDENEMYR,PMN,MA,DGildenemyr,proprio,16,48,3
+204571,câmara,ALEX SANTANA,PDT,BA,NA,proprio,0,0,0
+204572,câmara,CAPITÃO ALBERTO NETO,PRB,AM,capalbertoneto,proprio,82,587,7
+204573,câmara,OTTO ALENCAR FILHO,PSD,BA,ottoalencarfilh,proprio,0,0,0
+204574,câmara,JUNIOR LOURENÇO,PR,MA,junior_lourenco,proprio,0,0,0
+204575,câmara,GIL CUTRIM,PDT,MA,gilcutrim,proprio,106,539,4
+204576,câmara,JOÃO ROMA,PRB,BA,joaoromaneto,proprio,92,750,8
+205476,câmara,CHARLES FERNANDES,PSD,BA,CharlesGbi,proprio,0,0,0
+205535,câmara,PATRICIA FERRAZ,PR,AP,patricialferraz,proprio,0,0,0
+205548,câmara,DAVID MIRANDA,PSOL,RJ,davidmirandario,proprio,134,1129205,3478.5
+205550,câmara,JORGE BRAZ,PRB,RJ,Jorge_Braz,proprio,156,135,1
+205863,câmara,MARCELO BRUM,PSL,RS,NA,proprio,0,0,0
+205865,câmara,REINHOLD STEPHANES JUNIOR,PSD,PR,NA,proprio,0,0,0
+206231,câmara,TED CONTI,PSB,ES,NA,proprio,0,0,0
+207176,câmara,BIA CAVASSA,PSDB,MS,BiaCavassa,proprio,3,6,2
+207309,câmara,ENÉIAS REIS,PSL,MG,DepEneiasReis,proprio,0,0,0
+22,senado,ESPERIDIÃO AMIN,PP,SC,esperidiaoamin_,proprio,51,1503,13
+2331,senado,ROSE DE FREITAS,PODE,ES,senadorarose,proprio,145,824,1
+285,senado,MARCIO BITTAR,MDB,AC,marciombittar,proprio,51,206,2
+3361,senado,JOSÉ MARANHÃO,MDB,PB,josemaranhaopb,proprio,3,0,0
+3396,senado,TASSO JEREISSATI,PSDB,CE,tassojereissati,proprio,59,13962,21
+345,senado,FLÁVIO ARNS,REDE,PR,ArnsFlavio,proprio,35,812,10
+35,senado,JADER BARBALHO,MDB,PA,jader_barbalho,proprio,84,3355,34
+374,senado,PAULO ROCHA,PT,PA,PauloRocha_13,proprio,360,4853,3
+3777,senado,EDUARDO GOMES,MDB,TO,EduardoGomesTO,proprio,6,118,19.5
+3806,senado,ZEQUINHA MARINHO,PSC,PA,ZequinhaMarinho,proprio,28,100,3
+3830,senado,DAVI ALCOLUMBRE,DEM,AP,davialcolumbre,proprio,186,368369,867.5
+4525,senado,FERNANDO COLLOR,PROS,AL,Collor,proprio,21,903,30
+4531,senado,JAYME CAMPOS,DEM,MT,NA,proprio,0,0,0
+4545,senado,JARBAS VASCONCELOS,MDB,PE,Jarbas156,proprio,14,32,2
+4560,senado,SÉRGIO PETECÃO,PSD,AC,senadorpetecao,proprio,171,4831,1
+470,senado,CHICO RODRIGUES,DEM,RR,NA,proprio,0,0,0
+475,senado,CONFÚCIO MOURA,MDB,RO,confuciomoura,proprio,132,992,6
+4770,senado,IZALCI LUCAS,PSDB,DF,IzalciLucas,proprio,139,6987,9
+4981,senado,ACIR GURGACZ,PDT,RO,acirgurgacz,proprio,14,127,3.5
+4994,senado,EDUARDO BRAGA,MDB,AM,EduardoBraga_AM,proprio,139,418,2
+5008,senado,HUMBERTO COSTA,PT,PE,senadorhumberto,proprio,846,382662,151
+5012,senado,RANDOLFE RODRIGUES,REDE,AP,randolfeap,proprio,257,228451,413
+5236,senado,REGUFFE,S/Partido,DF,Reguffe,proprio,21,35914,1210
+5322,senado,ROMÁRIO,PODE,RJ,RomarioOnze,proprio,138,102670,141
+5350,senado,JORGINHO MELLO,PR,SC,jorginhomello,proprio,20,183,6.5
+5352,senado,ROGÉRIO CARVALHO,PT,SE,SenadorRogerio,proprio,114,15624,16
+5376,senado,MARA GABRILLI,PSDB,SP,maragabrilli,proprio,310,45305,1
+5385,senado,IRAJÁ,PSD,TO,iraja555,proprio,37,465,10
+5411,senado,WEVERTON,PDT,MA,wevertonrocha,proprio,288,6080,13
+5422,senado,MARCOS ROGÉRIO,DEM,RO,MarcosRogerio,proprio,6,653,27.5
+5502,senado,PLÍNIO VALÉRIO,PSDB,AM,PlinioValerio45,proprio,344,3243,3
+5523,senado,OTTO ALENCAR,PSD,BA,ottoalencar,proprio,62,1325,11.5
+5525,senado,OMAR AZIZ,PSD,AM,OmarAzizPSD,proprio,23,480,9
+5527,senado,SIMONE TEBET,MDB,MS,SimoneTebetms,proprio,44,133651,244.5
+5529,senado,ANTONIO ANASTASIA,PSDB,MG,Anastasia,proprio,101,28338,52
+5531,senado,ELMANO FÉRRER,PODE,PI,elmanoferrer,proprio,137,1009,5
+5533,senado,LASIER MARTINS,PODE,RS,lasiermartins,proprio,723,240003,5
+5535,senado,TELMÁRIO MOTA,PROS,RR,TelmarioMotaRR,proprio,202,468,1
+5537,senado,DÁRIO BERGER,MDB,SC,darioberger,proprio,77,1057,6
+5540,senado,FERNANDO BEZERRA COELHO,MDB,PE,fbezerracoelho,proprio,10,440,7
+5557,senado,MAILZA GOMES,PP,AC,MailzaGomes,proprio,32,153,4
+5585,senado,LUIZ DO CARMO,MDB,GO,_luizdocarmo,proprio,86,409,3
+5627,senado,JEAN PAUL PRATES,PT,RN,jpprates,proprio,196,5679,13
+5666,senado,MAJOR OLIMPIO,PSL,SP,majorolimpio,proprio,163,614850,2393
+5718,senado,ELIZIANE GAMA,PPS,MA,elizianegama,proprio,107,4351,23
+5732,senado,RODRIGO PACHECO,DEM,MG,rpsenador,proprio,68,16011,95.5
+5748,senado,VENEZIANO VITAL DO RÊGO,PSB,PB,venezianovital,proprio,71,729,6
+5783,senado,ZENAIDE MAIA,PROS,RN,zenaidern,proprio,0,0,0
+581,senado,JAQUES WAGNER,PT,BA,jaqueswagner,proprio,126,28163,92
+5894,senado,FLÁVIO BOLSONARO,PSL,RJ,FlavioBolsonaro,proprio,35,715380,19126
+5895,senado,JORGE KAJURU,PSB,GO,SenadorKajuru,proprio,666,330267,91.5
+5899,senado,VANDERLAN CARDOSO,PP,GO,Vanderlan_VC,proprio,195,2784,10
+5905,senado,RODRIGO CUNHA,PSDB,AL,RodrigoCunhaAL,proprio,14,2494,66
+5924,senado,ORIOVISTO GUIMARÃES,PODE,PR,Sen_Oriovisto,proprio,63,2351,8
+5926,senado,LUCAS BARRETO,PSD,AP,LucasBarreto_AP,proprio,9,392,45
+5929,senado,SELMA ARRUDA,PSL,MT,SenadoraSelma,proprio,8,294,20.5
+5942,senado,MARCOS DO VAL,PPS,ES,marcosdoval,proprio,193,16158,18
+5953,senado,FABIANO CONTARATO,REDE,ES,ContaratoSenado,proprio,194,7766,21
+5959,senado,STYVENSON VALENTIM,PODE,RN,SenStyvenson,proprio,187,4367,17
+5967,senado,ANGELO CORONEL,PSD,BA,angelocoronel_,proprio,182,1329,4
+5973,senado,CID GOMES,PDT,CE,cidfgomes,proprio,1,581,581
+5976,senado,EDUARDO GIRÃO,PODE,CE,EduGiraoOficial,proprio,16,28885,436
+5979,senado,LEILA BARROS,PSB,DF,leiladovolei,proprio,113,7203,32
+5982,senado,ALESSANDRO VIEIRA,PPS,SE,sen_alessandro,proprio,92,38140,34
+5985,senado,NELSINHO TRAD,PSD,MS,nelsinhotrad,proprio,39,322,6
+5988,senado,SORAYA THRONICKE,PSL,MS,SorayaThronicke,proprio,265,97827,17
+5990,senado,CARLOS VIANA,PSD,MG,carlosaviana,proprio,265,45589,47
+5998,senado,DANIELLA RIBEIRO,PP,PB,soudaniella111,proprio,60,1227,11
+6027,senado,MECIAS DE JESUS,PRB,RR,meciasdejesus,proprio,85,325,3
+66179,câmara,NORMA AYUB,DEM,ES,NA,proprio,0,0,0
+66828,câmara,FAUSTO PINATO,PP,SP,faustopinato,proprio,0,0,0
+67138,câmara,IRACEMA PORTELLA,PP,PI,iracemaportela,proprio,0,0,0
+677,senado,ROBERTO ROCHA,PSDB,MA,SigaRoberto_,proprio,141,19610,15
+68720,câmara,FÁBIO HENRIQUE,PDT,SE,FabioHenriqueSE,proprio,17,112,5
+69871,câmara,BACELAR,PODE,BA,DeputadoBacelar,proprio,1682,5712,2
+70,senado,RENAN CALHEIROS,MDB,AL,renancalheiros,proprio,47,65126,496
+72442,câmara,FELIPE CARRERAS,PSB,PE,felipecarreras,proprio,30,525,13
+73433,câmara,ARLINDO CHINAGLIA,PT,SP,achinaglia,proprio,7,69,13
+73441,câmara,CELSO RUSSOMANNO,PRB,SP,celsorussomanno,proprio,43,528,11
+73460,câmara,GUSTAVO FRUET,PDT,PR,gustavofruet,proprio,205,5554,18
+73466,câmara,RUBENS BUENO,PPS,PR,rubensbuenopps,proprio,91,1923,9
+73482,câmara,HENRIQUE FONTANA,PT,RS,henriquefontana,proprio,0,0,0
+73486,câmara,POMPEO DE MATTOS,PDT,RS,PompeodeMattos,proprio,267,5607,8
+73531,câmara,IVAN VALENTE,PSOL,SP,ivanvalente,proprio,0,0,0
+73586,câmara,JÚLIO DELGADO,PSB,MG,depjuliodelgado,proprio,0,0,0
+73604,câmara,RUI FALCÃO,PT,SP,rfalcao13,proprio,63,27549,170
+73692,câmara,OSMAR TERRA,MDB,RS,osmarterra,proprio,0,0,0
+73696,câmara,ANGELA AMIN,PP,SC,angelaamin11,proprio,0,0,0
+73701,câmara,BENEDITA DA SILVA,PT,RJ,dasilvabenedita ‏,proprio,0,0,0
+73772,câmara,HERMES PARCIANELLO,MDB,PR,parcianello,proprio,0,0,0
+73788,câmara,RICARDO BARROS,PP,PR,RicardoBarrosPP,proprio,17,210,6
+73801,câmara,RENILDO CALHEIROS,PCdoB,PE,renildo,proprio,39,117,2
+73808,câmara,SÉRGIO BRITO,PSD,BA,sergiobritoBA,proprio,0,0,0
+73891,câmara,DARCÍSIO PERONDI,MDB,RS,darcisioperondi,proprio,26,28,0.5
+739,senado,CIRO NOGUEIRA,PP,PI,ciro_nogueira,proprio,89,3293,9
+73943,câmara,PERPÉTUA ALMEIDA,PCdoB,AC,perpetua_acre,proprio,85,1364,6
+74043,câmara,WELLINGTON ROBERTO,PR,PB,wr22,proprio,0,0,0
+74044,câmara,WILSON SANTIAGO,PTB,PB,WilsonSantiago_,proprio,2,10,5
+74052,câmara,BOSCO COSTA,PR,SE,BoscoCosta1234,proprio,0,0,0
+74057,câmara,ALICE PORTUGAL,PCdoB,BA,Alice_Portugal,proprio,290,9732,10.5
+74060,câmara,DANIEL ALMEIDA,PCdoB,BA,Daniel_PCdoB‏,proprio,0,0,0
+74075,câmara,ELCIONE BARBALHO,MDB,PA,elcionepmdb,proprio,35,531,10
+74079,câmara,JOSÉ PRIANTE,MDB,PA,priante,proprio,0,0,0
+74090,câmara,ÁTILA LINS,PP,AM,NA,proprio,0,0,0
+74141,câmara,JOSIAS GOMES,PT,BA,josiasgomesba,proprio,173,174,1
+74156,câmara,LEONARDO MONTEIRO,PT,MG,depleomonteiro,proprio,154,3166,9
+74158,câmara,MÁRIO HERINGER,PDT,MG,mario_heringer,proprio,163,1703,3
+74159,câmara,ODAIR CUNHA,PT,MG,odaircunha_,proprio,9,46,4
+74160,câmara,PATRUS ANANIAS,PT,MG,Patrus_Ananias,proprio,216,3843,10
+74161,câmara,REGINALDO LOPES,PT,MG,ReginaldoLopes,proprio,486,36668,22
+742,senado,MARCELO CASTRO,MDB,PI,MarceloCastroPI,proprio,19,24,1
+74262,câmara,CARLOS SAMPAIO,PSDB,SP,carlossampaio_,proprio,37,7996,149
+74270,câmara,GILBERTO NASCIMENTO,PSC,SP,gilbertopsc20,proprio,0,0,0
+74273,câmara,JEFFERSON CAMPOS,PSB,SP,DepJefferson,proprio,35,71,2
+74283,câmara,VICENTINHO,PT,SP,VICENTINHOPT,proprio,98,5804,21
+74299,câmara,LEÔNIDAS CRISTINO,PDT,CE,leonidas9099,proprio,0,0,0
+74305,câmara,ROBERTO PESSOA,PSDB,CE,RobertoPessoaCE,proprio,0,0,0
+74317,câmara,JÚLIO CESAR,PSD,PI,DepJulioCesarPI,proprio,64,168,2
+74352,câmara,NILSON PINTO,PSDB,PA,DepNilsonPinto,proprio,0,0,0
+74356,câmara,SILAS CÂMARA,PRB,AM,SilasCamaraAM‏,proprio,0,0,0
+74366,câmara,JOÃO CAMPOS,PRB,GO,depjoaocampos,proprio,0,0,0
+74371,câmara,RUBENS OTONI,PT,GO,RubensOtoni,proprio,127,2554,11
+74374,câmara,GERALDO RESENDE,PSDB,MS,dep_geraldo,proprio,7,26,3
+74376,câmara,VANDER LOUBET,PT,MS,vanderloubet,proprio,310,406,0
+74383,câmara,GIACOBO,PR,PR,fernandogiacobo,proprio,8,6,0.5
+74398,câmara,MARIA DO ROSÁRIO,PT,RS,mariadorosario,proprio,258,343545,680.5
+74399,câmara,ONYX LORENZONI,DEM,RS,onyxlorenzoni,proprio,63,477622,4609
+74400,câmara,PAULO PIMENTA,PT,RS,deputadofederal,proprio,0,0,0
+74419,câmara,GONZAGA PATRIOTA,PSB,PE,NA,proprio,0,0,0
+74439,câmara,WOLNEY QUEIROZ,PDT,PE,WolneyQueirozM,proprio,11,1476,15
+74459,câmara,ÁTILA LIRA,PSB,PI,deputadoatila,proprio,0,0,0
+74467,câmara,DAMIÃO FELICIANO,PDT,PB,drdamiao,proprio,0,0,0
+74471,câmara,ANDRÉ DE PAULA,PSD,PE,NA,proprio,0,0,0
+74478,câmara,LUCIANO BIVAR,PSL,PE,Bivar1717,proprio,0,0,0
+74537,câmara,CLAUDIO CAJADO,PP,BA,claudio_cajado,proprio,0,0,0
+74554,câmara,JOSÉ ROCHA,PR,BA,joserocha_,proprio,0,0,0
+74571,câmara,NELSON PELLEGRINO,PT,BA,nelsonpelegrino,proprio,27,476,9
+74585,câmara,LINCOLN PORTELA,PR,MG,lincoln_portela,proprio,5,319,2
+74646,câmara,AÉCIO NEVES,PSDB,MG,AecioNeves,proprio,0,0,0
+74655,câmara,EDUARDO BARBOSA,PSDB,MG,eduardobarbosa_,proprio,77,125,1
+74693,câmara,RODRIGO MAIA,DEM,RJ,DepRodrigomaia,proprio,0,0,0
+74749,câmara,MAURO LOPES,MDB,MG,depmaurolopes,proprio,0,0,0
+74784,câmara,LUIZA ERUNDINA,PSOL,SP,luizaerundina,proprio,319,77195,42
+74848,câmara,JANDIRA FEGHALI,PCdoB,RJ,jandira_feghali,proprio,453,947309,629
+751,senado,AROLDE DE OLIVEIRA,PSD,RJ,AroldeOliveira,proprio,154,12924,38.5
+75431,câmara,MAURÍCIO DZIEDRICKI,PTB,RS,mauricioptbrs,proprio,3,16,5
+76874,câmara,MARCELO FREIXO,PSOL,RJ,MarceloFreixo,proprio,897,1597682,68
+81055,câmara,MÁRCIO JERRY,PCdoB,MA,marciojerry,proprio,527,22070,23
+81297,câmara,DRA. SORAYA MANATO,PSL,ES,DraManato,proprio,25,225,7
+825,senado,PAULO PAIM,PT,RS,paulopaim,proprio,79,61566,553
+90,senado,JOSÉ SERRA,PSDB,SP,joseserra_,proprio,27,7470,51
+90201,câmara,PEDRO AUGUSTO BEZERRA,PTB,CE,NA,proprio,0,0,0
+90842,câmara,SANTINI,PTB,RS,dep_santini,proprio,61,923,12
+92102,câmara,LEUR LOMANTO JÚNIOR,DEM,BA,LeurLomantoJr,proprio,8,13,1.5
+92346,câmara,EDUARDO BOLSONARO,PSL,SP,bolsonarosp,proprio,0,0,0
+92699,câmara,FERNANDO MONTEIRO,PP,PE,fmonteirope,proprio,0,0,0
+92776,câmara,STEFANO AGUIAR,PSD,MG,depstefano,proprio,5,20,5
+93083,câmara,CACÁ LEÃO,PP,BA,CacaLeao‏,proprio,0,0,0
+945,senado,ALVARO DIAS,PODE,PR,alvarodias_,proprio,878,638454,258.5
+98057,câmara,LAFAYETTE DE ANDRADA,PRB,MG,dep_lafayette,proprio,39,100,2

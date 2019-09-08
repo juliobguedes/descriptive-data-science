@@ -1,0 +1,188 @@
+---
+title: "Comparando mecanismos para jukebox sociais"
+output:
+    html_document:
+    df_print: paged
+theme: sandstone
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggbeeswarm)
+theme_set(theme_bw())
+
+library(boot)
+library(broom)
+
+knitr::opts_chunk$set(tidy = FALSE,
+                      fig.width = 6,
+                      fig.height = 5)
+
+```
+
+##0. Os Dados
+```{r read}
+dados = read_csv(here::here("data/satisfacoes.csv"), 
+                 col_types = "cdcc") 
+
+glimpse(dados)
+```
+
+##1. Plotar amostra
+```{r}
+thetas <- dados %>%
+    group_by(scenario) %>%
+    summarise(media = mean(satisfaction), quantidade = n())
+
+thetas
+
+dados %>%
+    ggplot(mapping = aes(x = scenario, y = satisfaction, color = scenario)) + 
+    geom_quasirandom() +
+    geom_point(data = thetas, aes(x = scenario, y = media), colour = "bisque4", size = 3) +
+    scale_color_brewer(palette = "Set2") +
+    theme(legend.position = "none")
+```
+
+Acima, é possivel observar que os dados de jukebox sociais estão demonstrados em um gráfico de dispersão e se subdividem em 5 **scenarios**. Cada um deles, possuem uma amostra de 23 pessoas que representa a população com média de:
+
+-baseline:	2.130435		
+-combined:	4.043478		
+-like/dislike:	3.652174	
+-skip:	2.521739		
+-up/downvoting:	4.391304
+
+##2. Fazer bootstrap da amostra
+
+```{r}
+theta_scenario <- function(df, i) {
+    df %>% slice(i) %>%
+        group_by(scenario) %>% 
+        summarise(media = mean(satisfaction)) %>%
+        pull(media)
+}
+
+boot_base <- dados %>%
+    filter(scenario == "baseline") %>% 
+    boot(statistic = theta_scenario, R = 4000) %>%
+    tidy(conf.low = 0.95, conf.int = TRUE) %>% 
+    mutate(scenario = "baseline")
+boot_like <- dados %>%
+    filter(scenario == "like/dislike") %>% 
+    boot(statistic = theta_scenario, R = 4000) %>%
+    tidy(conf.low = 0.95, conf.int = TRUE) %>% 
+    mutate(scenario = "like/dislike")
+boot_combined <- dados %>%
+    filter(scenario == "combined") %>% 
+    boot(statistic = theta_scenario, R = 4000) %>%
+    tidy(conf.low = 0.95, conf.int = TRUE) %>% 
+    mutate(scenario = "combined")
+boot_skip <- dados %>%
+    filter(scenario == "skip") %>% 
+    boot(statistic = theta_scenario, R = 4000) %>%
+    tidy(conf.low = 0.95, conf.int = TRUE) %>% 
+    mutate(scenario = "skip")
+boot_updown <- dados %>%
+    filter(scenario == "up/downvoting") %>% 
+    boot(statistic = theta_scenario, R = 4000) %>%
+    tidy(conf.low = 0.95, conf.int = TRUE) %>% 
+    mutate(scenario = "up/downvoting")
+
+bootdf <- rbind(boot_base, boot_like, boot_combined, boot_skip, boot_updown)
+bootdf
+```
+
+Com os dados e as médias calculadas, fomos capazes através da metodologia de **bootstrap** estimar os valores dos diferentes **scenarios**. Nesse caso, utilizamos 95% de confiabilidade para calcular o intervalo.
+
+-baseline: [1.869565, 2.391304]		
+-combined:	[3.434783,	3.869565]		
+-like/dislike: [3.826087,	4.239130]		
+-skip:	[2.326087,	2.717391]		
+-up/downvoting:	[4.217391,	4.586957]
+
+##3. Plotar comparação de intervalos de confiança
+
+```{r}
+bootdf %>%
+    group_by(scenario) %>%
+    ggplot(mapping = aes(x = scenario, ymin = conf.low, ymax = conf.high, color=scenario)) + 
+    geom_errorbar(width = .1) +
+    geom_point(mapping = aes(x = scenario, y = statistic)) +
+    scale_color_brewer(palette = "Set2") +
+    theme(legend.position = "none")
+```
+
+Através do gráfico de faixa de erro, podemos perceber as informações de forma mais direcionada.
+
+##4. Repetindo processos com diferenças
+
+```{r}
+theta_comparacao1 <- function(d, i) {
+    agrupado = d %>% 
+        slice(i) %>% 
+        group_by(scenario) %>% 
+        summarise(media = mean(satisfaction))
+    a = agrupado %>% filter(scenario == "baseline") %>% pull(media)
+    b = agrupado %>% filter(scenario == "like/dislike") %>% pull(media)
+    a - b
+}
+
+theta_comparacao2 <- function(d, i) {
+    agrupado = d %>% 
+        slice(i) %>% 
+        group_by(scenario) %>% 
+        summarise(media = mean(satisfaction))
+    a = agrupado %>% filter(scenario == "baseline") %>% pull(media)
+    b = agrupado %>% filter(scenario == "up/downvoting") %>% pull(media)
+    a - b
+}
+
+theta_comparacao3 <- function(d, i) {
+    agrupado = d %>% 
+        slice(i) %>% 
+        group_by(scenario) %>% 
+        summarise(media = mean(satisfaction))
+    a = agrupado %>% filter(scenario == "up/downvoting") %>% pull(media)
+    b = agrupado %>% filter(scenario == "like/dislike") %>% pull(media)
+    a - b
+}
+
+base_like <- dados %>% 
+    boot(statistic = theta_comparacao1, R = 4000) %>%
+    tidy(conf.low = 0.95, conf.int = TRUE) %>% 
+    mutate(scenario = "baseline - like/dislike")
+base_updown <- dados %>%
+    boot(statistic = theta_comparacao2, R = 4000) %>%
+    tidy(conf.low = 0.95, conf.int = TRUE) %>% 
+    mutate(scenario = "baseline - up/downvoting")
+updown_like <- dados %>%
+    boot(statistic = theta_comparacao3, R = 4000) %>%
+    tidy(conf.low = 0.95, conf.int = TRUE) %>% 
+    mutate(scenario = "up/downvoting - like/dislike")
+
+diferencas <- rbind(base_like, base_updown, updown_like)
+diferencas
+```
+
+Para entender o efeito real que **scenarios** tiveram na satisfação do cliente da jukebox, calculamos quanto a satisfação melhorou em três situações diferentes e aplicamos o **bootstrap** novamente. Os resultados foram:
+
+-baseline - like/dislike: [-1.8713004,	-1.184540]		
+-baseline - up/downvoting: [-2.5826091,	-1.939398]		
+-up/downvoting - like/dislike: [0.4538576,	1.034711]	
+
+
+##5. Plotando diferenças
+
+```{r, message = FALSE}
+diferencas %>% ggplot(mapping = aes(x=scenario, y=statistic, color=scenario)) + 
+    geom_line() +
+    geom_point()+
+    geom_errorbar(aes(ymin=conf.low, ymax=conf.high), width=.2) +
+    scale_color_brewer(palette = "Set2") +
+    theme(legend.position = "none")
+```
+
+Através do gráfico de faixa de erro, podemos perceber as informações de forma mais direcionada.
+
+
+

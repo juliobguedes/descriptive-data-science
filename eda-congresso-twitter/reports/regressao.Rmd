@@ -1,0 +1,301 @@
+---
+title: "Um Tweet de Lei"
+output:
+  html_document:
+    df_print: paged
+theme: sandstone
+---
+
+## Import das bibliotecas
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggrepel)
+library(gridExtra)
+library(plotly)
+library(modelr)
+library(broom)
+source(here::here("code/lib.R"))
+theme_set(theme_bw())
+```
+
+## Import dos dados
+
+```{r read}
+atividade = read_projectdata()
+atividade_real <- atividade %>% filter(!is.na(seguidores))
+
+atividade_log <- atividade_real %>% 
+  mutate(engaj_total_log = log10(engaj_total + 1),
+         n_proprio_log = log10(n_proprio + 1),
+         n_retweet_log = log10(n_retweet + 1),
+         engaj_mediano_log = log10(engaj_mediano + 1),
+         seguidores_log = log10(seguidores + 1),
+         segue_log = log10(segue + 1))
+```
+
+## Análise dos dados
+
+```{r fig.width=12, fig.height=6}
+
+p1 <- atividade_real %>%
+    ggplot(mapping=aes(x = n_proprio, y=engaj_total)) + 
+    geom_point()
+
+p2 <- atividade_log %>% 
+    ggplot(mapping = aes(x = n_proprio_log, y = engaj_total_log)) +
+    geom_point()
+
+grid.arrange(p1, p2, ncol = 2)
+```
+
+```{r fig.width=12, fig.height=6}
+
+p3 <- atividade_real %>%
+    ggplot(mapping=aes(x = n_proprio, y = engaj_mediano)) + 
+    geom_point()
+
+p4 <- atividade_log %>% 
+    ggplot(mapping = aes(x = n_proprio_log, y = engaj_mediano_log)) +
+    geom_point()
+
+grid.arrange(p3, p4, ncol = 2)
+```
+
+```{r fig.width=12, fig.height=6}
+p5 <- atividade_real %>%
+    ggplot(mapping=aes(x = n_retweet, y=engaj_total)) + 
+    geom_point()
+  
+p6 <- atividade_log %>% 
+    ggplot(mapping = aes(x = n_retweet_log, y = engaj_total_log)) +
+    geom_point()
+
+grid.arrange(p5, p6, ncol = 2)
+```
+
+```{r fig.width=12, fig.height=6}
+
+p7 <- atividade_real %>%
+    ggplot(mapping=aes(x = n_retweet, y = engaj_mediano)) + 
+    geom_point()
+
+p8 <- atividade_log %>% 
+    ggplot(mapping = aes(x = n_retweet_log, y = engaj_mediano_log)) +
+    geom_point()
+
+grid.arrange(p7, p8, ncol = 2)
+```
+
+```{r fig.width=12, fig.height=6}
+
+p9 <- atividade_real %>%
+    ggplot(mapping=aes(x = seguidores, y = engaj_total)) + 
+    geom_point()
+
+p10 <- atividade_log %>% 
+    ggplot(mapping = aes(x = seguidores_log, y = engaj_total_log)) +
+    geom_point()
+
+grid.arrange(p9, p10, ncol = 2)
+```
+
+```{r fig.width=12, fig.height=6}
+
+p11 <- atividade_real %>%
+    ggplot(mapping=aes(x = seguidores, y = engaj_mediano)) + 
+    geom_point()
+
+p12 <- atividade_log %>% 
+    ggplot(mapping = aes(x = seguidores_log, y = engaj_mediano_log)) +
+    geom_point()
+
+grid.arrange(p9, p10, ncol = 2)
+```
+
+```{r fig.width=12, fig.height=6}
+p13 <- atividade_real %>%
+    ggplot(mapping=aes(x = segue, y = engaj_total)) + 
+    geom_point()
+
+p14 <- atividade_log %>% 
+    ggplot(mapping = aes(x = segue_log, y = engaj_total_log)) +
+    geom_point()
+
+grid.arrange(p13, p14, ncol = 2)
+```
+
+```{r fig.width=12, fig.height=6}
+p15 <- atividade_real %>%
+    ggplot(mapping=aes(x = segue, y = engaj_mediano)) + 
+    geom_point()
+
+p16 <- atividade_log %>% 
+    ggplot(mapping = aes(x = segue_log, y = engaj_mediano_log)) +
+    geom_point()
+
+grid.arrange(p11, p12, ncol = 2)
+```
+
+## Regressões
+
+```{r, fig.width=12, fig.height=6}
+modelo_total <- lm(data = atividade_real, engaj_total ~ n_proprio)
+modelo_total_log <- lm(data = atividade_log, engaj_total_log ~ n_proprio_log)
+
+pp_total <- atividade_real %>% 
+  data_grid(n_proprio = seq_range(n_proprio, 10)) %>% 
+  add_predictions(modelo_total)
+
+pp_total_log <- atividade_log %>% 
+  data_grid(n_proprio_log = seq_range(n_proprio_log, 10)) %>% 
+  add_predictions(modelo_total_log)
+
+p1m <- p1 + geom_line(data = pp_total, aes(y = pred), colour="darkorchid")
+p2m <- p2 + geom_line(data = pp_total_log, aes(y = pred), colour="darkorchid")
+
+grid.arrange(p1m, p2m, ncol = 2)
+```
+
+```{r, fig.width=12, fig.height=6}
+modelo_total2 <- lm(data = atividade_log, engaj_total ~ n_retweet)
+modelo_total_log2 <- lm(data = atividade_log, engaj_total_log ~ n_retweet_log)
+
+pp_total2 <- atividade_real %>% 
+  data_grid(n_retweet = seq_range(n_retweet, 10)) %>% 
+  add_predictions(modelo_total2)
+
+pp_total_log2 <- atividade_log %>% 
+  data_grid(n_retweet_log = seq_range(n_retweet_log, 10)) %>% 
+  add_predictions(modelo_total_log2)
+
+p5m <- p5 + geom_line(data = pp_total2, aes(y = pred), colour="darkorchid")
+p6m <- p6 + geom_line(data = pp_total_log2, aes(y = pred), colour="darkorchid")
+
+grid.arrange(p5m, p6m, ncol = 2)
+```
+
+```{r, fig.width=12, fig.height=6}
+modelo_total3 <- lm(data = atividade_log, engaj_total ~ seguidores)
+modelo_total_log3 <- lm(data = atividade_log, engaj_total_log ~ seguidores_log)
+
+pp_total3 <- atividade_real %>% 
+  data_grid(seguidores = seq_range(seguidores, 10)) %>% 
+  add_predictions(modelo_total3)
+
+pp_total_log3 <- atividade_log %>% 
+  data_grid(seguidores_log = seq_range(seguidores_log, 10)) %>% 
+  add_predictions(modelo_total_log3)
+
+p9m <- p9 + geom_line(data = pp_total3, aes(y = pred), colour="darkorchid")
+p10m <- p10 + geom_line(data = pp_total_log3, aes(y = pred), colour="darkorchid")
+
+grid.arrange(p9m, p10m, ncol = 2)
+```
+
+```{r, fig.width=12, fig.height=6}
+modelo_total4 <- lm(data = atividade_log, engaj_total ~ segue)
+modelo_total_log4 <- lm(data = atividade_log, engaj_total_log ~ segue_log)
+
+pp_total4 <- atividade_real %>% 
+  data_grid(segue = seq_range(segue, 10)) %>% 
+  add_predictions(modelo_total4)
+
+pp_total_log4 <- atividade_log %>% 
+  data_grid(segue_log = seq_range(segue_log, 10)) %>% 
+  add_predictions(modelo_total_log4)
+
+p13m <- p13 + geom_line(data = pp_total4, aes(y = pred), colour="darkorchid")
+p14m <- p14 + geom_line(data = pp_total_log4, aes(y = pred), colour="darkorchid")
+
+grid.arrange(p13m, p14m, ncol = 2)
+```
+
+Agora, analisando o conjunto inteiro, temos:
+
+```{r}
+modelo_totalg <- lm(data = atividade_log, engaj_total_log ~ segue_log + seguidores_log + casa + n_proprio_log)
+tidy(modelo_totalg, conf.int = TRUE)
+glance(modelo_totalg)
+```
+
+
+### Regressão visando a mediana
+
+```{r, fig.width=12, fig.height=6}
+modelo_med <- lm(data = atividade_real, engaj_mediano ~ n_proprio)
+modelo_med_log <- lm(data = atividade_log, engaj_mediano_log ~ n_proprio_log)
+
+pp_med <- atividade_real %>% 
+  data_grid(n_proprio = seq_range(n_proprio, 10)) %>% 
+  add_predictions(modelo_med)
+
+pp_med_log <- atividade_log %>% 
+  data_grid(n_proprio_log = seq_range(n_proprio_log, 10)) %>% 
+  add_predictions(modelo_med_log)
+
+p3m <- p3 + geom_line(data = pp_med, aes(y = pred), colour="darkorchid")
+p4m <- p4 + geom_line(data = pp_med_log, aes(y = pred), colour="darkorchid")
+
+grid.arrange(p3m, p4m, ncol = 2)
+```
+
+```{r, fig.width=12, fig.height=6}
+modelo_med2 <- lm(data = atividade_log, engaj_mediano ~ n_retweet)
+modelo_med_log2 <- lm(data = atividade_log, engaj_mediano_log ~ n_retweet_log)
+
+pp_med2 <- atividade_real %>% 
+  data_grid(n_retweet = seq_range(n_retweet, 10)) %>% 
+  add_predictions(modelo_med2)
+
+pp_med_log2 <- atividade_log %>% 
+  data_grid(n_retweet_log = seq_range(n_retweet_log, 10)) %>% 
+  add_predictions(modelo_med_log2)
+
+p7m <- p7 + geom_line(data = pp_med2, aes(y = pred), colour="darkorchid")
+p8m <- p8 + geom_line(data = pp_med_log2, aes(y = pred), colour="darkorchid")
+
+grid.arrange(p7m, p8m, ncol = 2)
+```
+
+```{r, fig.width=12, fig.height=6}
+modelo_med3 <- lm(data = atividade_log, engaj_mediano ~ seguidores)
+modelo_med_log3 <- lm(data = atividade_log, engaj_mediano_log ~ seguidores_log)
+
+pp_med3 <- atividade_real %>% 
+  data_grid(seguidores = seq_range(seguidores, 10)) %>% 
+  add_predictions(modelo_med3)
+
+pp_med_log3 <- atividade_log %>% 
+  data_grid(seguidores_log = seq_range(seguidores_log, 10)) %>% 
+  add_predictions(modelo_med_log3)
+
+p11m <- p11 + geom_line(data = pp_med3, aes(y = pred), colour="darkorchid")
+p12m <- p12 + geom_line(data = pp_med_log3, aes(y = pred), colour="darkorchid")
+
+grid.arrange(p11m, p12m, ncol = 2)
+```
+
+```{r, fig.width=12, fig.height=6}
+modelo_med4 <- lm(data = atividade_log, engaj_mediano ~ segue)
+modelo_med_log4 <- lm(data = atividade_log, engaj_mediano_log ~ segue_log)
+
+pp_med4 <- atividade_real %>% 
+  data_grid(segue = seq_range(segue, 10)) %>% 
+  add_predictions(modelo_med4)
+
+pp_med_log4 <- atividade_log %>% 
+  data_grid(segue_log = seq_range(segue_log, 10)) %>% 
+  add_predictions(modelo_med_log4)
+
+p15m <- p15 + geom_line(data = pp_med4, aes(y = pred), colour="darkorchid")
+p16m <- p16 + geom_line(data = pp_med_log4, aes(y = pred), colour="darkorchid")
+
+grid.arrange(p15m, p16m, ncol = 2)
+```
+
+```{r}
+modelo_medg <- lm(data = atividade_log, engaj_mediano_log ~ segue_log + seguidores_log + casa + n_proprio_log)
+tidy(modelo_medg, conf.int = TRUE)
+glance(modelo_medg)
+```

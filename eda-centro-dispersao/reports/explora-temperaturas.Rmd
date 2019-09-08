@@ -1,0 +1,125 @@
+---
+title: "Temperatura JP x CG"
+output:
+    html_document:
+    df_print: paged
+theme: sandstone
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(here)
+library(gridExtra)
+library(lubridate)
+library(ggbeeswarm)
+theme_set(theme_bw())
+```
+
+```{r read}
+climas = read_csv(here::here("data/clima_cg_jp-semanal.csv"), 
+                  col_types = "cTdddddd")
+
+glimpse(climas)
+```
+
+## Temperatura
+
+### Onde é mais quente?
+
+```{r}
+climas %>%
+    ggplot(mapping = aes(x = cidade, y = tmedia)) + 
+    xlab("Cidade") + ylab("Temperatura Média") +
+    geom_quasirandom()
+```
+
+```{r, echo=FALSE}
+diferenca_temperaturas <- diff((climas %>% group_by(cidade) %>% summarize(temp_media = mean(tmedia)))$temp_media)
+diferenca_temperaturas <- diferenca_temperaturas - (diferenca_temperaturas %% 0.01)
+```
+
+Pelas distribuições acima, podemos ver que a temperatura média de Campina Grande é menor que a temperatura média de João Pessoa: enquanto a temperatura média de Campina grande fica em torno de 26 graus, a temperatura média de João Pessoa aproxima-se mais dos 28 graus. A diferença das temperaturas médias chega a ser `r diferenca_temperaturas` graus.
+
+### As temperaturas máximas semanais (o pico do calor) são tão diferentes quanto as médias? Mais?
+
+```{r}
+climas %>%
+    ggplot(mapping = aes(x = cidade, y = tmax)) +
+    xlab("Cidade") + ylab("Temperatura Máxima") +
+    geom_quasirandom()
+```
+
+Mesmo que a temperatura média de Campina Grande seja menor que a temperatura média de João Pessoa, maiores temperaturas são mais frequentes em Campina Grande que em João Pessoa, como podemos ver no gráfico acima. Entretanto, a média das temperaturas máximas de João Pessoa é mais constante que a de Campina Grande: enquanto João Pessoa tem a temperatura máxima mais frequente em torno dos 31 graus, Campina Grande tende a ter frequência maior tanto nas temperaturas máximas mais altas quanto nas temperaturas máximas mais baixas.
+
+### Quais os meses mais quentes e mais frios?
+
+Para responder essa pergunta, agrupamos os dados por mês, para em seguida visualizar a informação:
+
+```{r}
+climas %>%
+    ggplot(mapping = aes(x = factor(mes), y = tmedia, group = mes)) +
+    xlab("Mês do Ano") + ylab("Temperatura Média") +
+    geom_jitter(width = .1, alpha = 0.3, color = "turquoise") + 
+    geom_boxplot(coef = 0, outlier.shape = NA)
+```
+É possível notar que a temperatura média é menor nos meses do meio do ano.
+
+### Qual foi o São João  mais frio de CG que está nos nossos dados?
+
+```{r}
+climas %>%
+    filter(cidade == "Campina Grande") %>%
+    filter(mes == 6) %>%
+    group_by(ano) %>%
+    ggplot(mapping = aes(x=factor(ano), y = tmin)) +
+    xlab("Ano") + ylab("Temperaturas Mínimas") +
+    geom_boxplot(coef = 0) + 
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+A partir do gráfico acima, podemos concluir que o São João mais frio de Campina Grande foi o do ano de 2003, onde temos o mínimo absoluto, mas onde também temos a menor mediana.
+
+## Chuva
+
+Inicialmente, oodemos observar diretamente a distribuição da chuva ao longo do tempo:
+
+```{r, echo = FALSE}
+climas %>%
+    ggplot(mapping = aes(x = semana, y = chuva)) + 
+    ggtitle("Chuvas ao longo do tempo") +
+    xlab("Tempo (semanas)") + ylab("Chuva (mm/m³)") +
+    geom_line()
+```
+
+Entretanto, o gráfico acima não é fácil de ler e extrair informações, já que temos dados semanais. Algo que podemos fazer para tentar tornar o gráfico mais legível é agrupar por mês, e a partir daí podemos tentar novamente:
+
+```{r, echo = FALSE}
+climas %>%
+    group_by(cidade) %>%
+    group_by(mes = floor_date(semana, "month")) %>%
+    summarize(chuva = sum(chuva)) %>%
+    ggplot(mapping = aes(x = mes, y = chuva)) + 
+    geom_line() +
+    ggtitle("Chuvas ao longo do tempo") +
+    xlab("Tempo (meses)") + ylab("Chuva (mm/m³)")
+```
+
+### Quanto chove por semana em JP e CG?
+
+Como é a distribuição do volume de chuvas por semana em JP e CG? A chuva varia mais ou menos que a temperatura? O formato da distribuição é igual? 
+
+```{r, echo = FALSE}
+dados_cg <- climas %>% filter(cidade == "Campina Grande")
+dados_jp <- climas %>% filter(cidade == "João Pessoa")
+
+clima_cg <- dados_cg %>% ggplot(mapping = aes(x = semana, y = tmedia)) + geom_line() + ggtitle("Temperatura em CG") + xlab("Tempo (semanas)") + ylab("Temp. Média")
+chuva_cg <- dados_cg %>% ggplot(mapping = aes(x = semana, y = chuva)) + geom_line() + ggtitle("Chuva em CG") + xlab("Tempo(semanas)") + ylab("Chuva (mm/m³)")
+clima_jp <- dados_jp %>% ggplot(mapping = aes(x = semana, y = tmedia)) + geom_line() + ggtitle("Temperatura em JP") + xlab("Tempo (semanas)") + ylab("Temp. Média")
+chuva_jp <- dados_jp %>% ggplot(mapping = aes(x = semana, y = chuva)) + geom_line() + ggtitle("Chuva em JP") + xlab("Tempo(semanas)") + ylab("Chuva (mm/m³)")
+
+grid.arrange(clima_cg, chuva_cg, clima_jp, chuva_jp, ncol=2)
+```
+
+### No geral, onde chove mais?
+
+### A distribuição é diferente em meses específicos? 
+

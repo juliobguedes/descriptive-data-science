@@ -1,0 +1,381 @@
+Horario;Dia;Data;Clube 1;Clube 2;Vencedor;Rodada;Arena;p1;p2;gols;C1 Estado;C2 Estado;Vencedor Estado
+16:00;Sábado;13/05/2017;Flamengo;Atlético-MG;-;1ª Rodada;Maracanã;1;1;2;RJ;MG;Empate
+19:00;Sábado;13/05/2017;Corinthians;Chapecoense;-;1ª Rodada;Arena Corinthians;1;1;2;SP;SC;Empate
+11:00;Domingo;14/05/2017;Fluminense;Santos;Fluminense;1ª Rodada;Maracanã;3;2;5;RJ;SP;RJ
+16:00;Domingo;14/05/2017;Cruzeiro;São Paulo;Cruzeiro;1ª Rodada;Mineirão;1;0;1;MG;SP;MG
+16:00;Domingo;14/05/2017;Ponte Preta;Sport;Ponte Preta;1ª Rodada;Moisés Lucarelli;4;0;4;SP;PE;SP
+16:00;Domingo;14/05/2017;Palmeiras;Vasco;Palmeiras;1ª Rodada;Palestra Ítalia;4;0;4;SP;RJ;SP
+16:00;Domingo;14/05/2017;Bahia;Atlético-PR;Bahia;1ª Rodada;Fonte Nova;6;2;8;BH;PR;BH
+16:00;Domingo;14/05/2017;Avaí;Vitória;-;1ª Rodada;Ressacada;0;0;0;SC;ES;Empate
+19:00;Domingo;14/05/2017;Grêmio;Botafogo;Grêmio;1ª Rodada;Arena do Grêmio;2;0;2;RS;RJ;RS
+20:00;Segunda-feira;15/05/2017;Coritiba;Atlético-GO;Coritiba;1ª Rodada;Couto Pereira;4;1;5;PR;GO;PR
+16:00;Sábado;20/05/2017;Santos;Coritiba;Santos;2ª Rodada;Vila Belmiro;1;0;1;SP;PR;SP
+19:00;Sábado;20/05/2017;Atlético-GO;Flamengo;Flamengo;2ª Rodada;Serra Dourada;0;3;3;GO;RJ;RJ
+19:00;Sábado;20/05/2017;Chapecoense;Palmeiras;Chapecoense;2ª Rodada;Arena Condá;1;0;1;SC;SP;SC
+11:00;Domingo;21/05/2017;Vasco;Bahia;Vasco;2ª Rodada;São Januário;2;1;3;RJ;BH;RJ
+16:00;Domingo;21/05/2017;Atlético-MG;Fluminense;Fluminense;2ª Rodada;Independência;1;2;3;MG;RJ;RJ
+16:00;Domingo;21/05/2017;Atlético-PR;Grêmio;Grêmio;2ª Rodada;Arena da Baixada;0;2;2;PR;RS;RS
+16:00;Domingo;21/05/2017;Vitória;Corinthians;Corinthians;2ª Rodada;Fonte Nova;0;1;1;ES;SP;SP
+18:00;Domingo;21/05/2017;Botafogo;Ponte Preta;Botafogo;2ª Rodada;Engenhão;2;0;2;RJ;SP;RJ
+19:00;Domingo;21/05/2017;Sport;Cruzeiro;-;2ª Rodada;Ilha do Retiro;1;1;2;PE;MG;Empate
+20:00;Segunda-feira;22/05/2017;São Paulo;Avaí;São Paulo;2ª Rodada;Morumbi;2;0;2;SP;SC;SP
+16:00;Sábado;27/05/2017;Vasco;Fluminense;Vasco;3ª Rodada;São Januário;3;2;5;RJ;RJ;RJ
+19:00;Sábado;27/05/2017;São Paulo;Palmeiras;São Paulo;3ª Rodada;Morumbi;2;0;2;SP;SP;SP
+21:00;Sábado;27/05/2017;Vitória;Coritiba;Coritiba;3ª Rodada;Fonte Nova;0;1;1;ES;PR;PR
+11:00;Domingo;28/05/2017;Atlético-MG;Ponte Preta;-;3ª Rodada;Independência;2;2;4;MG;SP;Empate
+16:00;Domingo;28/05/2017;Atlético-GO;Corinthians;Corinthians;3ª Rodada;Serra Dourada;0;1;1;GO;SP;SP
+16:00;Domingo;28/05/2017;Atlético-PR;Flamengo;-;3ª Rodada;Arena da Baixada;1;1;2;PR;RJ;Empate
+16:00;Domingo;28/05/2017;Santos;Cruzeiro;Cruzeiro;3ª Rodada;Vila Belmiro;0;1;1;SP;MG;MG
+18:00;Domingo;28/05/2017;Sport;Grêmio;Sport;3ª Rodada;Ilha do Retiro;4;3;7;PE;RS;PE
+19:00;Domingo;28/05/2017;Botafogo;Bahia;Botafogo;3ª Rodada;Engenhão;1;0;1;RJ;BH;RJ
+20:00;Segunda-feira;29/05/2017;Chapecoense;Avaí;Chapecoense;3ª Rodada;Arena Condá;2;0;2;SC;SC;SC
+16:00;Sábado;03/06/2017;Coritiba;Atlético-PR;Coritiba;4ª Rodada;Couto Pereira;1;0;1;PR;PR;PR
+18:00;Sábado;03/06/2017;Fluminense;Vitória;Fluminense;4ª Rodada;Maracanã;2;1;3;RJ;ES;RJ
+19:00;Sábado;03/06/2017;Corinthians;Santos;Corinthians;4ª Rodada;Arena Corinthians;2;0;2;SP;SP;SP
+11:00;Domingo;04/06/2017;Flamengo;Botafogo;-;4ª Rodada;Raulino de Oliveira;0;0;0;RJ;RJ;Empate
+11:00;Domingo;04/06/2017;Avaí;Sport;Avaí;4ª Rodada;Ressacada;1;0;1;SC;PE;SC
+16:00;Domingo;04/06/2017;Grêmio;Vasco;Grêmio;4ª Rodada;Arena do Grêmio;2;0;2;RS;RJ;RS
+16:00;Domingo;04/06/2017;Ponte Preta;São Paulo;Ponte Preta;4ª Rodada;Moisés Lucarelli;1;0;1;SP;SP;SP
+16:00;Domingo;04/06/2017;Palmeiras;Atlético-MG;-;4ª Rodada;Palestra Ítalia;0;0;0;SP;MG;Empate
+19:00;Domingo;04/06/2017;Cruzeiro;Chapecoense;Chapecoense;4ª Rodada;Mineirão;0;2;2;MG;SC;SC
+20:00;Segunda-feira;05/06/2017;Bahia;Atlético-GO;Bahia;4ª Rodada;Fonte Nova;3;0;3;BH;GO;BH
+20:00;Terça-feira;06/06/2017;Fluminense;Atlético-PR;-;5ª Rodada;Maracanã;1;1;2;RJ;PR;Empate
+19:30;Quarta-feira;07/06/2017;Atlético-MG;Avaí;Atlético-MG;5ª Rodada;Independência;1;0;1;MG;SC;MG
+19:30;Quarta-feira;07/06/2017;Coritiba;Palmeiras;Coritiba;5ª Rodada;Couto Pereira;1;0;1;PR;SP;PR
+21:00;Quarta-feira;07/06/2017;Santos;Botafogo;Santos;5ª Rodada;Pacaembu;1;0;1;SP;RJ;SP
+21:45;Quarta-feira;07/06/2017;Sport;Flamengo;Sport;5ª Rodada;Ilha do Retiro;2;0;2;PE;RJ;PE
+21:45;Quarta-feira;07/06/2017;Vasco;Corinthians;Corinthians;5ª Rodada;São Januário;2;5;7;RJ;SP;SP
+19:30;Quinta-feira;08/06/2017;Atlético-GO;Ponte Preta;Atlético-GO;5ª Rodada;Olímpico;3;0;3;GO;SP;GO
+19:30;Quinta-feira;08/06/2017;São Paulo;Vitória;São Paulo;5ª Rodada;Morumbi;2;0;2;SP;ES;SP
+20:00;Quinta-feira;08/06/2017;Chapecoense;Grêmio;Grêmio;5ª Rodada;Arena Condá;3;6;9;SC;RS;RS
+21:00;Quinta-feira;08/06/2017;Bahia;Cruzeiro;Bahia;5ª Rodada;Fonte Nova;1;0;1;BH;MG;BH
+16:00;Sábado;10/06/2017;Palmeiras;Fluminense;Palmeiras;6ª Rodada;Palestra Ítalia;3;1;4;SP;RJ;SP
+19:00;Sábado;10/06/2017;Vasco;Sport;Vasco;6ª Rodada;São Januário;2;1;3;RJ;PE;RJ
+11:00;Domingo;11/06/2017;Botafogo;Coritiba;-;6ª Rodada;Engenhão;2;2;4;RJ;PR;Empate
+16:00;Domingo;11/06/2017;Vitória;Atlético-MG;Vitória;6ª Rodada;Barradão;2;0;2;ES;MG;ES
+16:00;Domingo;11/06/2017;Corinthians;São Paulo;Corinthians;6ª Rodada;Arena Corinthians;3;2;5;SP;SP;SP
+16:00;Domingo;11/06/2017;Avaí;Flamengo;-;6ª Rodada;Ressacada;1;1;2;SC;RJ;Empate
+16:00;Domingo;11/06/2017;Ponte Preta;Chapecoense;Ponte Preta;6ª Rodada;Moisés Lucarelli;3;2;5;SP;SC;SP
+18:30;Domingo;11/06/2017;Cruzeiro;Atlético-GO;Cruzeiro;6ª Rodada;Mineirão;2;0;2;MG;GO;MG
+19:00;Domingo;11/06/2017;Atlético-PR;Santos;Santos;6ª Rodada;Arena da Baixada;0;2;2;PR;SP;SP
+20:00;Segunda-feira;12/06/2017;Grêmio;Bahia;Grêmio;6ª Rodada;Arena do Grêmio;1;0;1;RS;BH;RS
+19:30;Quarta-feira;14/06/2017;Atlético-MG;Atlético-PR;Atlético-PR;7ª Rodada;Independência;0;1;1;MG;PR;PR
+19:30;Quarta-feira;14/06/2017;Vitória;Botafogo;-;7ª Rodada;Barradão;2;2;4;ES;RJ;Empate
+19:30;Quarta-feira;14/06/2017;Atlético-GO;Avaí;Atlético-GO;7ª Rodada;Olímpico;3;1;4;GO;SC;GO
+19:30;Quarta-feira;14/06/2017;Sport;São Paulo;-;7ª Rodada;Ilha do Retiro;0;0;0;PE;SP;Empate
+21:00;Quarta-feira;14/06/2017;Flamengo;Ponte Preta;Flamengo;7ª Rodada;Luso Brasileiro;2;0;2;RJ;SP;RJ
+21:45;Quarta-feira;14/06/2017;Corinthians;Cruzeiro;Corinthians;7ª Rodada;Arena Corinthians;1;0;1;SP;MG;SP
+21:45;Quarta-feira;14/06/2017;Chapecoense;Vasco;Chapecoense;7ª Rodada;Arena Condá;2;1;3;SC;RJ;SC
+21:45;Quarta-feira;14/06/2017;Santos;Palmeiras;Santos;7ª Rodada;Vila Belmiro;1;0;1;SP;SP;SP
+16:00;Quinta-feira;15/06/2017;Coritiba;Bahia;-;7ª Rodada;Couto Pereira;0;0;0;PR;BH;Empate
+21:00;Quinta-feira;15/06/2017;Fluminense;Grêmio;Grêmio;7ª Rodada;Maracanã;0;2;2;RJ;RS;RS
+16:00;Sábado;17/06/2017;Atlético-GO;Atlético-PR;Atlético-PR;8ª Rodada;Olímpico;0;1;1;GO;PR;PR
+19:00;Sábado;17/06/2017;Vasco;Avaí;Vasco;8ª Rodada;São Januário;1;0;1;RJ;SC;RJ
+21:00;Sábado;17/06/2017;Santos;Ponte Preta;-;8ª Rodada;Pacaembu;0;0;0;SP;SP;Empate
+11:00;Domingo;18/06/2017;Coritiba;Corinthians;-;8ª Rodada;Couto Pereira;0;0;0;PR;SP;Empate
+16:00;Domingo;18/06/2017;Chapecoense;Botafogo;Botafogo;8ª Rodada;Arena Condá;0;2;2;SC;RJ;RJ
+16:00;Domingo;18/06/2017;Fluminense;Flamengo;-;8ª Rodada;Maracanã;2;2;4;RJ;RJ;Empate
+16:00;Domingo;18/06/2017;Bahia;Palmeiras;Palmeiras;8ª Rodada;Fonte Nova;2;4;6;BH;SP;SP
+16:00;Domingo;18/06/2017;São Paulo;Atlético-MG;Atlético-MG;8ª Rodada;Morumbi;1;2;3;SP;MG;MG
+19:00;Domingo;18/06/2017;Sport;Vitória;Vitória;8ª Rodada;Ilha do Retiro;1;3;4;PE;ES;ES
+20:00;Segunda-feira;19/06/2017;Cruzeiro;Grêmio;-;8ª Rodada;Mineirão;3;3;6;MG;RS;Empate
+19:30;Quarta-feira;21/06/2017;Vitória;Santos;Santos;9ª Rodada;Barradão;0;2;2;ES;SP;SP
+21:00;Quarta-feira;21/06/2017;Palmeiras;Atlético-GO;Palmeiras;9ª Rodada;Palestra Ítalia;1;0;1;SP;GO;SP
+21:00;Quarta-feira;21/06/2017;Botafogo;Vasco;Botafogo;9ª Rodada;Engenhão;3;1;4;RJ;RJ;RJ
+21:45;Quarta-feira;21/06/2017;Avaí;Fluminense;Fluminense;9ª Rodada;Ressacada;0;3;3;SC;RJ;RJ
+21:45;Quarta-feira;21/06/2017;Atlético-PR;São Paulo;Atlético-PR;9ª Rodada;Arena da Baixada;1;0;1;PR;SP;PR
+21:45;Quarta-feira;21/06/2017;Atlético-MG;Sport;-;9ª Rodada;Independência;2;2;4;MG;PE;Empate
+19:30;Quinta-feira;22/06/2017;Corinthians;Bahia;Corinthians;9ª Rodada;Arena Corinthians;3;0;3;SP;BH;SP
+19:30;Quinta-feira;22/06/2017;Ponte Preta;Cruzeiro;Ponte Preta;9ª Rodada;Moisés Lucarelli;1;0;1;SP;MG;SP
+21:00;Quinta-feira;22/06/2017;Flamengo;Chapecoense;Flamengo;9ª Rodada;Luso Brasileiro;5;1;6;RJ;SC;RJ
+21:00;Quinta-feira;22/06/2017;Grêmio;Coritiba;Grêmio;9ª Rodada;Arena do Grêmio;2;0;2;RS;PR;RS
+19:00;Sábado;24/06/2017;Santos;Sport;Sport;10ª Rodada;Vila Belmiro;0;1;1;SP;PE;PE
+11:00;Domingo;25/06/2017;Vasco;Atlético-GO;Vasco;10ª Rodada;São Januário;1;0;1;RJ;GO;RJ
+16:00;Domingo;25/06/2017;Atlético-PR;Vitória;Atlético-PR;10ª Rodada;Arena da Baixada;4;1;5;PR;ES;PR
+16:00;Domingo;25/06/2017;Cruzeiro;Coritiba;Cruzeiro;10ª Rodada;Mineirão;2;0;2;MG;PR;MG
+16:00;Domingo;25/06/2017;São Paulo;Fluminense;-;10ª Rodada;Morumbi;1;1;2;SP;RJ;Empate
+16:00;Domingo;25/06/2017;Grêmio;Corinthians;Corinthians;10ª Rodada;Arena do Grêmio;0;1;1;RS;SP;SP
+16:00;Domingo;25/06/2017;Ponte Preta;Palmeiras;Palmeiras;10ª Rodada;Moisés Lucarelli;1;2;3;SP;SP;SP
+18:30;Domingo;25/06/2017;Bahia;Flamengo;Flamengo;10ª Rodada;Fonte Nova;0;1;1;BH;RJ;RJ
+19:00;Domingo;25/06/2017;Chapecoense;Atlético-MG;Atlético-MG;10ª Rodada;Arena Condá;0;1;1;SC;MG;MG
+20:00;Segunda-feira;26/06/2017;Botafogo;Avaí;Avaí;10ª Rodada;Engenhão;0;2;2;RJ;SC;SC
+16:00;Sábado;01/07/2017;Palmeiras;Grêmio;Palmeiras;11ª Rodada;Pacaembu;1;0;1;SP;RS;SP
+19:00;Sábado;01/07/2017;Atlético-GO;Santos;-;11ª Rodada;Olímpico;1;1;2;GO;SP;Empate
+16:00;Domingo;02/07/2017;Corinthians;Botafogo;Corinthians;11ª Rodada;Arena Corinthians;1;0;1;SP;RJ;SP
+16:00;Domingo;02/07/2017;Sport;Atlético-PR;Sport;11ª Rodada;Ilha do Retiro;1;0;1;PE;PR;PE
+16:00;Domingo;02/07/2017;Vitória;Bahia;-;11ª Rodada;Barradão;0;0;0;ES;BH;Empate
+16:00;Domingo;02/07/2017;Atlético-MG;Cruzeiro;Atlético-MG;11ª Rodada;Independência;3;1;4;MG;MG;MG
+16:00;Domingo;02/07/2017;Flamengo;São Paulo;Flamengo;11ª Rodada;Luso Brasileiro;2;0;2;RJ;SP;RJ
+19:00;Domingo;02/07/2017;Coritiba;Vasco;-;11ª Rodada;Vila Capanema;2;2;4;PR;RJ;Empate
+19:00;Domingo;02/07/2017;Avaí;Ponte Preta;-;11ª Rodada;Ressacada;0;0;0;SC;SP;Empate
+20:00;Segunda-feira;03/07/2017;Fluminense;Chapecoense;-;11ª Rodada;Edson Passos;3;3;6;RJ;SC;Empate
+16:00;Sábado;08/07/2017;Atlético-GO;Vitória;Vitória;12ª Rodada;Olímpico;1;2;3;GO;ES;ES
+18:00;Sábado;08/07/2017;Vasco;Flamengo;Flamengo;12ª Rodada;São Januário;0;1;1;RJ;RJ;RJ
+19:00;Sábado;08/07/2017;Corinthians;Ponte Preta;Corinthians;12ª Rodada;Arena Corinthians;2;0;2;SP;SP;SP
+11:00;Domingo;09/07/2017;Chapecoense;Atlético-PR;-;12ª Rodada;Arena Condá;1;1;2;SC;PR;Empate
+16:00;Domingo;09/07/2017;Bahia;Fluminense;-;12ª Rodada;Fonte Nova;1;1;2;BH;RJ;Empate
+16:00;Domingo;09/07/2017;Grêmio;Avaí;Avaí;12ª Rodada;Arena do Grêmio;0;2;2;RS;SC;SC
+16:00;Domingo;09/07/2017;Cruzeiro;Palmeiras;Cruzeiro;12ª Rodada;Mineirão;3;1;4;MG;SP;MG
+19:00;Domingo;09/07/2017;Santos;São Paulo;Santos;12ª Rodada;Vila Belmiro;3;2;5;SP;SP;SP
+19:00;Domingo;09/07/2017;Botafogo;Atlético-MG;-;12ª Rodada;Engenhão;1;1;2;RJ;MG;Empate
+20:00;Segunda-feira;10/07/2017;Coritiba;Sport;Sport;12ª Rodada;Couto Pereira;0;3;3;PR;PE;PE
+19:30;Quarta-feira;12/07/2017;Atlético-MG;Santos;Santos;13ª Rodada;Independência;0;1;1;MG;SP;SP
+19:30;Quarta-feira;12/07/2017;Ponte Preta;Bahia;Bahia;13ª Rodada;Moisés Lucarelli;0;3;3;SP;BH;BH
+21:00;Quarta-feira;12/07/2017;Fluminense;Botafogo;Botafogo;13ª Rodada;Maracanã;0;1;1;RJ;RJ;RJ
+21:45;Quarta-feira;12/07/2017;Vitória;Vasco;Vasco;13ª Rodada;Barradão;1;4;5;ES;RJ;RJ
+21:45;Quarta-feira;12/07/2017;Palmeiras;Corinthians;Corinthians;13ª Rodada;Palestra Ítalia;0;2;2;SP;SP;SP
+21:45;Quarta-feira;12/07/2017;Atlético-PR;Cruzeiro;Cruzeiro;13ª Rodada;Arena da Baixada;0;2;2;PR;MG;MG
+19:30;Quinta-feira;13/07/2017;São Paulo;Atlético-GO;-;13ª Rodada;Morumbi;2;2;4;SP;GO;Empate
+19:30;Quinta-feira;13/07/2017;Sport;Chapecoense;Sport;13ª Rodada;Arena Pernambuco;3;0;3;PE;SC;PE
+19:30;Quinta-feira;13/07/2017;Flamengo;Grêmio;Grêmio;13ª Rodada;Luso Brasileiro;0;1;1;RJ;RS;RS
+21:00;Quinta-feira;13/07/2017;Avaí;Coritiba;Coritiba;13ª Rodada;Ressacada;1;4;5;SC;PR;PR
+19:00;Sábado;15/07/2017;Corinthians;Atlético-PR;-;14ª Rodada;Arena Corinthians;2;2;4;SP;PR;Empate
+11:00;Domingo;16/07/2017;Palmeiras;Vitória;Palmeiras;14ª Rodada;Palestra Ítalia;4;2;6;SP;ES;SP
+16:00;Domingo;16/07/2017;Vasco;Santos;-;14ª Rodada;Engenhão;0;0;0;RJ;SP;Empate
+16:00;Domingo;16/07/2017;Grêmio;Ponte Preta;Grêmio;14ª Rodada;Arena do Grêmio;3;1;4;RS;SP;RS
+16:00;Domingo;16/07/2017;Chapecoense;São Paulo;Chapecoense;14ª Rodada;Arena Condá;2;0;2;SC;SP;SC
+16:00;Domingo;16/07/2017;Cruzeiro;Flamengo;-;14ª Rodada;Mineirão;1;1;2;MG;RJ;Empate
+16:00;Domingo;16/07/2017;Atlético-GO;Atlético-MG;Atlético-MG;14ª Rodada;Olímpico;1;2;3;GO;MG;MG
+19:00;Domingo;16/07/2017;Bahia;Avaí;-;14ª Rodada;Pituaçu;1;1;2;BH;SC;Empate
+19:00;Domingo;16/07/2017;Coritiba;Fluminense;Fluminense;14ª Rodada;Couto Pereira;1;2;3;PR;RJ;RJ
+20:00;Segunda-feira;17/07/2017;Botafogo;Sport;Botafogo;14ª Rodada;Engenhão;2;1;3;RJ;PE;RJ
+19:30;Quarta-feira;19/07/2017;Santos;Chapecoense;Santos;15ª Rodada;Vila Belmiro;1;0;1;SP;SC;SP
+19:30;Quarta-feira;19/07/2017;Vitória;Grêmio;Grêmio;15ª Rodada;Barradão;1;3;4;ES;RS;RS
+21:00;Quarta-feira;19/07/2017;Avaí;Corinthians;-;15ª Rodada;Ressacada;0;0;0;SC;SP;Empate
+21:00;Quarta-feira;19/07/2017;Ponte Preta;Coritiba;Ponte Preta;15ª Rodada;Moisés Lucarelli;4;0;4;SP;PR;SP
+21:45;Quarta-feira;19/07/2017;Atlético-MG;Bahia;Bahia;15ª Rodada;Independência;0;2;2;MG;BH;BH
+21:45;Quarta-feira;19/07/2017;São Paulo;Vasco;São Paulo;15ª Rodada;Morumbi;1;0;1;SP;RJ;SP
+21:45;Quarta-feira;19/07/2017;Flamengo;Palmeiras;-;15ª Rodada;Luso Brasileiro;2;2;4;RJ;SP;Empate
+19:30;Quinta-feira;20/07/2017;Fluminense;Cruzeiro;-;15ª Rodada;Edson Passos;1;1;2;RJ;MG;Empate
+20:00;Quinta-feira;20/07/2017;Sport;Atlético-GO;Sport;15ª Rodada;Ilha do Retiro;4;0;4;PE;GO;PE
+21:00;Quinta-feira;20/07/2017;Atlético-PR;Botafogo;-;15ª Rodada;Arena da Baixada;0;0;0;PR;RJ;Empate
+16:00;Sábado;22/07/2017;Vitória;Chapecoense;Chapecoense;16ª Rodada;Barradão;1;2;3;ES;SC;SC
+19:00;Sábado;22/07/2017;Flamengo;Coritiba;Flamengo;16ª Rodada;Luso Brasileiro;2;1;3;RJ;PR;RJ
+11:00;Domingo;23/07/2017;Santos;Bahia;Santos;16ª Rodada;Pacaembu;3;0;3;SP;BH;SP
+16:00;Domingo;23/07/2017;Avaí;Cruzeiro;Avaí;16ª Rodada;Ressacada;1;0;1;SC;MG;SC
+16:00;Domingo;23/07/2017;Fluminense;Corinthians;Corinthians;16ª Rodada;Maracanã;0;1;1;RJ;SP;SP
+16:00;Domingo;23/07/2017;Sport;Palmeiras;Palmeiras;16ª Rodada;Arena Pernambuco;0;2;2;PE;SP;SP
+19:00;Domingo;23/07/2017;Atlético-MG;Vasco;Vasco;16ª Rodada;Independência;1;2;3;MG;RJ;RJ
+19:00;Domingo;23/07/2017;Atlético-PR;Ponte Preta;Ponte Preta;16ª Rodada;Arena da Baixada;0;2;2;PR;SP;SP
+19:00;Domingo;23/07/2017;Atlético-GO;Botafogo;-;16ª Rodada;Olímpico;1;1;2;GO;RJ;Empate
+20:00;Segunda-feira;24/07/2017;São Paulo;Grêmio;-;16ª Rodada;Morumbi;1;1;2;SP;RS;Empate
+16:00;Sábado;29/07/2017;Botafogo;São Paulo;São Paulo;17ª Rodada;Engenhão;3;4;7;RJ;SP;SP
+19:00;Sábado;29/07/2017;Palmeiras;Avaí;Palmeiras;17ª Rodada;Palestra Ítalia;2;0;2;SP;SC;SP
+11:00;Domingo;30/07/2017;Chapecoense;Atlético-GO;Atlético-GO;17ª Rodada;Arena Condá;1;2;3;SC;GO;GO
+16:00;Domingo;30/07/2017;Bahia;Sport;Sport;17ª Rodada;Fonte Nova;1;3;4;BH;PE;PE
+16:00;Domingo;30/07/2017;Coritiba;Atlético-MG;Atlético-MG;17ª Rodada;Couto Pereira;0;2;2;PR;MG;MG
+16:00;Domingo;30/07/2017;Corinthians;Flamengo;-;17ª Rodada;Arena Corinthians;1;1;2;SP;RJ;Empate
+19:00;Domingo;30/07/2017;Grêmio;Santos;-;17ª Rodada;Arena do Grêmio;1;1;2;RS;SP;Empate
+19:00;Domingo;30/07/2017;Cruzeiro;Vitória;-;17ª Rodada;Mineirão;0;0;0;MG;ES;Empate
+20:00;Segunda-feira;31/07/2017;Vasco;Atlético-PR;Atlético-PR;17ª Rodada;Raulino de Oliveira;0;1;1;RJ;PR;PR
+20:00;Quarta-feira;09/08/2017;Ponte Preta;Fluminense;-;17ª Rodada;Moisés Lucarelli;0;0;0;SP;RJ;Empate
+19:30;Quarta-feira;02/08/2017;Chapecoense;Bahia;-;18ª Rodada;Arena Condá;1;1;2;SC;BH;Empate
+19:30;Quarta-feira;02/08/2017;Sport;Fluminense;-;18ª Rodada;Ilha do Retiro;2;2;4;PE;RJ;Empate
+21:00;Quarta-feira;02/08/2017;Atlético-MG;Corinthians;Corinthians;18ª Rodada;Mineirão;0;2;2;MG;SP;SP
+21:00;Quarta-feira;02/08/2017;Vitória;Ponte Preta;Vitória;18ª Rodada;Barradão;3;1;4;ES;SP;ES
+21:45;Quarta-feira;02/08/2017;Santos;Flamengo;Santos;18ª Rodada;Pacaembu;3;2;5;SP;RJ;SP
+21:45;Quarta-feira;02/08/2017;Botafogo;Palmeiras;Palmeiras;18ª Rodada;Engenhão;1;2;3;RJ;SP;SP
+21:45;Quarta-feira;02/08/2017;Atlético-GO;Grêmio;Grêmio;18ª Rodada;Olímpico;0;1;1;GO;RS;RS
+19:30;Quinta-feira;03/08/2017;São Paulo;Coritiba;Coritiba;18ª Rodada;Morumbi;1;2;3;SP;PR;PR
+19:30;Quinta-feira;03/08/2017;Atlético-PR;Avaí;Atlético-PR;18ª Rodada;Arena da Baixada;5;0;5;PR;SC;PR
+20:00;Quinta-feira;03/08/2017;Vasco;Cruzeiro;Cruzeiro;18ª Rodada;Raulino de Oliveira;0;3;3;RJ;MG;MG
+19:00;Sábado;05/08/2017;Corinthians;Sport;Corinthians;19ª Rodada;Arena Corinthians;3;1;4;SP;PE;SP
+19:00;Sábado;05/08/2017;Fluminense;Atlético-GO;Fluminense;19ª Rodada;Maracanã;3;1;4;RJ;GO;RJ
+11:00;Domingo;06/08/2017;Flamengo;Vitória;Vitória;19ª Rodada;Luso Brasileiro;0;2;2;RJ;ES;ES
+16:00;Domingo;06/08/2017;Coritiba;Chapecoense;Coritiba;19ª Rodada;Couto Pereira;2;0;2;PR;SC;PR
+16:00;Domingo;06/08/2017;Cruzeiro;Botafogo;-;19ª Rodada;Mineirão;0;0;0;MG;RJ;Empate
+16:00;Domingo;06/08/2017;Bahia;São Paulo;Bahia;19ª Rodada;Fonte Nova;2;1;3;BH;SP;BH
+16:00;Domingo;06/08/2017;Palmeiras;Atlético-PR;Atlético-PR;19ª Rodada;Palestra Ítalia;0;1;1;SP;PR;PR
+16:00;Domingo;06/08/2017;Grêmio;Atlético-MG;Grêmio;19ª Rodada;Arena do Grêmio;2;0;2;RS;MG;RS
+19:00;Domingo;06/08/2017;Avaí;Santos;-;19ª Rodada;Ressacada;0;0;0;SC;SP;Empate
+19:00;Domingo;06/08/2017;Ponte Preta;Vasco;-;19ª Rodada;Moisés Lucarelli;0;0;0;SP;RJ;Empate
+16:00;Sábado;12/08/2017;Atlético-GO;Coritiba;Atlético-GO;20ª Rodada;Olímpico;1;0;1;GO;PR;GO
+19:00;Sábado;12/08/2017;Vitória;Avaí;Avaí;20ª Rodada;Barradão;0;1;1;ES;SC;SC
+11:00;Domingo;13/08/2017;São Paulo;Cruzeiro;São Paulo;20ª Rodada;Morumbi;3;2;5;SP;MG;SP
+16:00;Domingo;13/08/2017;Vasco;Palmeiras;-;20ª Rodada;Raulino de Oliveira;1;1;2;RJ;SP;Empate
+16:00;Domingo;13/08/2017;Atlético-MG;Flamengo;Atlético-MG;20ª Rodada;Independência;2;0;2;MG;RJ;MG
+16:00;Domingo;13/08/2017;Sport;Ponte Preta;-;20ª Rodada;Ilha do Retiro;0;0;0;PE;SP;Empate
+19:00;Domingo;13/08/2017;Atlético-PR;Bahia;Atlético-PR;20ª Rodada;Arena da Baixada;4;1;5;PR;BH;PR
+19:00;Domingo;13/08/2017;Botafogo;Grêmio;Botafogo;20ª Rodada;Engenhão;1;0;1;RJ;RS;RJ
+20:00;Segunda-feira;14/08/2017;Santos;Fluminense;-;20ª Rodada;Pacaembu;0;0;0;SP;RJ;Empate
+19:30;Quarta-feira;23/08/2017;Chapecoense;Corinthians;Corinthians;20ª Rodada;Arena Condá;0;1;1;SC;SP;SP
+16:00;Sábado;19/08/2017;Corinthians;Vitória;Vitória;21ª Rodada;Arena Corinthians;0;1;1;SP;ES;ES
+19:00;Sábado;19/08/2017;Flamengo;Atlético-GO;Flamengo;21ª Rodada;Luso Brasileiro;2;0;2;RJ;GO;RJ
+11:00;Domingo;20/08/2017;Grêmio;Atlético-PR;-;21ª Rodada;Arena do Grêmio;0;0;0;RS;PR;Empate
+16:00;Domingo;20/08/2017;Bahia;Vasco;Bahia;21ª Rodada;Fonte Nova;3;0;3;BH;RJ;BH
+16:00;Domingo;20/08/2017;Cruzeiro;Sport;Cruzeiro;21ª Rodada;Mineirão;2;0;2;MG;PE;MG
+16:00;Domingo;20/08/2017;Ponte Preta;Botafogo;Ponte Preta;21ª Rodada;Moisés Lucarelli;2;1;3;SP;RJ;SP
+16:00;Domingo;20/08/2017;Avaí;São Paulo;-;21ª Rodada;Ressacada;1;1;2;SC;SP;Empate
+19:00;Domingo;20/08/2017;Palmeiras;Chapecoense;Chapecoense;21ª Rodada;Palestra Ítalia;0;2;2;SP;SC;SC
+19:00;Domingo;20/08/2017;Coritiba;Santos;-;21ª Rodada;Couto Pereira;0;0;0;PR;SP;Empate
+20:00;Segunda-feira;21/08/2017;Fluminense;Atlético-MG;Fluminense;21ª Rodada;Maracanã;2;1;3;RJ;MG;RJ
+16:00;Sábado;26/08/2017;Fluminense;Vasco;Vasco;22ª Rodada;Maracanã;0;1;1;RJ;RJ;RJ
+19:00;Sábado;26/08/2017;Corinthians;Atlético-GO;Atlético-GO;22ª Rodada;Arena Corinthians;0;1;1;SP;GO;GO
+16:00;Domingo;27/08/2017;Ponte Preta;Atlético-MG;Atlético-MG;22ª Rodada;Moisés Lucarelli;1;2;3;SP;MG;MG
+16:00;Domingo;27/08/2017;Flamengo;Atlético-PR;Flamengo;22ª Rodada;Luso Brasileiro;2;0;2;RJ;PR;RJ
+16:00;Domingo;27/08/2017;Bahia;Botafogo;Botafogo;22ª Rodada;Fonte Nova;1;2;3;BH;RJ;RJ
+16:00;Domingo;27/08/2017;Palmeiras;São Paulo;Palmeiras;22ª Rodada;Palestra Ítalia;4;2;6;SP;SP;SP
+19:00;Domingo;27/08/2017;Avaí;Chapecoense;Avaí;22ª Rodada;Ressacada;1;0;1;SC;SC;SC
+19:00;Domingo;27/08/2017;Cruzeiro;Santos;-;22ª Rodada;Mineirão;1;1;2;MG;SP;Empate
+20:00;Segunda-feira;28/08/2017;Coritiba;Vitória;Vitória;22ª Rodada;Couto Pereira;0;1;1;PR;ES;ES
+16:00;Sábado;02/09/2017;Grêmio;Sport;Grêmio;22ª Rodada;Arena do Grêmio;5;0;5;RS;PE;RS
+16:00;Sábado;09/09/2017;Atlético-MG;Palmeiras;-;23ª Rodada;Independência;1;1;2;MG;SP;Empate
+18:00;Sábado;09/09/2017;Vasco;Grêmio;Vasco;23ª Rodada;São Januário;1;0;1;RJ;RS;RJ
+19:00;Sábado;09/09/2017;São Paulo;Ponte Preta;-;23ª Rodada;Morumbi;2;2;4;SP;SP;Empate
+11:00;Domingo;10/09/2017;Atlético-PR;Coritiba;-;23ª Rodada;Arena da Baixada;1;1;2;PR;PR;Empate
+16:00;Domingo;10/09/2017;Sport;Avaí;Avaí;23ª Rodada;Ilha do Retiro;0;1;1;PE;SC;SC
+16:00;Domingo;10/09/2017;Santos;Corinthians;Santos;23ª Rodada;Vila Belmiro;2;0;2;SP;SP;SP
+16:00;Domingo;10/09/2017;Vitória;Fluminense;-;23ª Rodada;Barradão;2;2;4;ES;RJ;Empate
+19:00;Domingo;10/09/2017;Botafogo;Flamengo;Botafogo;23ª Rodada;Engenhão;2;0;2;RJ;RJ;RJ
+19:00;Domingo;10/09/2017;Chapecoense;Cruzeiro;Cruzeiro;23ª Rodada;Arena Condá;1;2;3;SC;MG;MG
+20:00;Segunda-feira;11/09/2017;Atlético-GO;Bahia;-;23ª Rodada;Olímpico;1;1;2;GO;BH;Empate
+19:00;Sábado;16/09/2017;Botafogo;Santos;Botafogo;24ª Rodada;Engenhão;2;0;2;RJ;SP;RJ
+21:00;Sábado;16/09/2017;Ponte Preta;Atlético-GO;Atlético-GO;24ª Rodada;Moisés Lucarelli;1;3;4;SP;GO;GO
+11:00;Domingo;17/09/2017;Avaí;Atlético-MG;-;24ª Rodada;Ressacada;1;1;2;SC;MG;Empate
+16:00;Domingo;17/09/2017;Corinthians;Vasco;Corinthians;24ª Rodada;Arena Corinthians;1;0;1;SP;RJ;SP
+16:00;Domingo;17/09/2017;Atlético-PR;Fluminense;Atlético-PR;24ª Rodada;Arena da Baixada;3;1;4;PR;RJ;PR
+16:00;Domingo;17/09/2017;Flamengo;Sport;Flamengo;24ª Rodada;Luso Brasileiro;2;0;2;RJ;PE;RJ
+16:00;Domingo;17/09/2017;Vitória;São Paulo;São Paulo;24ª Rodada;Barradão;1;2;3;ES;SP;SP
+16:00;Domingo;17/09/2017;Grêmio;Chapecoense;Chapecoense;24ª Rodada;Arena do Grêmio;0;1;1;RS;SC;SC
+19:00;Domingo;17/09/2017;Cruzeiro;Bahia;Cruzeiro;24ª Rodada;Mineirão;1;0;1;MG;BH;MG
+20:00;Segunda-feira;18/09/2017;Palmeiras;Coritiba;Palmeiras;24ª Rodada;Pacaembu;1;0;1;SP;PR;SP
+19:00;Sábado;23/09/2017;Flamengo;Avaí;-;25ª Rodada;Luso Brasileiro;1;1;2;RJ;SC;Empate
+21:00;Sábado;23/09/2017;Santos;Atlético-PR;Santos;25ª Rodada;Vila Belmiro;1;0;1;SP;PR;SP
+11:00;Domingo;24/09/2017;São Paulo;Corinthians;-;25ª Rodada;Morumbi;1;1;2;SP;SP;Empate
+16:00;Domingo;24/09/2017;Chapecoense;Ponte Preta;Chapecoense;25ª Rodada;Arena Condá;1;0;1;SC;SP;SC
+16:00;Domingo;24/09/2017;Coritiba;Botafogo;Botafogo;25ª Rodada;Couto Pereira;2;3;5;PR;RJ;RJ
+16:00;Domingo;24/09/2017;Atlético-GO;Cruzeiro;Cruzeiro;25ª Rodada;Olímpico;1;2;3;GO;MG;MG
+16:00;Domingo;24/09/2017;Fluminense;Palmeiras;Palmeiras;25ª Rodada;Maracanã;0;1;1;RJ;SP;SP
+19:00;Domingo;24/09/2017;Atlético-MG;Vitória;Vitória;25ª Rodada;Independência;1;3;4;MG;ES;ES
+19:00;Domingo;24/09/2017;Bahia;Grêmio;Bahia;25ª Rodada;Fonte Nova;1;0;1;BH;RS;BH
+20:00;Segunda-feira;25/09/2017;Sport;Vasco;-;25ª Rodada;Ilha do Retiro;1;1;2;PE;RJ;Empate
+16:00;Sábado;30/09/2017;Vasco;Chapecoense;-;26ª Rodada;São Januário;1;1;2;RJ;SC;Empate
+16:00;Sábado;30/09/2017;Bahia;Coritiba;-;26ª Rodada;Fonte Nova;1;1;2;BH;PR;Empate
+19:00;Sábado;30/09/2017;Palmeiras;Santos;Santos;26ª Rodada;Palestra Ítalia;0;1;1;SP;SP;SP
+16:00;Domingo;01/10/2017;Grêmio;Fluminense;Grêmio;26ª Rodada;Arena do Grêmio;1;0;1;RS;RJ;RS
+16:00;Domingo;01/10/2017;Cruzeiro;Corinthians;-;26ª Rodada;Mineirão;1;1;2;MG;SP;Empate
+16:00;Domingo;01/10/2017;Botafogo;Vitória;Vitória;26ª Rodada;Engenhão;2;3;5;RJ;ES;ES
+16:00;Domingo;01/10/2017;São Paulo;Sport;São Paulo;26ª Rodada;Morumbi;1;0;1;SP;PE;SP
+16:00;Domingo;01/10/2017;Avaí;Atlético-GO;Atlético-GO;26ª Rodada;Ressacada;0;2;2;SC;GO;GO
+19:00;Domingo;01/10/2017;Atlético-PR;Atlético-MG;Atlético-MG;26ª Rodada;Arena da Baixada;0;2;2;PR;MG;MG
+20:00;Segunda-feira;02/10/2017;Ponte Preta;Flamengo;Ponte Preta;26ª Rodada;Moisés Lucarelli;1;0;1;SP;RJ;SP
+19:30;Quarta-feira;11/10/2017;Atlético-PR;Atlético-GO;-;27ª Rodada;Arena da Baixada;2;2;4;PR;GO;Empate
+19:30;Quarta-feira;11/10/2017;Botafogo;Chapecoense;Botafogo;27ª Rodada;Engenhão;2;1;3;RJ;SC;RJ
+21:00;Quarta-feira;11/10/2017;Corinthians;Coritiba;Corinthians;27ª Rodada;Arena Corinthians;3;1;4;SP;PR;SP
+21:45;Quarta-feira;11/10/2017;Avaí;Vasco;Vasco;27ª Rodada;Ressacada;1;2;3;SC;RJ;RJ
+21:45;Quarta-feira;11/10/2017;Atlético-MG;São Paulo;Atlético-MG;27ª Rodada;Independência;1;0;1;MG;SP;MG
+21:45;Quarta-feira;11/10/2017;Grêmio;Cruzeiro;Cruzeiro;27ª Rodada;Arena do Grêmio;0;1;1;RS;MG;MG
+17:00;Quinta-feira;12/10/2017;Ponte Preta;Santos;-;27ª Rodada;Moisés Lucarelli;1;1;2;SP;SP;Empate
+17:00;Quinta-feira;12/10/2017;Vitória;Sport;Sport;27ª Rodada;Barradão;1;2;3;ES;PE;PE
+17:00;Quinta-feira;12/10/2017;Flamengo;Fluminense;-;27ª Rodada;Maracanã;1;1;2;RJ;RJ;Empate
+21:00;Quinta-feira;12/10/2017;Palmeiras;Bahia;-;27ª Rodada;Pacaembu;2;2;4;SP;BH;Empate
+16:00;Sábado;07/10/2017;Cruzeiro;Ponte Preta;Cruzeiro;28ª Rodada;Mineirão;2;1;3;MG;SP;MG
+19:00;Sábado;14/10/2017;Vasco;Botafogo;Vasco;28ª Rodada;Maracanã;1;0;1;RJ;RJ;RJ
+21:00;Sábado;14/10/2017;São Paulo;Atlético-PR;São Paulo;28ª Rodada;Pacaembu;2;1;3;SP;PR;SP
+17:00;Domingo;15/10/2017;Atlético-GO;Palmeiras;Palmeiras;28ª Rodada;Olímpico;1;3;4;GO;SP;SP
+17:00;Domingo;15/10/2017;Fluminense;Avaí;Fluminense;28ª Rodada;Maracanã;1;0;1;RJ;SC;RJ
+17:00;Domingo;15/10/2017;Chapecoense;Flamengo;Flamengo;28ª Rodada;Arena Condá;0;1;1;SC;RJ;RJ
+17:00;Domingo;15/10/2017;Sport;Atlético-MG;-;28ª Rodada;Ilha do Retiro;1;1;2;PE;MG;Empate
+19:00;Domingo;15/10/2017;Bahia;Corinthians;Bahia;28ª Rodada;Fonte Nova;2;0;2;BH;SP;BH
+19:00;Domingo;15/10/2017;Coritiba;Grêmio;Grêmio;28ª Rodada;Couto Pereira;0;1;1;PR;RS;RS
+20:00;Segunda-feira;16/10/2017;Santos;Vitória;-;28ª Rodada;Pacaembu;2;2;4;SP;ES;Empate
+19:30;Quarta-feira;18/10/2017;Atlético-GO;Vasco;Vasco;29ª Rodada;Serra Dourada;0;1;1;GO;RJ;RJ
+19:30;Quarta-feira;18/10/2017;Coritiba;Cruzeiro;Coritiba;29ª Rodada;Couto Pereira;1;0;1;PR;MG;PR
+21:00;Quarta-feira;18/10/2017;Atlético-MG;Chapecoense;Chapecoense;29ª Rodada;Independência;2;3;5;MG;SC;SC
+21:45;Quarta-feira;18/10/2017;Fluminense;São Paulo;Fluminense;29ª Rodada;Maracanã;3;1;4;RJ;SP;RJ
+21:45;Quarta-feira;18/10/2017;Corinthians;Grêmio;-;29ª Rodada;Arena Corinthians;0;0;0;SP;RS;Empate
+21:45;Quarta-feira;18/10/2017;Avaí;Botafogo;-;29ª Rodada;Ressacada;1;1;2;SC;RJ;Empate
+20:00;Quinta-feira;19/10/2017;Palmeiras;Ponte Preta;Palmeiras;29ª Rodada;Pacaembu;2;0;2;SP;SP;SP
+20:00;Quinta-feira;19/10/2017;Vitória;Atlético-PR;Atlético-PR;29ª Rodada;Barradão;2;3;5;ES;PR;PR
+21:00;Quinta-feira;19/10/2017;Flamengo;Bahia;Flamengo;29ª Rodada;Luso Brasileiro;4;1;5;RJ;BH;RJ
+21:00;Quinta-feira;19/10/2017;Sport;Santos;-;29ª Rodada;Ilha do Retiro;1;1;2;PE;SP;Empate
+17:00;Sábado;21/10/2017;Vasco;Coritiba;-;30ª Rodada;Maracanã;1;1;2;RJ;PR;Empate
+17:00;Domingo;22/10/2017;Bahia;Vitória;Bahia;30ª Rodada;Fonte Nova;2;1;3;BH;ES;BH
+17:00;Domingo;22/10/2017;Santos;Atlético-GO;Santos;30ª Rodada;Vila Belmiro;1;0;1;SP;GO;SP
+17:00;Domingo;22/10/2017;São Paulo;Flamengo;São Paulo;30ª Rodada;Pacaembu;2;0;2;SP;RJ;SP
+17:00;Domingo;22/10/2017;Grêmio;Palmeiras;Palmeiras;30ª Rodada;Arena do Grêmio;1;3;4;RS;SP;SP
+17:00;Domingo;22/10/2017;Cruzeiro;Atlético-MG;Atlético-MG;30ª Rodada;Mineirão;1;3;4;MG;MG;MG
+17:00;Domingo;22/10/2017;Atlético-PR;Sport;Atlético-PR;30ª Rodada;Arena da Baixada;2;1;3;PR;PE;PR
+19:00;Domingo;22/10/2017;Ponte Preta;Avaí;Avaí;30ª Rodada;Moisés Lucarelli;1;2;3;SP;SC;SC
+19:00;Domingo;22/10/2017;Chapecoense;Fluminense;Chapecoense;30ª Rodada;Arena Condá;2;0;2;SC;RJ;SC
+20:00;Segunda-feira;23/10/2017;Botafogo;Corinthians;Botafogo;30ª Rodada;Engenhão;2;1;3;RJ;SP;RJ
+17:00;Sábado;28/10/2017;São Paulo;Santos;São Paulo;31ª Rodada;Pacaembu;2;1;3;SP;SP;SP
+19:00;Sábado;28/10/2017;Flamengo;Vasco;-;31ª Rodada;Maracanã;0;0;0;RJ;RJ;Empate
+21:00;Sábado;28/10/2017;Atlético-PR;Chapecoense;-;31ª Rodada;Arena da Baixada;0;0;0;PR;SC;Empate
+17:00;Domingo;29/10/2017;Fluminense;Bahia;-;31ª Rodada;Maracanã;1;1;2;RJ;BH;Empate
+17:00;Domingo;29/10/2017;Atlético-MG;Botafogo;-;31ª Rodada;Independência;0;0;0;MG;RJ;Empate
+17:00;Domingo;29/10/2017;Ponte Preta;Corinthians;Ponte Preta;31ª Rodada;Moisés Lucarelli;1;0;1;SP;SP;SP
+18:00;Domingo;29/10/2017;Vitória;Atlético-GO;-;31ª Rodada;Barradão;1;1;2;ES;GO;Empate
+18:00;Domingo;29/10/2017;Sport;Coritiba;Coritiba;31ª Rodada;Ilha do Retiro;3;4;7;PE;PR;PR
+19:00;Domingo;29/10/2017;Avaí;Grêmio;-;31ª Rodada;Ressacada;2;2;4;SC;RS;Empate
+20:00;Segunda-feira;30/10/2017;Palmeiras;Cruzeiro;-;31ª Rodada;Palestra Ítalia;2;2;4;SP;MG;Empate
+17:00;Sábado;04/11/2017;Santos;Atlético-MG;Santos;32ª Rodada;Vila Belmiro;3;1;4;SP;MG;SP
+19:00;Sábado;04/11/2017;Atlético-GO;São Paulo;São Paulo;32ª Rodada;Serra Dourada;0;1;1;GO;SP;SP
+19:00;Sábado;04/11/2017;Botafogo;Fluminense;Fluminense;32ª Rodada;Engenhão;1;2;3;RJ;RJ;RJ
+21:00;Sábado;04/11/2017;Coritiba;Avaí;Coritiba;32ª Rodada;Couto Pereira;4;0;4;PR;SC;PR
+17:00;Domingo;05/11/2017;Grêmio;Flamengo;Grêmio;32ª Rodada;Arena do Grêmio;3;1;4;RS;RJ;RS
+17:00;Domingo;05/11/2017;Cruzeiro;Atlético-PR;Cruzeiro;32ª Rodada;Mineirão;1;0;1;MG;PR;MG
+17:00;Domingo;05/11/2017;Corinthians;Palmeiras;Corinthians;32ª Rodada;Arena Corinthians;3;2;5;SP;SP;SP
+18:00;Domingo;05/11/2017;Bahia;Ponte Preta;Bahia;32ª Rodada;Fonte Nova;2;0;2;BH;SP;BH
+19:00;Domingo;05/11/2017;Vasco;Vitória;-;32ª Rodada;Maracanã;1;1;2;RJ;ES;Empate
+19:00;Domingo;05/11/2017;Chapecoense;Sport;-;32ª Rodada;Arena Condá;1;1;2;SC;PE;Empate
+19:30;Quarta-feira;08/11/2017;Ponte Preta;Grêmio;Grêmio;33ª Rodada;Moisés Lucarelli;0;1;1;SP;RS;RS
+19:30;Quarta-feira;08/11/2017;Avaí;Bahia;Bahia;33ª Rodada;Ressacada;1;2;3;SC;BH;BH
+21:00;Quarta-feira;08/11/2017;Sport;Botafogo;Botafogo;33ª Rodada;Ilha do Retiro;1;2;3;PE;RJ;RJ
+21:00;Quarta-feira;08/11/2017;Atlético-PR;Corinthians;Corinthians;33ª Rodada;Arena da Baixada;0;1;1;PR;SP;SP
+21:45;Quarta-feira;08/11/2017;Santos;Vasco;Vasco;33ª Rodada;Vila Belmiro;1;2;3;SP;RJ;RJ
+21:45;Quarta-feira;08/11/2017;Vitória;Palmeiras;Vitória;33ª Rodada;Barradão;3;1;4;ES;SP;ES
+21:45;Quarta-feira;08/11/2017;Flamengo;Cruzeiro;Flamengo;33ª Rodada;Luso Brasileiro;2;0;2;RJ;MG;RJ
+20:00;Quinta-feira;09/11/2017;Atlético-MG;Atlético-GO;Atlético-MG;33ª Rodada;Independência;3;2;5;MG;GO;MG
+20:00;Quinta-feira;09/11/2017;São Paulo;Chapecoense;-;33ª Rodada;Pacaembu;2;2;4;SP;SC;Empate
+21:00;Quinta-feira;09/11/2017;Fluminense;Coritiba;-;33ª Rodada;Maracanã;2;2;4;RJ;PR;Empate
+17:00;Sábado;11/11/2017;Botafogo;Atlético-PR;Atlético-PR;34ª Rodada;Engenhão;0;1;1;RJ;PR;PR
+19:00;Sábado;11/11/2017;Corinthians;Avaí;Corinthians;34ª Rodada;Arena Corinthians;1;0;1;SP;SC;SP
+17:00;Domingo;12/11/2017;Vasco;São Paulo;-;34ª Rodada;São Januário;1;1;2;RJ;SP;Empate
+17:00;Domingo;12/11/2017;Grêmio;Vitória;-;34ª Rodada;Alfredo Jaconi;1;1;2;RS;ES;Empate
+17:00;Domingo;12/11/2017;Atlético-GO;Sport;Atlético-GO;34ª Rodada;Olímpico;2;0;2;GO;PE;GO
+17:00;Domingo;12/11/2017;Palmeiras;Flamengo;Palmeiras;34ª Rodada;Palestra Ítalia;2;0;2;SP;RJ;SP
+18:00;Domingo;12/11/2017;Bahia;Atlético-MG;-;34ª Rodada;Fonte Nova;2;2;4;BH;MG;Empate
+19:00;Domingo;12/11/2017;Coritiba;Ponte Preta;-;34ª Rodada;Couto Pereira;1;1;2;PR;SP;Empate
+19:00;Domingo;12/11/2017;Cruzeiro;Fluminense;Cruzeiro;34ª Rodada;Mineirão;3;1;4;MG;RJ;MG
+20:00;Segunda-feira;13/11/2017;Chapecoense;Santos;Chapecoense;34ª Rodada;Arena Condá;2;0;2;SC;SP;SC
+17:00;Quarta-feira;15/11/2017;Ponte Preta;Atlético-PR;Ponte Preta;35ª Rodada;Moisés Lucarelli;2;1;3;SP;PR;SP
+19:30;Quarta-feira;15/11/2017;Grêmio;São Paulo;Grêmio;35ª Rodada;Arena do Grêmio;1;0;1;RS;SP;RS
+19:30;Quarta-feira;15/11/2017;Cruzeiro;Avaí;-;35ª Rodada;Mineirão;2;2;4;MG;SC;Empate
+21:45;Quarta-feira;15/11/2017;Vasco;Atlético-MG;-;35ª Rodada;São Januário;1;1;2;RJ;MG;Empate
+21:45;Quarta-feira;15/11/2017;Corinthians;Fluminense;Corinthians;35ª Rodada;Arena Corinthians;3;1;4;SP;RJ;SP
+20:00;Quinta-feira;16/11/2017;Palmeiras;Sport;Palmeiras;35ª Rodada;Palestra Ítalia;5;1;6;SP;PE;SP
+20:00;Quinta-feira;16/11/2017;Botafogo;Atlético-GO;Atlético-GO;35ª Rodada;Engenhão;1;2;3;RJ;GO;GO
+20:00;Quinta-feira;16/11/2017;Chapecoense;Vitória;Chapecoense;35ª Rodada;Arena Condá;2;1;3;SC;ES;SC
+21:00;Quinta-feira;16/11/2017;Coritiba;Flamengo;Coritiba;35ª Rodada;Couto Pereira;1;0;1;PR;RJ;PR
+21:00;Quinta-feira;16/11/2017;Bahia;Santos;Bahia;35ª Rodada;Fonte Nova;3;1;4;BH;SP;BH
+17:00;Domingo;19/11/2017;Vitória;Cruzeiro;-;36ª Rodada;Barradão;1;1;2;ES;MG;Empate
+17:00;Domingo;19/11/2017;Sport;Bahia;Sport;36ª Rodada;Ilha do Retiro;1;0;1;PE;BH;PE
+17:00;Domingo;19/11/2017;São Paulo;Botafogo;-;36ª Rodada;Pacaembu;0;0;0;SP;RJ;Empate
+17:00;Domingo;19/11/2017;Flamengo;Corinthians;Flamengo;36ª Rodada;Luso Brasileiro;3;0;3;RJ;SP;RJ
+17:00;Domingo;19/11/2017;Atlético-GO;Chapecoense;-;36ª Rodada;Olímpico;1;1;2;GO;SC;Empate
+19:00;Domingo;19/11/2017;Santos;Grêmio;Santos;36ª Rodada;Vila Belmiro;1;0;1;SP;RS;SP
+19:00;Domingo;19/11/2017;Atlético-PR;Vasco;Atlético-PR;36ª Rodada;Arena da Baixada;3;1;4;PR;RJ;PR
+19:00;Domingo;19/11/2017;Atlético-MG;Coritiba;Atlético-MG;36ª Rodada;Independência;3;0;3;MG;PR;MG
+17:00;Segunda-feira;20/11/2017;Fluminense;Ponte Preta;Fluminense;36ª Rodada;Maracanã;2;0;2;RJ;SP;RJ
+20:00;Segunda-feira;20/11/2017;Avaí;Palmeiras;Avaí;36ª Rodada;Ressacada;2;1;3;SC;SP;SC
+17:00;Sábado;25/11/2017;Fluminense;Sport;Sport;37ª Rodada;Maracanã;1;2;3;RJ;PE;PE
+17:00;Domingo;26/11/2017;Corinthians;Atlético-MG;-;37ª Rodada;Arena Corinthians;2;2;4;SP;MG;Empate
+17:00;Domingo;26/11/2017;Avaí;Atlético-PR;Avaí;37ª Rodada;Ressacada;1;0;1;SC;PR;SC
+17:00;Domingo;26/11/2017;Coritiba;São Paulo;São Paulo;37ª Rodada;Couto Pereira;1;2;3;PR;SP;SP
+17:00;Domingo;26/11/2017;Grêmio;Atlético-GO;-;37ª Rodada;Arena do Grêmio;1;1;2;RS;GO;Empate
+17:00;Domingo;26/11/2017;Cruzeiro;Vasco;Vasco;37ª Rodada;Mineirão;0;1;1;MG;RJ;RJ
+17:00;Domingo;26/11/2017;Ponte Preta;Vitória;Vitória;37ª Rodada;Moisés Lucarelli;2;3;5;SP;ES;ES
+19:00;Domingo;26/11/2017;Flamengo;Santos;Santos;37ª Rodada;Luso Brasileiro;1;2;3;RJ;SP;SP
+19:00;Domingo;26/11/2017;Bahia;Chapecoense;Chapecoense;37ª Rodada;Fonte Nova;0;1;1;BH;SC;SC
+20:00;Segunda-feira;27/11/2017;Palmeiras;Botafogo;Palmeiras;37ª Rodada;Palestra Ítalia;2;0;2;SP;RJ;SP
+17:00;Domingo;03/12/2017;Chapecoense;Coritiba;Chapecoense;38ª Rodada;Arena Condá;2;1;3;SC;PR;SC
+17:00;Domingo;03/12/2017;Vitória;Flamengo;Flamengo;38ª Rodada;Barradão;1;2;3;ES;RJ;RJ
+17:00;Domingo;03/12/2017;São Paulo;Bahia;-;38ª Rodada;Morumbi;1;1;2;SP;BH;Empate
+17:00;Domingo;03/12/2017;Santos;Avaí;-;38ª Rodada;Vila Belmiro;1;1;2;SP;SC;Empate
+17:00;Domingo;03/12/2017;Atlético-PR;Palmeiras;Atlético-PR;38ª Rodada;Arena da Baixada;3;0;3;PR;SP;PR
+17:00;Domingo;03/12/2017;Botafogo;Cruzeiro;-;38ª Rodada;Engenhão;2;2;4;RJ;MG;Empate
+17:00;Domingo;03/12/2017;Sport;Corinthians;Sport;38ª Rodada;Ilha do Retiro;1;0;1;PE;SP;PE
+17:00;Domingo;03/12/2017;Atlético-GO;Fluminense;-;38ª Rodada;Olímpico;1;1;2;GO;RJ;Empate
+17:00;Domingo;03/12/2017;Atlético-MG;Grêmio;Atlético-MG;38ª Rodada;Independência;4;3;7;MG;RS;MG
+17:00;Domingo;03/12/2017;Vasco;Ponte Preta;Vasco;38ª Rodada;São Januário;2;1;3;RJ;SP;RJ

@@ -1,0 +1,34 @@
+---
+title: "Regressão Linear"
+author: "Nazareno Andrade"
+output: 
+  html_notebook:
+    theme: readable
+    fig_width: 7
+    toc: true
+    toc_float: true
+
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggbeeswarm)
+library(modelr)
+library(broom)
+theme_set(theme_bw())
+```
+
+```{r}
+parlamentares = read_csv(here::here("data/atividade-por-perfil-20190322.csv"))
+glimpse(parlamentares)
+```
+
+```{r}
+parlamentares %>% 
+    filter(n_proprio >= 10, !is.na(twitter), !is.na(seguidores), engaj_mediano > 0) %>% 
+    ggplot(aes(x = seguidores, y = engaj_mediano)) + 
+    geom_point() + 
+    scale_y_log10() + 
+    scale_x_log10()
+```
+

@@ -1,0 +1,128 @@
+---
+title: "Twitter dos Congressistas: Análise Conjunta"
+author:
+- Lívia Cavalcanti
+- Marcus Vinicius
+- Júlio Barreto
+date: "12 de abril de 2019"
+output: html_document
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(plotly) ## apenas para o hover, pois não estava legível
+options(scipen = 999)
+
+source(here::here("code/lib.R"))
+theme_set(theme_bw())
+atividade = read_projectdata()
+atividade_real <- atividade %>% filter(!is.na(seguidores))
+```
+
+### Proporcionalmente, quem é mais presente no twitter, Câmara ou Senado?
+
+```{r}
+utilizadores_camara = nrow(atividade %>% filter(!is.na(seguidores), casa == "câmara", engaj_total_proprio>10))
+utilizadores_senado = nrow(atividade %>% filter(!is.na(seguidores), casa == "senado", engaj_total_proprio>10))
+total_camara = nrow(atividade %>% filter(casa == "câmara"))
+total_senado = nrow(atividade %>% filter(casa == "senado"))
+  
+proporcao_camara = utilizadores_camara / total_camara
+proporcao_senado = utilizadores_senado / total_senado
+vetor_grafico = c(proporcao_camara, proporcao_senado)
+rotulos = c("Câmara", "Senado")
+data.frame(vetor_grafico, rotulos) %>% ggplot(aes(x = rotulos, y = vetor_grafico)) + geom_bar(stat = "identity", fill=c("#DC143C", "#6A5ACD"), col=c("#DC143C", "#6A5ACD"), alpha=.6) + labs(x = "Casas", y = "Pessoas que usam twitter (%)", title = "Visualização dos parlamentares que usam twitter em cada casa \n (Proporcionalmente)") + theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,1.1))
+```
+
+Com essa visualização, nós podemos perceber que, proporcionalmente, o senado tem mais usuários do twitter se comparado à câmara, superando a margem de 90 por cento de utilizadores, considerando que o representante tem um Twitter com mais de dez postagens.
+
+### Qual a representatividade de cada Partido no Twitter?
+
+Se a internet facilitou a interação dos congressistas com seus eleitores, eles deveriam aproveitar essa facilidade e utilizá-la em seu favor. Entretanto, nem todos os congressistas tem Twitter. Vamos então analisar como é a participação dos congressistas, por partido, no Twitter, tentando descobrir quais os partidos que menos tem representatividade:
+
+```{r, warning=FALSE}
+atividade %>%
+  rowwise() %>%
+  mutate(tem_tt=if(!is.na(twitter) & !is.na(seguidores)) 1 else 0, n_tt=if(is.na(twitter) | is.na(seguidores)) 1 else 0) %>%
+  group_by(UF) %>%
+  summarise(com_tt = sum(tem_tt), sem_tt = sum(n_tt)) %>%
+  plot_ly(x = ~UF, y = ~sem_tt, type = 'bar', name = 'Não tem Twitter') %>%
+  add_trace(y = ~com_tt, name="Tem Twitter") %>%
+  layout(yaxis = list(title = 'Quantidade de Congressistas'), barmode = 'stack')
+```
+
+### A média do engajamento depende do partido?
+
+De modo geral, as pessoas participam igualmente dos twitter de representantes do mesmo partido? Ou a ideologia não é um fator tão importante quanto o indivíduo político?
+
+```{r warning=FALSE}
+atividade %>% 
+  filter(!is.na(engaj_total)) %>%
+  select(id_parlamentar, partido, engaj_total) %>%
+  ggplot(aes(x=partido, y = engaj_total)) +
+  geom_boxplot(outlier.alpha = .6) +
+  geom_point(alpha=0.2, color='orange') + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(x = "Partido", y="Engajamento Total", title="Engajamento por partido") +
+  scale_y_log10()
+
+  
+```
+
+O engajamento é, em geral, bem distribuído dentro de cada partido para os representantes com mais de 25% e menos de 75% dos engajamentos, com a posição da mediana próxima do meio da caixa para a maioria deles.
+Apesar disso, há caixas bem elásticas, mostrando a existência de variações. As maiores estão no DEM, PODEMOS e PSB.
+A última análise que podemos fazer é que há poucos representantes com valores discrepantes para o engajamento total. Alguns deles são: Chico D'Angelo, Eros Biondini, Jandira Feghali, Marcelo Ramos e Paulo Eduardo Martins, com valores acima do máximo para o boxplot, e Dagoberto Nogueira, Euclydes Pettersen, Professor Joziel e Professora Rosa Neide, com valores Inferiores.
+
+```{r echo=FALSE}
+atividade %>% 
+  filter(partido %in% c("PCdoB","PDT", "PR", "PROS", "PSC"), !is.na(engaj_total)) %>%
+  select(partido, nome_eleitoral, engaj_total) %>%
+  group_by(partido) %>%
+  filter(engaj_total == max(engaj_total) )
+
+atividade %>% 
+  filter(partido %in% c("PDT", "PSC", "PSL", "PT"), !is.na(engaj_total), engaj_total > 0) %>%
+  select(partido, nome_eleitoral, engaj_total) %>%
+  group_by(partido) %>%
+  filter(engaj_total == min(engaj_total))
+```
+
+```{r pressure, echo=FALSE, warning=FALSE}
+totais <- atividade %>% 
+  filter(!is.na(seguidores) & casa == "câmara") %>%
+  summarize(n_politicos = n(),
+            n_seguidores = sum(seguidores))
+seguidores <- atividade %>% 
+  select(id_parlamentar, partido, seguidores) %>%
+  filter(!is.na(seguidores))%>%
+  group_by(partido) %>%
+  summarize(QntPoliticos = n(),
+            QntSeguidores = sum(seguidores),
+            Proporcao = round(QntPoliticos*100/totais$n_politicos, 2),
+            Seguidores = round(QntSeguidores*100/totais$n_seguidores,2))
+```
+
+### É correto dizer que um congressista que twitta muito tem maior engajamento?
+
+Pelo senso comum parece correto afirmar, afinal quanto maior o número de tweets, maiores as chances de engajamento. Entretanto, é preciso analisar os dados antes de afirmar, para que não seja uma afirmação equivocada:
+
+```{r warning=FALSE}
+atividade %>% filter(!is.na(seguidores)) %>% mutate(total_tweets = n_proprio + n_retweet) %>%
+  ggplot(mapping = aes(total_tweets, engaj_total)) +
+  geom_point(alpha=.4, colour="#00CED1") + 
+  xlab("Número de Tweets") + ylab("Engajamento Total") + ggtitle("Número de Tweets vs. Engajamento") +
+  geom_smooth(method = "lm", colour = "turquoise")
+```
+
+Entretanto, é difícil analisar se existe ou não uma relação nesse caso, pois a distribuição dos dados não facilita. Vejamos se ao alterar as escalas para uma escala logarítmica melhora nossa visualização:
+
+```{r warning=FALSE}
+atividade %>% filter(!is.na(seguidores)) %>% mutate(total_tweets = n_proprio + n_retweet) %>%
+  ggplot(mapping = aes(total_tweets, engaj_total)) +
+  geom_point(alpha=.4, colour="#00CED1") + scale_x_log10() + scale_y_log10() +
+  xlab("Número de Tweets") + ylab("Engajamento Total") + ggtitle("Número de Tweets vs. Engajamento") +
+  geom_smooth(method = "lm", colour = "turquoise")
+```
+
+Agora é possível ver melhor o formato e realmente identificar a correção entre os dados: quanto maior o número de tweets, maior o engajamento. Ao calcular a correlação, temos um valor de `r cor(atividade_real$n_proprio + atividade_real$n_retweet, atividade_real$engaj_total)`.

@@ -1,0 +1,138 @@
+---
+title: "Regressão Linear"
+author: "Nazareno Andrade"
+output: 
+  html_notebook:
+    theme: readable
+    fig_width: 7
+    toc: true
+    toc_float: true
+
+---
+
+```{r message=FALSE, warning=FALSE}
+library(openintro) # O dataset é desse pacote
+
+library(tidyverse)
+library(ggbeeswarm)
+library(modelr)
+library(broom)
+theme_set(theme_bw())
+```
+
+# Nosso objetivo
+
+Até aqui, já conhecemos diferentes formas de sumarizar uma variável com uma estatística (ex: média, mediana, desvio padrão). Conhecemos também uma forma de avaliar a força e a direção da relação entre duas variáveis, com coeficientes de correlação. 
+
+Com regressão, queremos dar os seguintes passos adiante:
+
+   * descrever além da força e da direção de uma relação, sua *forma*. Por exemplo, queremos além de dizer que pessoas mais altas em geral pesam mais, dizer o quanto se espera que uma pessoa pese a mais se ela for 20cm mais alta que outra.   
+   * descrever a relação entre mais de duas variáveis. Por exemplo, dizer que ao adicionar 1GB de memória a mais em uma VM (máquina virtual) e não mexer no número de vCPUs que ela tem, um servidor web rodando nessa VM conseguirá responder mais 20 req/s e adicionar uma vCPU sem mexer na memória aumenta a taxa de respostas em 40 req/s. 
+   
+Para descrever a relação entre as variávies dessa forma, escolheremos uma variável na qual nos interessa entender o efeito das demais. Essa será nossa variável de resposta ou saída, ou variável dependente. As demais são variáveis de entrada, preditores ou variáveis independentes. No exemplo acima, taxa de respostas é a variável de resposta, e número de vCPUs e quantidade de memória da VM são variáveis de entrada, ou preditores, ou variáveis dependentes.
+
+## Funções, modelos, famílias
+
+Em regressão, descreveremos a relação entre variáveis como uma função matemática. Por exemplo, uma resposta de nossa análise será algo como uma dessas 3 funções:
+
+  * $reqs = 4 *mem + 10*vCPUs -2$, ou    
+  * $reqs = 1.2 *mem^2 + 10*vCPUs -7.1$ ou    
+  * $reqs = 2.1 *mem + 10*2^{vCPUs} - 4$   
+
+No primeiro exemplo, a taxa de requisição é uma função linear da quantidade de memória e do número de vCPUs. No segundo caso, a taxa de requisições aumenta com o quadrado do número de GBs de memória no nosso servidor. Isso quer dizer que o efeito de aumentar $mem$ de 0 para 1 ($=1.2*1 = 1.2$ nesse caso) não é o mesmo que o efeito de aumentar $mem$ de 1 para 2 ($=1.2*2^2 - 1.2=3.6$). Essa é a definição de não-linearidade, a propósito. 
+
+Na terceira função na lista, a taxa de requisições cresce exponencialmente com o número de vCPUs. Aumentar $vCPUs$ em uma unidade multiplica por 2 o valor do termo $10*2^{vCPUs}$.
+
+Esses três exemplos dão exemplos de três famílias de funções: lineares, polinomiais e exponenciais. Em regressão construiremos funções para descrever a relação entre variáveis. Normalmente a escolha da família de funções a ser usada é uma escolha do analista. Os métodos de regressão servirão para encontrar os valores dos coeficientes na função que melhor se ajustam aos seus dados. Você depois utilizará estatística para afirmar quão bem a função que o método encontrou representa seus dados. E iterará nesse processo, claro.
+
+# A intuição
+
+Os dados que usaremos:
+
+```{r}
+data(countyComplete)
+
+glimpse(countyComplete)
+```
+
+Estamos interessados na relação entre escolaridade (`hs_grad`) e pobreza (`poverty`):
+
+## EDA, sempre
+
+SEMPRE iniciamos com uma EDA dos dados!
+
+```{r}
+countyComplete %>% 
+  ggplot(aes(x = hs_grad)) + 
+  geom_histogram(binwidth = 5)
+
+countyComplete %>% 
+  ggplot(aes(x = poverty)) + 
+  geom_histogram(binwidth = 5)
+```
+
+
+```{r}
+ggplot(countyComplete, aes(x = hs_grad, y = poverty)) + 
+  geom_point(alpha = 0.4, size = .5)
+```
+
+
+## Modelando a relação
+
+No olho:
+
+```{r}
+ggplot(countyComplete, aes(x = hs_grad, y = poverty)) + 
+  geom_point(alpha = 0.4, size = .8) + 
+  geom_abline(slope = 0, intercept = 20, color  = "red") 
+```
+
+Quantificando a qualidade do modelo:
+
+```{r}
+modelo = function(hs_grad, slope, intercept){
+  return(slope * hs_grad + intercept)
+}
+
+nossas_estimativas = countyComplete %>% 
+  select(hs_grad, poverty) %>% 
+  mutate(
+    segundo_modelo = modelo(hs_grad, -.72, 75), 
+    residuo = poverty - segundo_modelo, 
+    residuo_quad = residuo**2 # para que fique tudo positivo
+  )
+
+fit_modelo = nossas_estimativas %>% summarise(sse = sum(residuo_quad)) %>% pull(sse)
+
+fit_modelo
+```
+
+É mais fácil se tivermos um parâmetro pra comparar esse número. Usaremos o erro de um modelo sem a variável hs_grad: 
+
+```{r}
+ggplot(countyComplete, aes(x = "", y = poverty)) + 
+  geom_quasirandom(size = .5, width = .2) + 
+  geom_point(aes(y = mean(poverty)), color = "red", size = 3)
+```
+
+
+```{r}
+usando_media = countyComplete %>% 
+  select(hs_grad, poverty) %>% 
+  mutate(
+    segundo_modelo = mean(poverty), 
+    residuo = poverty - segundo_modelo, 
+    residuo_quad = residuo**2
+  )
+
+fit_media = usando_media %>% summarise(sse = sum(residuo_quad)) %>% pull(sse)
+```
+
+Comparando: de quanto é a redução no erro usando nosso modelo comparado com o da média?
+
+```{r}
+(fit_media - fit_modelo)/fit_media
+```
+
+Essa medida que acabamos de definir se chama `R^2`, ou R squared.

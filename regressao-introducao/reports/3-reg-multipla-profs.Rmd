@@ -1,0 +1,52 @@
+---
+title: "Regressão múltipla"
+author: "Nazareno Andrade"
+output: 
+  html_notebook:
+    theme: readable
+    fig_width: 7
+    toc: true
+    toc_float: true
+
+---
+
+```{r message=FALSE, warning=FALSE}
+library(openintro)
+library(tidyverse)
+library(ggbeeswarm)
+library(modelr)
+library(broom)
+theme_set(theme_bw())
+```
+
+Os dados que usaremos estão detalhados nessa página do [OpenIntro](https://www.openintro.org/stat/data/?data=evals).
+
+```{r}
+profs = read_csv("https://www.openintro.org/stat/data/evals.csv") %>% 
+    select(score, age, gender, bty_avg, pic_outfit, pic_color)
+glimpse(profs)
+```
+
+
+```{r}
+profs %>% 
+    ggplot(aes(x = age, y = score)) + 
+    geom_count()
+
+profs %>% 
+    ggplot(aes(x = bty_avg, y = score)) + 
+    geom_count()
+
+profs %>% 
+    ggplot(aes(x = pic_outfit, y = score)) + 
+    geom_count()
+
+profs %>% 
+    ggplot(aes(x = pic_color, y = score)) + 
+    geom_count()
+```
+
+```{r}
+
+```
+

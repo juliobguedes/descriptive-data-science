@@ -1,0 +1,162 @@
+---
+title: "Uma Análise sobre Correlações: Twitter dos Congressistas"
+author: "Júlio Guedes"
+output:
+  html_document:
+    df_print: paged
+theme: sandstone
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggrepel)
+library(gridExtra)
+library(plotly)
+source(here::here("code/lib.R"))
+theme_set(theme_bw())
+```
+
+```{r read, echo = FALSE}
+atividade = read_projectdata()
+atividade_real <- atividade %>% filter(!is.na(seguidores))
+```
+
+O objetivo deste post é analisar as correlações presentes nos dados do Twitter dos congressistas.
+
+## Relação nas publicações
+
+### Tweets vs Retweets
+
+Nesta seção buscaremos identificar se existe relação entre a quantidade de tweets autoriais e a quantidade de retweets feitos pelos congressistas. Inicialmente, vejamos como é a dispersão desses dados:
+
+```{r}
+r1 <- atividade_real %>%
+  ggplot(mapping = aes(x=n_proprio, y=n_retweet, label=nome_eleitoral)) +
+  geom_point() + geom_abline(slope = 1) + xlab("Número de Tweets Autorais") +
+  ylab("Número de Retweets") + ggtitle("Tweets x Retweets: Há relação?")
+ggplotly(r1)
+```
+
+De imediato, é difícil dizer se existe um formato específico: além da linha que segue descendo de Paulão à Margarida Salomão, não é muito que se consegue observar a partir dos dados, já que os pontos estão muito aglomerados próximos à orgiem. Vamos tentar melhorar essa visualização removendo o congressista que é um _outlier_: Bacelar.
+
+```{r}
+r2 <- atividade_real %>%
+  filter(nome_eleitoral != "BACELAR") %>%
+  ggplot(mapping = aes(x=n_proprio, y=n_retweet, label=nome_eleitoral)) +
+  geom_point() + geom_abline(slope = 1) + xlab("Número de Tweets Autorais") +
+  ylab("Número de Retweets") + ggtitle("Tweets x Retweets: Sem Bacelar")
+ggplotly(r2)
+```
+
+Ainda assim, o formato dos dados não é tão bem definido: embora pareça vagamente que o número de retweets cresce quando o número de tweets cresce, não é tão claro assim. Vamos tentar mudar a escala nos eixos e verificar se isso realmente acontece:
+
+```{r warning=FALSE}
+r31 <- atividade_real %>%
+  ggplot(mapping = aes(x=n_proprio, y=n_retweet, label=nome_eleitoral)) +
+  geom_point() + xlab("Número de Tweets Autorais") +
+  ylab("Número de Retweets") + ggtitle("Tweets x Retweets: X em Log") + scale_x_log10()
+
+r32 <- atividade_real %>%
+  filter(nome_eleitoral != "BACELAR") %>%
+  ggplot(mapping = aes(x=n_proprio, y=n_retweet, label=nome_eleitoral)) +
+  geom_point() + xlab("Número de Tweets Autorais") +
+  ylab("Número de Retweets") + ggtitle("Tweets x Retweets: X em Log, SB") + scale_x_log10()
+
+grid.arrange(r31, r32, ncol = 2)
+```
+
+Quando colocamos X em escala logarítmica temos um formato mais claro, que demonstra realmente que o número de retweets cresce, se maior o número de tweets, num formato quase esponencial.
+
+```{r warning=FALSE}
+r41 <- atividade_real %>%
+  ggplot(mapping = aes(x=n_proprio, y=n_retweet, label=nome_eleitoral)) +
+  geom_point() + xlab("Número de Tweets Autorais") +
+  ylab("Número de Retweets") + ggtitle("Tweets x Retweets: Y em Log") + scale_y_log10()
+
+r42 <- atividade_real %>%
+  filter(nome_eleitoral != "BACELAR") %>%
+  ggplot(mapping = aes(x=n_proprio, y=n_retweet, label=nome_eleitoral)) +
+  geom_point() + xlab("Número de Tweets Autorais") +
+  ylab("Número de Retweets") + ggtitle("Tweets x Retweets: Y em Log, SB") + scale_y_log10()
+
+grid.arrange(r41, r42, ncol=2)
+```
+
+Agora que y está em escala logarítmica, o formato parece ser logarítmico: o número de retweets parece estagnar, de acordo com o número de tweets. Para uma última visualização, vejamos:
+
+```{r warning=FALSE}
+r51 <- atividade_real %>%
+  ggplot(mapping = aes(x=n_proprio, y=n_retweet, label=nome_eleitoral)) +
+  geom_point() + xlab("Número de Tweets Autorais") +
+  ylab("Número de Retweets") + ggtitle("Tweets x Retweets: XY em Log") +
+  scale_x_log10() + scale_y_log10() + geom_abline(slope = 1, intercept = -.7)
+
+r52 <- atividade_real %>%
+  filter(nome_eleitoral != "BACELAR") %>%
+  ggplot(mapping = aes(x=n_proprio, y=n_retweet, label=nome_eleitoral)) +
+  geom_point() + xlab("Número de Tweets Autorais") +
+  ylab("Número de Retweets") + ggtitle("Tweets x Retweets: XY em Log, SB") +
+  scale_x_log10() + scale_y_log10() + geom_abline(slope = 1, intercept = -.7)
+
+grid.arrange(r51, r52, ncol=2)
+```
+
+Agora que X e Y estão em escala logarítimica, podemos realmente ver que existe uma correlação entre esses dados. Por fim, vamos confirmar analisando as correlações de Pearson, Spearman e Kendall:
+
+```{r}
+atividade_real %>%
+  summarise(
+    pearson = cor(n_proprio, n_retweet, method = "pearson"),
+    spearman = cor(n_proprio, n_retweet, method = "spearman"),
+    kendall = cor(n_proprio, n_retweet, method = "kendall")
+  )
+```
+
+Entretanto, assim como nas visualizações anteriores, é preciso analisar as correlações removendo o outlier (_BACELAR_) do nosso conjunto:
+
+```{r}
+atividade_real %>%
+  filter(nome_eleitoral != "BACELAR") %>%
+  summarise(
+    pearson = cor(n_proprio, n_retweet, method = "pearson"),
+    spearman = cor(n_proprio, n_retweet, method = "spearman"),
+    kendall = cor(n_proprio, n_retweet, method = "kendall")
+  )
+```
+
+Embora muitas vezes o formato pareça ser mais claro sem a presença de Bacelar, quando ele não está no conjunto, nossa correlação diminui. Ainda assim, em ambos os casos, existe correlação entre as variáveis.
+
+### Quantas pessoas eles seguem vs Quantas pessoas seguem eles
+
+```{r warning=FALSE}
+r6 <- atividade_real %>%
+  ggplot(mapping = aes(x=seguidores, y=segue, label=nome_eleitoral)) +
+  geom_point() + geom_abline(slope = 1) + xlab("Número de Seguidores") +
+  ylab("Número de Seguidos") + ggtitle("Seguidores x Seguidos: Há relação?") +
+  scale_x_continuous(labels = scales::comma)
+ggplotly(r6)
+```
+
+Do mesmo modo que no caso anterior, é difícil identificar quem a relação com a escala atual. Vejamos quando as escalas são logarítmicas:
+
+```{r warning=FALSE}
+r7 <- atividade_real %>%
+  ggplot(mapping = aes(x=seguidores, y=segue, label=nome_eleitoral)) +
+  geom_point() + xlab("Número de Seguidores") +
+  ylab("Número de Seguidos") + ggtitle("Seguidores x Seguidos: Há relação?") +
+  scale_x_log10(labels = scales::comma) + scale_y_log10()
+ggplotly(r7)
+```
+
+Agora é possível visualizar um formato e supor que há correlação, mesmo que a força seja pequena. Vejamos agora as correlações de Pearson, Spearman e Kendall:
+
+```{r}
+atividade_real %>%
+  summarise(
+    pearson = cor(segue, seguidores, method = "pearson"),
+    spearman = cor(segue, seguidores, method = "spearman"),
+    kendall = cor(segue, seguidores, method = "kendall")
+  )
+```
+
+

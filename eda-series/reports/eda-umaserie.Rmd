@@ -1,0 +1,154 @@
+---
+title: "EDA Stranger Things"
+output:
+  html_notebook:
+    toc: yes
+    toc_float: yes
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(here)
+library(ggbeeswarm)
+theme_set(theme_bw())
+```
+
+## Objetivo
+
+Explorar as avaliações dos episódios da série Stranger Things. Houve duas temporadas: quais foram os melhores episódios? A melhor temporada?
+
+Ler os dados:
+
+```{r}
+all_series = read_csv(here("data/series_from_imdb.csv.zip"), 
+                      col_types = "ccdcdcdddddddddddd") 
+
+glimpse(all_series)
+
+episodes = all_series %>% 
+    filter(series_name == "Chuck") 
+
+glimpse(episodes)
+```
+
+Estamos interessados nas variáveis `UserRating` e `UserVotes`, principalmente.
+
+## Quais os valores que existem de notas? 
+
+```{r}
+episodes %>%
+    ggplot(mapping = aes(x=series_name, y=UserRating)) +
+    # geom_point() # Ponto simples
+    # geom_jitter(width = .1, alpha = .5) # Aleatória
+    geom_quasirandom(width = .1) # Formatado "Quase Random"
+  
+```
+
+E por faixas de valor?
+
+```{r}
+episodes %>%
+    ggplot(mapping=aes(x = UserRating)) +
+    geom_histogram(binwidth = .25, color="black", fill="turquoise") +
+    geom_rug() # Mostra os pontos no eixo X
+
+```
+
+Outra forma de pensar no histograma, pensa-se em proporção
+
+```{r}
+episodes %>%
+    ggplot(mapping = aes(UserRating, stat(density))) +
+    geom_histogram(binwidth = .5, color="black", fill="turquoise")
+    #geom_rug() # Mostra os pontos no eixo X
+```
+
+Quando a variável é contínua, estima-se a densidade para cada ponto dos dados:
+
+```{r}
+episodes %>%
+    ggplot(mapping = aes(UserRating, stat(density))) + 
+    geom_density()
+```
+Probabilidade do intervalo = AUC.
+
+## Agora por temporada
+
+```{r}
+episodes %>%
+    ggplot(mapping = aes(x = season, y = UserRating)) +
+    geom_quasirandom()
+```
+
+Posição/Centro -> Média, Mediana, Moda.
+
+E se quisessemos observar um centro da dispersão?
+
+```{r}
+episodes %>%
+    ggplot(mapping = aes(x = season, y = UserRating)) +
+    geom_quasirandom(alpha = .3) + 
+    stat_summary(fun.y = "mean", color = "orange", geom = "point") + # uma estatística
+    stat_summary(fun.y = "median", color = "purple", geom = "point")
+```
+
+Dispersão/Concentração -> Desvio Padrão, Range (Amplitude) => uma outra abordagem é remover uma quantidade de amostras acima e abaixo, ou até mesmo uma porcentagem acima e abaixo -> formula 1.
+
+Amplitude interquartis.
+
+Pontos Extremos (outliers em alguns casos) -> Boxplot.
+
+```{r}
+episodes %>%
+    ggplot(mapping = aes(x = season, y = UserRating)) + 
+    geom_boxplot(outlier.colour = NA, coef = 0) +
+    geom_quasirandom(alpha = .1)
+```
+
+
+## Quais valores existem para número de votos?
+
+```{r}
+episodes %>% 
+  mutate(season = as.character(season)) %>% 
+  ggplot(mapping = aes(x = season, y = UserVotes)) + 
+  geom_point()
+```
+
+```{r}
+episodes %>% 
+  mutate(season = as.character(season)) %>% 
+  ggplot(mapping = aes(x = UserVotes)) + 
+  geom_histogram(binwidth = 1000, 
+                 boundary = 10000,
+                 color = "black", 
+                 fill = "darkorange") + 
+  geom_rug()
+```
+
+Temos um episódio bem mais avaliado que os demais.
+
+
+## Qual é esse episódio tão mal avaliado?
+
+```{r}
+episodes %>% 
+  mutate(season = as.character(season)) %>% 
+  ggplot(mapping = aes(x = series_ep, y = UserRating, color = season)) + 
+  geom_line()
+```
+
+E qual aquele com mais avaliações?
+
+```{r}
+episodes %>% 
+  mutate(season = as.character(season)) %>% 
+  ggplot(mapping = aes(x = series_ep, y = UserVotes, color = season)) + 
+  geom_line()
+```
+
+Alguma coisa aconteceu no episódio 15...

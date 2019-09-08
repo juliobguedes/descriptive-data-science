@@ -1,0 +1,23 @@
+p {
+  margin-top: 1em;
+  text-indent: 2em;
+  padding: 0em 0.5em;
+  text-align: justify;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 1em;
+}
+
+.r {
+    margin-top: 1.5em; 
+}

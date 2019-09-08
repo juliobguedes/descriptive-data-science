@@ -1,0 +1,54 @@
+---
+title: "Como os congressistas se expressam no Twitter: Uma análise quantitativa"
+output:
+  html_document:
+    df_print: paged
+theme: sandstone
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+source(here::here("code/lib.R"))
+theme_set(theme_bw())
+```
+
+```{r read, echo = FALSE}
+atividade = read_projectdata()
+```
+
+No Brasil e em muitos países Democráticos, é comum que membros da Câmara dos Deputados e do Senado Federal tenham alguma forma de se comunicar, ampla e continuamente, com a população. Uma forma fácil de fazer isso é através das redes sociais: Facebook, Instagram e Twitter têm se tornado mais um meio no qual a população pode acompanhar as atividades parlamentares.
+
+Entretanto, podemos descobrir mais coisas através de uma análise sobre a atividade dos deputados nessas redes, e faremos isso utilizando os dados dos deputados no Twitter, através de seis perguntas:
+
+1. [Qual a representatividade de cada Partido no Twitter? E de cada Estado?](#p1)
+2. [Quais os congressistas que mais participam no Twitter? Quais menos participam?](#p2)
+3. [Quais Deputados conseguem maior participação nas redes sociais? E Senadores?](#p3)
+4. [Quais congressistas "hitaram" no Twitter?](#p4)
+5. [Quais partidos fazem "publi" no Twitter?](#p5)
+6. [Quais congressistas aderiram ao "SDV"?](#p6)
+
+## Análise dos dados
+
+### Qual a representatividade de cada Partido no Twitter? E de cada Estado? <span id="p1"></span>
+
+A representatividade dos partidos no Twitter deveria seguir de acordo com a quantidade de candidatos eleitos em cada partido, sendo  PSL e PT os mais representados. Quanto aos estados, creio que os estados do Sudeste e Centro-Oeste sejam os que possuem mais representantes.
+
+### Quais os congressistas que mais participam no Twitter? Quais menos participam? <span id="p2"></span>
+
+Da mesma forma que na pergunta anterior, creio que os congressistas dos dois partidos com maior número, PSL e PT, sejam os que mais participam.
+
+### Quais Deputados conseguem maior participação nas redes sociais? E Senadores? <span id="p3"></span>
+
+Creio que entre os Deputados estejam Eduardo Bolsonaro, Rodrigo Maia e Marcelo Freixo. Entre os Senadores, Flávio Bolsonaro, Cid Gomes, Kátia Abreu,
+
+### Quais congressistas "hitaram" no Twitter? <span id="p4"></span>
+
+Alexandre Frota, Flavio e Eduardo Bolsonaro, Cid Gomes.
+
+### Quais partidos fazem "publi" no Twitter? <span id="p5"></span>
+
+MDB, Novo, Avante.
+
+### Quais congressistas aderiram ao "SDV"? <span id="p6"></span>
+
+PSL, PSDB, PC, PSC.

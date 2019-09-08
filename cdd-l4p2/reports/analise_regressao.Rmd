@@ -1,0 +1,129 @@
+---
+title: "Alfabetização das Raças"
+author: "Iann Carvalho e Júlio Barreto"
+date: "05 de julho de 2019"
+output:
+  html_document:
+    theme: flatly
+    df_print: paged
+    code_folding: "hide"
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+  phtml_notebook:
+    toc: yes
+    toc_depth: 5
+    fig_width: 7
+css: r-markdown.css
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(broom)
+library(here)
+library(modelr)
+library(corrplot)
+```
+
+# 0. Os Dados
+
+O Instituto Brasileiro de Geografia e Estatística (IBGE) é um instituto público da administração federal brasileira criado em 1934 e instalado em 1936 com o nome de Instituto Nacional de Estatística; seu fundador e grande incentivador foi o estatístico Mário Augusto Teixeira de Freitas.
+
+O IBGE tem atribuições ligadas às geociências e estatísticas sociais, demográficas e econômicas, o que inclui realizar censos e organizar as informações obtidas nesses censos, para suprir órgãos das esferas governamentais federal, estadual e municipal, e para outras instituições e o público em geral.
+
+Através dos dados disponibilizados por esse instituto, foi sugerida a tentativa de explicar como a raça e o setor afetam na alfabetização dos cidadãos. Os dados são divididos em setores censitários, que são, uma unidade territorial de coleta das operações censitárias, definido pelo IBGE, com limites físicos identificados, em áreas contínuas e respeitando a divisão político-administrativa do Brasil.
+
+```{r}
+dados <- read_csv(here::here("data/dados_limpos.csv"), col_types = "dcccdddddddddddddddd")
+glimpse(dados)
+```
+
+```{r}
+data = dados %>%
+  filter(!is.na(porc_alfabetizados),!is.na(porc_indigenas_pardos_pretos),!is.na(urbano)) %>% 
+  select(porc_alfabetizados, porc_indigenas_pardos_pretos, urbano)
+```
+
+# 1. Análises
+
+## 1.1. Análise de Dipsersão dos Dados
+
+```{r}
+data %>%
+  ggplot(aes(x = porc_indigenas_pardos_pretos, y = porc_alfabetizados)) +
+  geom_point(alpha = .2, color = "darkorchid3") +
+  labs(x="Pardos, Negros e Índios", y="Alfabetizados") 
+
+data %>% 
+  ggplot(aes(x = urbano, y = porc_alfabetizados)) + 
+  geom_jitter(alpha = .2, color = "orangered2") + 
+  labs(x="Urbano", y="Alfabetizados")
+```
+
+Com o gráfico de dispersão acima, percebeu-se que é mais próximo da função, subdividiu-se em dois modelos lineares (os aqueles acima e abaixo de 40%). Tendo em vista que 58,86% da Paraíba é composta de negros, pardos e índios, foi utilizada a parte acima de 40% da distribuição.
+
+```{r}
+dados %>% 
+  summarise(nao_brancos = sum(num_pretos, num_indigenas, num_pardos, na.rm = T) / sum(num_residentes, na.rm = T))
+
+data = data %>% 
+  filter(porc_indigenas_pardos_pretos > .4)
+
+data %>%
+  ggplot(aes(x = porc_indigenas_pardos_pretos, y = porc_alfabetizados, color = urbano)) +
+  geom_point(alpha = .2) +
+  labs(x="Pardos, Negros e Índios", y="Alfabetizados") +
+  scale_color_manual(values = c("#8E3B46", "#477890"))
+```
+
+## 1.2 Análise de Correlação
+
+```{r}
+data_corr = data %>%
+    mutate(urbano = ifelse(urbano == "Urbano", 1, 0))
+
+corrplot(cor(data_corr), diag = FALSE, tl.cex = 0.5, method = "circle", tl.col = "black", number.cex = .9, cl.lim = c(-100, 100), na.label = "o", addCoef.col = "black")
+```
+
+Através do gráfico de correlação, notou-se que, existe uma correlação linear moderada entre a alfabetização, tanto com a raça, quanto com o setor. Já pelo gráfico de distribuição, podemos perceber que a correlação não é monotônica e é negativa.
+
+# 2. Regressão
+
+## 2.1. Criando Modelo
+
+```{r}
+modelo <- lm(data = data,
+             porc_alfabetizados ~ porc_indigenas_pardos_pretos + urbano
+             )
+tidy(modelo, conf.int = TRUE)
+glance(modelo)
+```
+
+## 2.2. Análise Gráfica da Regressão
+
+```{r}
+para_plotar_modelo = data %>% 
+  data_grid(porc_indigenas_pardos_pretos = seq_range(porc_indigenas_pardos_pretos, 10),
+            urbano = c("Urbano", "Rural")) %>% 
+  add_predictions(modelo)
+
+glimpse(para_plotar_modelo)
+```
+
+```{r}
+ggplot(data = data, aes(x = porc_indigenas_pardos_pretos)) + 
+  geom_point(aes(y = porc_alfabetizados, color = urbano), alpha = .2) + 
+  geom_line(data = para_plotar_modelo, aes(y = pred, color=urbano), size = 1.5)  +
+  labs(x="Pardos, Negros e Índios", y="Alfabetizados", color="Setor") +
+  scale_color_manual(values = c("#8E3B46", "#477890"))
+```
+
+```{r}
+ggplot(data = data, aes(x = porc_indigenas_pardos_pretos)) + 
+  geom_line(data = para_plotar_modelo, aes(y = pred,color=urbano), size = 1.5) +
+  labs(x="Pardos, Negros e Índios", y="Alfabetizados", color="Setor") +
+  scale_color_manual(values = c("#8E3B46", "#477890"))
+```
+
+Regressão linear múltipla foi utilizada para analisar a associação da porcentagem de alfabetizados e da raça e setor. Os resultados da regressão indicam que um modelo no formato Alfabetizados = 0,87 - 0,50.(porc_indigenas_pardos_pretos) + 0,14.(urbano), explicam 41,42% da variância da variável de resposta (R2 = 0.41). Portanto, observamos que as principais caracteristicas de raça influenciam mais no alfabetizado do que se a pessoa mora em um setor urbano ou rural.

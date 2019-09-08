@@ -1,0 +1,220 @@
+---
+title: "Análise de uma replicação"
+author: "Iann Carvalho Barbosa"
+date: "06 de junho de 2019"
+output:
+  html_document:
+    theme: flatly
+    df_print: paged
+    code_folding: "hide"
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+  phtml_notebook:
+    toc: yes
+    toc_depth: 5
+    fig_width: 7
+css: r-markdown.css
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(here)
+library(tidyverse)
+library(broom)
+library(ggbeeswarm)
+library(gridExtra)
+library(boot)
+
+theme_set(theme_bw())
+
+knitr::opts_chunk$set(tidy = FALSE,
+                      fig.width = 6,
+                      fig.height = 5)
+```
+
+```{r warning=FALSE, message=FALSE}
+data = read_csv2(here::here("data/campeonato_brasileiro.csv"))
+data
+```
+
+# Dia
+
+## Sobre os dados
+
+```{r warning=FALSE}
+dias = data %>% 
+    filter(Dia == "Domingo" | Dia == "Quarta-feira")
+
+dias %>% 
+    ggplot(aes(x = gols)) + 
+    geom_histogram(binwidth = 1, boundary = 0) + 
+    facet_wrap(~ Dia, 
+               ncol = 1) + 
+    xlim(5, 10)
+
+dias_valores = dias %>%
+    group_by(Dia) %>%
+    summarise(jogos = n(), quantidade_gols = sum(gols), media = mean(gols), sd = sd(gols))
+
+dias_valores
+```
+
+Sobre os dados, temos que há uma quantidade de jogos e de gols quase três vezes maior nos domingos, uma média e um desvio padrão próximos.
+
+## Intervalo de Confiança
+
+```{r}
+theta_diferenca_dia = function(d, i){
+    dias = d %>%
+        slice(i) %>%
+        group_by(Dia) %>%
+        summarise(media = mean(gols))
+    
+    qua = dias %>% filter(Dia == "Quarta-feira") %>% pull(media)
+    dom = dias %>% filter(Dia == "Domingo") %>% pull(media)
+    
+    qua - dom
+}
+
+theta_diferenca_dia(dias, 1:NROW(dias))
+```
+
+```{r}
+dias %>% 
+    boot(statistic = theta_diferenca_dia, R = 4000) %>% 
+    tidy(conf.level = 0.95, 
+         conf.int = TRUE)
+```
+
+Com a análise de intervalo de confiança, através de **bootstrap**, chegamos a conclusão que a diferença entre os gols da quarta e do domingo é quase nula, pois o módulo do limite inferior do intervalo da diferença é quase igual ao limite superior [-0.43, 0.46].
+
+## Teste de Hipótese
+
+```{r}
+theta_embaralhado_dia = function(d){
+    dias = d %>%
+        mutate(dia_embaralhado = sample(Dia, n())) %>% 
+        group_by(dia_embaralhado) %>%
+        summarise(media = mean(gols))
+    
+    qua = dias %>% filter(dia_embaralhado == "Quarta-feira") %>% pull(media)
+    dom = dias %>% filter(dia_embaralhado == "Domingo") %>% pull(media)
+    
+    qua - dom
+}
+
+theta_embaralhado_dia(dias)
+```
+
+```{r}
+diffs_dia = replicate(5000, {theta_embaralhado_dia(dias)})
+```
+
+```{r}
+tibble(diferenca = diffs_dia) %>% 
+  ggplot(aes(x = diferenca)) +
+    geom_density(fill = "white", color = "darkorchid3") + 
+  geom_vline(xintercept = theta_diferenca_dia(dias, 1:NROW(dias)), 
+             color = "yellowgreen") + 
+    geom_vline(xintercept = - theta_diferenca_dia(dias, 1:NROW(dias)), 
+             color = "yellowgreen")
+```
+
+```{r}
+mean(abs(diffs_dia) >= abs(theta_diferenca_dia(dias, 1:NROW(dias))))
+```
+
+Com a análise do teste de hipótese, chegamos a conclusão que há apróximadamente 96% de parecer com o modelo nulo, ou seja, não existe uma diferença significativa entre a quantidade de gols na quarta e domingo.
+
+# Vencedores
+
+## Sobre os dados
+
+```{r warning=FALSE}
+names(data)[14] <- "Estado_Vencedor"
+
+vencedor = data %>%
+    mutate(Vencedor = if_else(Estado_Vencedor=="Empate", "Empate", "Vitória"))
+
+vencedor %>% 
+    ggplot(aes(x = gols)) + 
+    geom_histogram(binwidth = 1, boundary = 0) + 
+    facet_wrap(~Vencedor , 
+               ncol = 1) + 
+    xlim(5, 10)
+
+vencedor_valores = vencedor %>% 
+    group_by(Vencedor) %>%
+    summarise(jogos = n(), quantidade_gols = sum(gols), media = mean(gols), sd = sd(gols))
+
+vencedor_valores
+```
+
+Sobre os dados, temos que há uma quantidade de jogos quase três vezes maior que resultam em vitória, que a quantidade de gols em vitória são três vezes maior do que em empate, que a média de gols é um pouco maior para jogos em que há vitória e um desvio padrão próximo.
+
+## Intervalo de Confiança
+
+```{r}
+theta_diferenca_vencedor = function(d, i){
+    gols_dados = d %>% 
+        slice(i) %>% 
+        group_by(Vencedor) %>% 
+        summarise(media = mean(gols)) 
+    
+    vence = gols_dados %>% filter(Vencedor == "Empate") %>% pull(media)
+    n_vence = gols_dados %>% filter(Vencedor == "Vitória") %>% pull(media)
+    
+    n_vence - vence
+}
+
+
+theta_diferenca_vencedor(vencedor, 1:NROW(vencedor))
+```
+
+```{r}
+vencedor %>% 
+    boot(statistic = theta_diferenca_vencedor, R = 4000) %>% 
+    tidy(conf.level = 0.95, 
+         conf.int = TRUE)
+```
+
+Com a análise de intervalo de confiança, através de **bootstrap**, chegamos a conclusão que a diferença entre os gols das partidas que há vitória e empate existe, mas não é muito grande sendo entre [0.21, 0.89].
+
+## Teste de Hipótese
+
+```{r}
+theta_embaralhado_vencedor = function(d){
+    gols_dados = d %>% 
+        mutate(vencedor_embaralhado = sample(Vencedor, n())) %>% 
+        group_by(vencedor_embaralhado) %>% 
+        summarise(gols_media = mean(gols)) 
+    
+    Empate = gols_dados %>% filter(vencedor_embaralhado == "Empate") %>% pull(gols_media)
+    Vitoria = gols_dados %>% filter(vencedor_embaralhado == "Vitória") %>% pull(gols_media)
+    
+    Empate - Vitoria
+}
+
+theta_embaralhado_vencedor(vencedor)
+```
+
+```{r}
+diffs_vencedor = replicate(5000, {theta_embaralhado_vencedor(vencedor)})
+```
+
+```{r}
+tibble(diferenca = diffs_vencedor) %>% 
+  ggplot(aes(x = diferenca)) +
+    geom_density(fill = "white", color = "aquamarine3") + 
+  geom_vline(xintercept = theta_diferenca_vencedor(vencedor, 1:NROW(vencedor)), 
+             color = "deeppink3") + 
+    geom_vline(xintercept = - theta_diferenca_vencedor(vencedor, 1:NROW(vencedor)), 
+             color = "deeppink3")
+```
+
+```{r}
+mean(abs(diffs_vencedor) >= abs(theta_diferenca_vencedor(vencedor, 1:NROW(vencedor))))
+```
+
+Com a análise do teste de hipótese, chegamos a conclusão que há apróximadamente 0,24% de parecer com o modelo nulo, ou seja, existe uma diferença entre a quantidade de gols nos dias de vitória e empate.

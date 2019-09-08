@@ -1,0 +1,74 @@
+---
+title: "Regressão Linear"
+author: "Nazareno Andrade"
+output: 
+  html_notebook:
+    theme: readable
+    fig_width: 7
+    toc: true
+    toc_float: true
+
+---
+
+```{r message=FALSE, warning=FALSE}
+library(openintro)
+library(tidyverse)
+library(ggbeeswarm)
+library(modelr)
+library(broom)
+theme_set(theme_bw())
+```
+
+# Agora automaticamente
+
+lm  == linear model
+
+```{r}
+ggplot(countyComplete, aes(x = hs_grad, y = poverty)) + 
+  geom_point(alpha = 0.4) + 
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+
+
+```{r}
+mod <- lm(poverty ~ hs_grad, 
+          data = countyComplete)
+
+# sintaxe base R, que não usaremos
+# summary(mod)
+# confint(mod)
+
+# broom, que recomendo: 
+tidy(mod)
+glance(mod) 
+```
+
+Estimativas/previsões do modelo:
+
+```{r}
+countyComplete %>% 
+  select(poverty, hs_grad) %>% 
+  add_predictions(model = mod) %>% # add o que o modelo estima p cada hs_grad
+  ggplot(mapping = aes(x = hs_grad, y = poverty)) + 
+  geom_point(alpha = 0.4, size = .1) + 
+  geom_line(aes(y = pred), colour = "red")  + 
+  geom_abline(intercept = 75, slope = -.72, color  = "darkblue") 
+```
+
+Resíduos do modelo:
+
+```{r}
+countyComplete %>% 
+  add_residuals(model = mod) %>% 
+  ggplot(aes(hs_grad, resid)) + 
+  geom_point(alpha = .4, size = .5) + 
+  geom_hline(yintercept = 0, colour = "blue")
+```
+
+-------------
+
+A conclusão a eque chegamos com um modelo assim é algo como:
+
+> Regressão linear simples foi utilizada para analisar a associação entre VarIndep1 e VarDep. Os resultados da regressão indicam que um modelo no formato VarDep = XXX.VarIndep1 + YYY explicam XX,XX% da variância da variável de resposta (R2 = XX,XX). O aumento de 1 unidade de VarIndep1 medida como/em [unidade] produz uma mudança de xxx em VarDep. Portanto...
+

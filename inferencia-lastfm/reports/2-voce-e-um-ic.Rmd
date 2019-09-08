@@ -1,0 +1,152 @@
+---
+title: "Implementando ICs"
+author: "Nazareno"
+output:
+  html_document:
+    theme: readable
+    df_print: paged
+    toc: yes
+  html_notebook:
+    fig_width: 7
+    theme: readable
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(bootstrap)
+theme_set(theme_bw())
+```
+
+## Os dados
+
+```{r}
+set.seed(12345)
+
+lastfm = read_csv(here::here("data/experimento-lastfm.csv"), 
+                  col_types = cols(.default = col_double(), 
+                                   user = col_character()))
+
+lastfm = lastfm %>% 
+  sample_n(300) %>% 
+  select(news, old, mediana_pop)
+
+glimpse(lastfm)
+```
+
+## Proporção de artistas novos e popularidade
+
+Utilizaremos ICs para estimar duas métricas sobre os usuários do LastFM em geral durante um período de 6 meses. Em ambos os casos faremos isso a partir de uma amostra de 300 usuários. As duas métricas são: 
+
+1. **Qual a proporção de novos artistas escutados pelos usuários**
+
+2. Para os usuários que gostam de música muito pop (mediana_pop > 5), qual a correlação entre a popularidade mediana dos artistas escutado e a proporção dos artistas escutados que eram novos. 
+
+```{r}
+```
+
+### Parte 1: Utilizando a biblioteca
+
+Para a primeira pergunta, temos que: inicialmente, é interessante medir qual a proporção na amostra que possuimos:
+
+```{r}
+uma_proporcao <- function(df, i) {
+    amostra <- df %>% slice(i)
+    novos <- amostra %>% pull(news)
+    antigos <- amostra %>% pull(old)
+    proporcao <- novos / (novos+antigos)
+    return(mean(proporcao))
+}
+
+p_c <- uma_proporcao(lastfm, 1:NROW(lastfm))
+p_c
+```
+
+```{r echo=FALSE}
+lastfm %>% mutate(proporcao = news/(old+news)) %>%
+    ggplot(mapping = aes(x = proporcao)) +
+    geom_histogram(bins = 50, fill="white", colour = "darkgray") +
+    geom_vline(xintercept = p_c, colour = "darkblue")
+```
+
+Vejamos então se, a partir da reamostragem, é possível identificar um intervalo:
+
+```{r}
+boot_x95 <- lastfm %>% boot::boot(statistic = uma_proporcao, R = 4000) %>%
+    broom::tidy(conf.level = .95, conf.int = TRUE)
+boot_x95
+
+boot_x99 <- lastfm %>% boot::boot(statistic = uma_proporcao, R = 4000) %>%
+    broom::tidy(conf.level = .99, conf.int = TRUE)
+
+boot_x99
+```
+
+E agora, vejamos o gráfico anterior adicionando a ele o intervalo:
+
+```{r}
+lastp <- lastfm %>% mutate(proporcao = news/(old+news))
+ggplot() +
+    geom_histogram(data = lastp, mapping = aes(x = proporcao), bins = 50, 
+                   fill="white", colour = "darkgray") +
+    geom_rect(mapping = aes(xmin = boot_x99$conf.low, xmax = boot_x99$conf.high,
+                            ymin=0, ymax=Inf), alpha = .25, fill="darkorchid") +
+    geom_rect(mapping = aes(xmin = boot_x95$conf.low, xmax = boot_x95$conf.high,
+                            ymin=0, ymax=Inf), alpha = .25, fill="turquoise") +
+    geom_vline(xintercept = p_c, colour = "darkblue") + 
+    geom_vline(xintercept = boot_x99$statistic, colour = "darkgreen") + 
+    geom_vline(xintercept = boot_x95$statistic, colour = "darkred")
+```
+
+### Parte 2: Não utilizando a biblioteca
+
+Já que definimos a proporção anteriormente, agora que faremos a nossa própria reamostragem, é também possível verificar a diferença entre a proporção de cada amostra e a proporção da amostra. Vejamos:
+
+```{r}
+N_REAMOSTRAGENS = 4000
+
+uma_proporcao2 <- function(df) {
+    df %>% mutate(prop = news / (news+old)) %>%
+        pull(prop) %>%
+        mean()
+}
+
+amostras = tibble(amostra = 1:N_REAMOSTRAGENS) %>%
+    mutate(p_amostra = map_dbl(amostra, ~ lastfm %>%
+                                            sample_n(100) %>%
+                                            uma_proporcao2()))
+
+```
+
+E agora faremos o nosso bootstrap:
+
+```{r}
+
+bootstrapping <- function(df) {
+    proporcao <- df %>% mutate(prop = news / (news+old)) %>%
+        pull(prop)
+    boot_x <- sample(proporcao, size=NROW(df), replace=TRUE)
+    return(mean(boot_x))
+}
+
+reamostragem <- tibble(i = 1:N_REAMOSTRAGENS) %>%
+    mutate(p_c_s = map_dbl(i, ~ bootstrapping(lastfm)))
+
+reamostragem
+```
+
+Vejamos agora o erro da nossa reamostragem:
+
+```{r}
+reamostragem %>%
+    ggplot(mapping = aes(x = p_c_s)) +
+    geom_histogram(bins = 25, colour = "darkorchid", fill="white")
+    
+reamostragem %>%
+    ggplot(mapping = aes(x = p_c_s - p_c)) +
+    geom_histogram(bins = 25, colour = "darkorange", fill="white")
+
+```
+

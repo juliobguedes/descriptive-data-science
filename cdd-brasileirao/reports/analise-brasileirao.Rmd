@@ -1,0 +1,198 @@
+---
+title: "Brasileirão 2017: Uma análise quantitativa"
+author: Júlio Guedes
+output:
+    html_document:
+    df_print: paged
+theme: sandstone
+---
+
+```{r setup, echo=FALSE}
+library(tidyverse)
+library(ggbeeswarm)
+
+theme_set(theme_bw())
+
+knitr::opts_chunk$set(tidy = FALSE,
+                      fig.width = 9,
+                      fig.height = 6)
+```
+
+## Import dos dados
+
+```{r read_data, warning = FALSE}
+dados <- read_csv2(here::here("data/campeonato-brasileiro-full.csv"),
+                   col_types="ccccccccdddccc")
+dados <- dados %>% 
+  rename(
+    horario = `Horario`,
+    dia = `Dia`,
+    data = `Data`,
+    c1 = `Clube 1`,
+    c2 = `Clube 2`,
+    vencedor = `Vencedor`,
+    rodada = `Rodada`,
+    arena = `Arena`,
+    p1 = `p1`,
+    p2 = `p2`,
+    gols = `gols`,
+    c1e = `C1 Estado`,
+    c2e = `C2 Estado`,
+    vencedor_estado = `Vencedor Estado`
+  )
+
+```
+
+## Análise
+
+Nesse post, buscamos identificar a equivalência em significado do teste de hipótese via permutação e os intervalos de confiança. Entretanto, para ambas, é necessário definir quais as funções $\theta$ para nossas perguntas:
+
+1. Jogos aos domingos têm mais gols que jogos às quartas?
+
+```{r}
+theta_quarta_domingo <- function(df, i) {
+  jogos <- df %>% filter(dia %in% c("Quarta-feira", "Domingo")) %>% 
+    slice(i) %>% 
+    group_by(dia) %>% 
+    summarise(media_gols = mean(gols))
+  
+  domingo <- jogos %>% filter(dia == "Domingo") %>% pull(media_gols)
+  quarta <- jogos %>% filter(dia == "Quarta-feira") %>% pull(media_gols)
+  
+  domingo - quarta
+}
+
+theta_qd <- theta_quarta_domingo(dados, 1:NROW(dados))
+theta_qd
+```
+
+2. Jogos onde há um vitorioso têm mais ou menos gols que empates? 
+
+```{r}
+theta_vitoria_empate <- function(df, i) {
+  jogos <- df %>%
+    slice(i) %>% 
+    mutate(vit_emp = if_else(p1 == p2, "E", "V")) %>% 
+    group_by(vit_emp) %>% 
+    summarise(media_gols = mean(gols))
+  
+  vitoria <- jogos %>% filter(vit_emp == "V") %>% pull(media_gols)
+  empate <- jogos %>% filter(vit_emp == "E") %>% pull(media_gols)
+  
+  vitoria - empate
+}
+
+theta_ve <- theta_vitoria_empate(dados, 1:NROW(dados))
+theta_ve
+```
+
+Tendo nossas funções definidas, as utilizaremos nas duas partes da análise.
+
+## Teste de Hipótese via permutação
+
+O teste de hipótese busca identificar um valor, chamado de p-valor, em comparação à um valor $\alpha$, tendo como intenção verificar se o p-valor é ou não inferior à um valor $\alpha$ que, no nosso caso, é o $\theta$, previamente definido. Estaremos então assumindo uma hipótese, chamada hipótese nula, para cada pergunta, e tentaremos idenficar o p-valor: caso p-valor < $\theta$, podemos concluir que a hipótese nula é falsa e, portanto, pode ser rejeitada; caso contrário, nada pode ser dito sobre a hipótese.
+
+### Domingo vs. Quarta
+
+Definiremos então nossa hipótese nula para a primeira como sendo "domingos e quartas-feiras não têm diferença significante em gols", e verificaremos o p-valor para a pergunta abaixo:
+
+```{r}
+theta_h_dom_qua <- function(df) {
+  jogos <- df %>% filter(dia %in% c("Quarta-feira", "Domingo")) %>% 
+    mutate(dia_trocado = sample(dia, n())) %>%
+    group_by(dia_trocado) %>%
+    summarise(media_gols = mean(gols))
+  
+  domingo <- jogos %>% filter(dia_trocado == "Domingo") %>% pull(media_gols)
+  quarta <- jogos %>% filter(dia_trocado == "Quarta-feira") %>% pull(media_gols)
+  
+  domingo - quarta
+}
+
+diffs1 <- replicate(5000, {theta_h_dom_qua(dados)})
+
+tibble(diferenca = diffs1) %>%
+  ggplot(mapping = aes(x = diferenca)) +
+  #geom_histogram()
+  geom_density(fill="white", color = "darkorchid") +
+  geom_vline(xintercept = theta_qd, color = "darkorange") + 
+  geom_vline(xintercept = - theta_qd, color = "darkorange") +
+  geom_rug()
+  
+pvalor1 <- mean(abs(diffs1) >= abs(theta_qd))
+```
+
+Sendo `r pvalor1` o p-valor para a primeira pergunta, podemos ver que é um valor alto, e portanto, a hipótese nula não pode ser rejeitada, mas também não pode ser confirmada. O que podemos entender a partir disso é que não existe uma diferença significante entre gols na quarta e gols no domingo.
+
+### Gols: Empate ou não
+
+```{r}
+theta_h_vit_emp <- function(df) {
+  jogos <- df %>%
+    mutate(vit_emp = if_else(p1 == p2, "E", "V")) %>% 
+    mutate(vit_emp_trocado = sample(vit_emp, n())) %>% 
+    group_by(vit_emp_trocado) %>% 
+    summarise(media_gols = mean(gols))
+  
+  vitoria <- jogos %>% filter(vit_emp_trocado == "V") %>% pull(media_gols)
+  empate <- jogos %>% filter(vit_emp_trocado == "E") %>% pull(media_gols)
+  
+  vitoria - empate
+}
+
+diffs2 <- replicate(5000, {theta_h_vit_emp(dados)})
+
+tibble(diferenca = diffs2) %>%
+  ggplot(mapping = aes(x = diferenca)) +
+  #geom_histogram()
+  geom_density(fill="white", color = "darkorchid") +
+  geom_vline(xintercept = theta_ve, color = "darkorange") + 
+  geom_vline(xintercept = - theta_ve, color = "darkorange") +
+  geom_rug()
+  
+pvalor2 <- mean(abs(diffs2) >= abs(theta_ve))
+```
+
+Sendo `r pvalor2` o p-valor para a segunda pergunta, podemos ver que é um valor muito pequeno e, portanto, a hipótese nula pode ser rejeitada. O que podemos entender a partir disso é que existe uma diferença significante entre a quantidade de gols quando um dos times vence e quando há um empate.
+
+## Intervalo de Confiança
+
+Observando agora o intervalo de confiança, definiremos uma confiança de 95%, fazendo bootstrap:
+
+### Domingo vs. Quarta
+
+```{r}
+theta_qd <- dados %>% theta_quarta_domingo(1:NROW(dados))
+
+boot_qua_dom <- dados %>% boot::boot(statistic = theta_quarta_domingo, R = 4000) %>% 
+  broom::tidy(conf.low = 0.95, conf.int = TRUE)
+
+boot_qua_dom
+```
+
+A partir do resultado do bootstrap, podemos ver que não é bem definido se há mais gols no domingo ou na quarta, já que o intervalo de confiança vai de -0.45 a 0.39, isto é, uma diferença pequena negativa a uma diferença pequena positiva. Esse resultado reafirma a não rejeição do teste de hipótese para esta pergunta, dado que não há influência positiva ou negativa no intervalo.
+
+### Gols: Empate ou não
+
+```{r}
+theta_ve <- dados %>% theta_vitoria_empate(1:NROW(dados))
+
+boot_vit_emp <- dados %>% boot::boot(statistic = theta_vitoria_empate, R = 4000) %>% 
+  broom::tidy(conf.low = 0.95, conf.int = TRUE)
+
+boot_vit_emp
+```
+
+Diferentemente da pergunta anterior, quando fazemoso bootstrap para esta pergunta, podemos afirmar com bastante certeza que há mais gols numa vitória do que num empate, já que o intervalo é positivo em toda sua extensão. Entretanto, pela diferença menos de um gol, i.e. uma diferença pequena, mas com certeza de haver mais gols em vitórias, é possível entender melhor que o p-valor para a segunda pergunta tenha rejeitado a hipótese nula.
+
+
+
+
+
+
+
+
+
+
+
+
