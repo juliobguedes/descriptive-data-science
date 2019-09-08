@@ -5,18 +5,18 @@ This repository contains my implementations to the exercises of the Descriptive 
 ## The exercises
 
 1. Exploratory Data Analysis
-    1. [Series](./eda-series/README.md)
-    2. [Dispersion Center](./eda-centro-dispersao/README.md)
-    3. [Congress @ Twitter](./eda-congresso-twitter/README.md)
-    4. [Stackoverflow Culture Visualization](./vis-cultura-stackoverflow/README.md)
+    1. [Series](./eda-series)
+    2. [Dispersion Center](./eda-centro-dispersao)
+    3. [Congress @ Twitter](./eda-congresso-twitter)
+    4. [Stackoverflow Culture Visualization](./vis-cultura-stackoverflow)
 2. Inference
-    1. [IAT Scores](./inferencia-iat-scores/README.md)
-    2. [LastFM](./inferencia-lastfm/README.md)
-    3. [Alunos](./inferencia-alunos/README.md)
-    4. [Ismir](./inferencia-ismir/README.md)
-    5. [Brazilian Soccer Championship](./cdd-brasileirao/README.md)
+    1. [IAT Scores](./inferencia-iat-scores)
+    2. [LastFM](./inferencia-lastfm)
+    3. [Alunos](./inferencia-alunos)
+    4. [Ismir](./inferencia-ismir)
+    5. [Brazilian Soccer Championship](./cdd-brasileirao)
 3. Regression
-    1. [Congress @ Twitter](./eda-congresso-twitter/README.md)
-    2. [General Exercise](./cdd-l4p2/README.md)
+    1. [Congress @ Twitter](./eda-congresso-twitter)
+    2. [General Exercise](./cdd-l4p2)
 
 &copy; Júlio Guedes
