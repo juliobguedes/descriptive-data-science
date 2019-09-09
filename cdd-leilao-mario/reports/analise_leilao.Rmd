@@ -1,0 +1,138 @@
+---
+title: "Mario Kart: Quem dá mais?"
+author: Júlio Guedes
+output:
+    html_document:
+    df_print: paged
+theme: sandstone
+---
+
+```{r setup}
+library(tidyverse)
+library(ggbeeswarm)
+library(modelr)
+
+theme_set(theme_bw())
+
+knitr::opts_chunk$set(tidy = FALSE,
+                      fig.width = 9,
+                      fig.height = 6)
+```
+
+## Import dos dados
+
+```{r}
+dados <- read_tsv(here::here('data/mariokart.tsv'),
+                  col_types = 'dddcdddcdcdc')
+
+```
+
+# Número de Lances vs. Preço Final
+
+## Análise
+
+```{r}
+dados %>%
+  ggplot(mapping = aes(x = nBids, y = totalPr)) +
+  geom_point()
+```
+
+```{r}
+dadosCorrigidos <- dados %>%
+  arrange(-totalPr) %>%
+  slice(3:NROW(dados))
+
+dadosCorrigidos
+```
+
+```{r}
+dadosCorrigidos %>%
+  ggplot(mapping = aes(x = nBids, y = totalPr)) +
+  geom_point()
+```
+
+## Correlação
+
+```{r}
+cor(dados$nBids, dados$totalPr)
+```
+
+```{r}
+cor(dadosCorrigidos$nBids, dadosCorrigidos$totalPr)
+```
+
+## Regressão
+
+```{r}
+modelo1 <- lm(data = dadosCorrigidos, totalPr ~ nBids, na.action = na.omit)
+summary(modelo1)
+modelo1 %>% broom::tidy(conf.int = TRUE, conf.level = .95)
+```
+
+```{r}
+dadosCorrigidos %>%
+  add_predictions(model = modelo1) %>% 
+  ggplot(mapping = aes(x = nBids, y = totalPr)) +
+  geom_point() + geom_line(mapping = aes(y = pred), colour = "darkorchid")
+```
+
+
+# Número de Lances vs. Aumento no preço
+
+```{r}
+dadosCorrigidos <- dadosCorrigidos %>% mutate(diffPrice = totalPr - startPr)
+
+dadosCorrigidos %>%
+  ggplot(mapping = aes(x = nBids, y = diffPrice)) +
+  geom_point()
+```
+
+## Correlação
+
+```{r}
+cor(dadosCorrigidos$nBids, dadosCorrigidos$diffPrice)
+```
+
+## Regressão
+
+```{r}
+modelo2 <- lm(data = dadosCorrigidos, diffPrice ~ nBids, na.action = na.omit)
+summary(modelo2)
+modelo2 %>% broom::tidy(conf.int = TRUE, conf.level = .95)
+```
+
+```{r}
+dadosCorrigidos %>%
+  add_predictions(model = modelo2) %>% 
+  ggplot(mapping = aes(x = nBids, y = diffPrice)) +
+  geom_point() + geom_line(mapping = aes(y = pred), colour = "darkorchid")
+```
+
+# TotalPr vs. StockPhoto
+
+```{r}
+dadosCorrigidos %>%
+  ggplot(mapping = aes(x = stockPhoto, y = totalPr)) +
+  geom_quasirandom()
+```
+
+## Correlação
+
+```{r}
+cor(dadosCorrigidos$stockPhoto, dadosCorrigidos$totalPr)
+```
+
+## Regressão
+
+```{r}
+modelo3 <- lm(data = dadosCorrigidos, totalPr ~ stockPhoto, na.action = na.omit)
+summary(modelo3)
+modelo3 %>% broom::tidy(conf.int = TRUE, conf.level = .95)
+```
+
+```{r}
+dadosCorrigidos %>%
+  add_predictions(model = modelo3) %>% 
+  ggplot(mapping = aes(x = stockPhoto, y = totalPr)) +
+  geom_point() + geom_line(mapping = aes(y = pred), colour = "darkorchid")
+```
