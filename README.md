@@ -12,7 +12,7 @@ This repository contains my implementations to the exercises of the Descriptive 
 2. Inference
     1. [IAT Scores](./inferencia-iat-scores)
     2. [LastFM](./inferencia-lastfm)
-    3. [Alunos](./inferencia-alunos)
+    3. [Students](./inferencia-alunos)
     4. [Ismir](./inferencia-ismir)
     5. [Brazilian Soccer Championship](./cdd-brasileirao)
 3. Regression

@@ -1,3 +1,3 @@
-# Conflito em Jukeboxes Sociais
+# Conflict in Social Jukeboxes
 
-Dados do experimento [nesse artigo](http://ismir2015.uma.es/articles/212_Paper.pdf). 
+Experiment data [in this article](http://ismir2015.uma.es/articles/212_Paper.pdf). 

@@ -1,10 +1,10 @@
-# Tweets dos congressitas brasileiros em 2019
+# Brazilian Congressman and Congresswoman tweets in 2019
 
-Usamos o pacote rtweet e uma lista de perfis de parlamentares feita colaborativamente pelo Serenata de Amor, Laboratório Analytics e mais gente legal para baixar os tweets de nossos representantes federais em 2019. O código para baixar e etc. não está nesse repositório. 
+We are using the package `rtweet` and a colaborative list of parliamentarians assembled by [Serenata de Amor](https://serenata.ai/), [Analytics Laboratory](https://www.facebook.com/analytics.ufcg?fref=ts) and other cool people to download our federal representants' tweets in 2019. The code to download it is not in this repository.
 
-Os dados brutos têm 72.316 tweets cuja data de criação segundo a API é em 2019. Esses tweets foram coletados em 22 de março de 2019 e estão em `data/tweets-2019.csv.zip`. O script que os processa, cruza com a lista de parlamentares conhecidos e salva a atividade por parlamentar é `code/0-cria-dataset.R`. O resultado é o arquivo `data/atividade-por-perfil-20190322.csv`. 
+The raw data has 72,316 tweets which the API points to 2019. Those tweets were collected in March 22, 2019, and they are in `data/tweets-2019.csv.zip`. The script to download is not in this repository.
 
-## O que temos nos dados 
+## What is in the data
 
 ```
 Observations: 608
@@ -30,22 +30,22 @@ $ engaj_max_proprio     <dbl> 0, 0, 0, 0, 1031, 0, 0, 0, 0, 0, 0, 0, NA, 38, 136
 $ engaj_max_retweet     <dbl> 0, 0, 0, 0, 99, 0, 0, 0, 0, 0, 0, 0, NA, 4002, 4227, NA, 81…
 ```
 
-* id_parlamentar  - ID do parlamentar segundo a API da câmara ou senado
-* casa  - se o parlamentar é da câmara ou senado
-* nome_eleitoral  - nome que vimos na urna
-* partido - pela sigla do nome atual (MDB, DEM, ...)
-* UF  - por onde foi eleito
-* twitter - Handle no twitter - *NA se o parlamentar não tem perfil* (ie, não encontramos)
-* seguidores  - Quantos perfis seguem o parlamentar. *`NA` se o parlamentar não tem perfil ou se não tuitou em 2019* (e por isso não observamos seus seguidores).
-* segue - Quantos perfis ele/a segue. *`NA` se o parlamentar não tem perfil ou se não tuitou em 2019* (e por isso não observamos seus seguidores).
-* n_proprio - Número de tweets que não são retweets ou retweets com comentário.
-* n_retweet - Número de tweets que são retweets ou retweets com comentário.
-* engaj_total - Engajamento = likes + retweets. Total = para todos os tweets vistos.
-* engaj_total_proprio - Engajamento total em tweets de conteúdo próprio.
-* engaj_total_retweet - Engajamento total em retweets.
-* engaj_mediano - Mediana do engajamento em todos os tweets
-* engaj_mediano_proprio - Mediana para tweets de conteúdo próprio
-* engaj_mediano_retweet - Para retweets
-* engaj_max - Máximo de engajamento em um tweet.
-* engaj_max_proprio - Máximo para os de conteúdo próprio
-* engaj_max_retweet - Máximo para os retweets
+* id_parlamentar  - parliamentarian ID according to the Chamber of Deputies or the Senate APIs.
+* casa  - which house the parliamentarian belongs
+* nome_eleitoral  - name seen in the ballot box
+* partido - party initials
+* UF  - which state elected him/her
+* twitter - Twitter handle - *NA otherwise*
+* seguidores  - Number of Followers. *`NA` if he/she doesnt have an account or didnt tweet in 2019* (reason that we were unable to acquire the data).
+* segue - Number of Following. *`NA` if he/she doesnt have an account or didnt tweet in 2019* (reason that we were unable to acquire the data).
+* n_proprio - Number of Tweets that are not retweets or retweets with comments.
+* n_retweet - Number of Tweets that are retweets or retweets with comments.
+* engaj_total - engagement = number of likes + number of retweets. Total = for every tweet available.
+* engaj_total_proprio - engagement in tweets that are not retweets or retweets with comments.
+* engaj_total_retweet - engagement in retweets or retweets with comments.
+* engaj_mediano - median of engagement in all tweets.
+* engaj_mediano_proprio - median of engagements in thweets that are not retweets or retweets with comments.
+* engaj_mediano_retweet - median of engagements in thweets that are retweets or retweets with comments.
+* engaj_max - Maximum engagement in all tweets.
+* engaj_max_proprio - Maximum engagement in tweets that are not retweets or retweets with comments.
+* engaj_max_retweet - Maximum engagement in tweets that are retweets or tweets with comments.

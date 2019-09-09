@@ -1,8 +1,8 @@
-# Valores, indicadores culturais e participação no StackExchange
+# Values, cultural indicators and participation in StackExchange
 
-Os dados nesse repositório tem medições feitas em 2016 dos níveis de participação das pessoas de diferentes países nos sites StackOverflow e SuperUser, ambos da plataforma StackExchange. 
+The data in this repository contains measurements made in 2016 about the levels of participation of different people in different countries in StackOverflow and SuperUser, both in the StackExchange Platform.
 
-Os dados foram coletados por Nigini Oliveira, para a pesquisa relatada [neste artigo](https://homes.cs.washington.edu/~reinecke/Publications_files/Oliveira2016.pdf) e na tese dele. Os detalhes da medição e limitações dos dados são discutidos no artigo.
+The data was collected by Nigini Oliveira to [this article's](https://homes.cs.washington.edu/~reinecke/Publications_files/Oliveira2016.pdf) research and his thesis. The details about the measurements are discussed in the article.
 
-As dimensões quantitativas de cultura nacional usadas nos dados (PDI,IDV,MAS,UAI) são explicadas [neste site](https://www.hofstede-insights.com/models/national-culture/).
+The quantitative dimensions about national culture used in the data (PDI, IDV, MAS, UAI) are explained [here](https://www.hofstede-insights.com/models/national-culture/).
 

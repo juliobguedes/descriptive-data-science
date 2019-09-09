@@ -1,7 +1,5 @@
-# Inferências a partir de uma amostra de alunos
+# Inference from a student sample
 
-Estimativa de intervalos de confiança para características de um grupo e diferenças entre grupos usando bootstrap.
+Confidence interval estimation to a group characteristics and difference between groups using bootstrap. 
 
-Os dados vêm de um questionário via google form em uma turma de Ciência de Dados Descritiva da graduação e em uma turma de Fundamento de Pesquisa para Ciência da Computação na pós da Computação@UFCG. Os resultados estão em data/
-
-
+The data was originated using a Google Form filled by students attending Descriptive Data Science class in the undergraduate course in Computer Science and graduate students attending Research Fundaments in the graduate course in Computer Science, both @ UFCG. The results are in `data/`.
